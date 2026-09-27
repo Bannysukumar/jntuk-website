@@ -2,7 +2,9 @@
  * Central SEO config for canonical URLs, sitemap, and schema.
  * Used by metadata, sitemap, robots, and structured data.
  */
-export const SITE_URL = "https://manajntuhresults.vercel.app";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://jntuk-website.vercel.app";
 
 /** Sitelink candidate URLs for sitemap and Quick Links (homepage). */
 export const SITELINK_URLS = [
@@ -23,8 +25,8 @@ export const SITELINK_URLS = [
   // SEO landing pages
   { path: "/jntuk-results", name: "JNTUK Results" },
   { path: "/jntuk-btech-results", name: "JNTUK B.Tech Results" },
-  { path: "/jntuk-r18-results", name: "JNTUK R18 Results" },
-  { path: "/jntuk-r22-results", name: "JNTUK R22 Results" },
+  { path: "/jntuk-r18-results", name: "JNTUK R16 Results" },
+  { path: "/jntuk-r22-results", name: "JNTUK R20 / R23 Results" },
   { path: "/jntuk-1-1-results", name: "JNTUK 1-1 Results" },
   { path: "/jntuk-1-2-results", name: "JNTUK 1-2 Results" },
   { path: "/jntuk-2-1-results", name: "JNTUK 2-1 Results" },

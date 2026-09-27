@@ -1,4 +1,5 @@
 "use client";
+// Syllabus files shown here are whatever the data source/API returns.
 import { SyllabusNode, PdfItem, syllabusDetails } from "@/constants/syllabusdetails";
 import { FaFilePdf } from "react-icons/fa";
 import dynamic from "next/dynamic";

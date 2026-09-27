@@ -1,4 +1,5 @@
 "use client";
+// Calendar files shown here are whatever the data source/API returns.
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import {
@@ -104,7 +105,7 @@ const Calendars = () => {
             </h1>
           </div>
           <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-            Select your academic year, degree, year, and calendar to view or download
+            Select your JNTUK academic year, degree, year, and calendar to view or download
           </p>
         </div>
 

@@ -90,7 +90,7 @@ const ExamResults = ({ title, query }: { title: string; query: string }) => {
                     />
                   </div>
                   <p className="text-xs text-muted-foreground mt-2 text-center">
-                    Enter your 10-digit Hall Ticket Number
+                    Enter your 10-character Hall Ticket Number
                   </p>
                 </div>
                 <Button

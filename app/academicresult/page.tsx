@@ -88,11 +88,11 @@ const AcademicResult = () => {
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
               <p className="text-blue-800 dark:text-blue-300 font-medium mb-1">Supported Regulations</p>
               <p className="text-xs">
-                Results cover regular, supply, and RCRV attempts published by JNTUK. Use Hard Refresh on the result page if you need a forced scrape.
+                Supported JNTUK regulations: R16, R19, R20, and R23 (R20 is current for the 2022 regular batch). Results cover regular, supply, and RCRV attempts published by JNTUK. Use Hard Refresh on the result page if you need a forced scrape.
               </p>
             </div>
             <p className="text-xs italic text-center text-gray-500 mt-6">
-              Note: For official certification, always refer to the original mark sheets issued by Jawaharlal Nehru Technological University, Kakinada.
+              Note: For official certification, always refer to mark sheets from Jawaharlal Nehru Technological University, Kakinada and https://jntukresults.edu.in.
             </p>
           </div>
         </div>

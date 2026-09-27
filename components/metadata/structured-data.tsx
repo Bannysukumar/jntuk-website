@@ -15,7 +15,7 @@ export default function StructuredData() {
     },
     image: `${SITE_URL}/icon-512x512.png`,
     description:
-      "JNTUK RESULTS - Official portal for checking JNTUK (Jawaharlal Nehru Technological University Kakinada) exam results online. Get your UG & PG results, CGPA, backlogs, and academic performance.",
+      "JNTUK RESULTS is an independent student tool for JNTUK (Jawaharlal Nehru Technological University, Kakinada) exam results. Official results: https://jntukresults.edu.in.",
     sameAs: [
       "https://github.com/Bannysukumar",
       "https://www.linkedin.com/in/adepusukumar",

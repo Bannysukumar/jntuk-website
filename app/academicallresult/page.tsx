@@ -40,10 +40,10 @@ const AcademicAllResult = () => {
           </h2>
           <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
             <p className="leading-relaxed">
-              The Academic All Results tool shows every exam result you have taken at JNTUK in one consolidated view. Instead of checking each semester separately, you enter your hall ticket number once and see all semesters, including regular and supply attempts, in a single page. This makes it easier to track your overall CGPA, identify backlogs, and plan for future exams.
+              The Academic All Results tool shows every exam result you have taken at JNTUK in one consolidated view. Instead of checking each semester separately, you enter your hall ticket number once and see published JNTUK attempts—regular, supply, and RCRV—in a single page. This makes it easier to track your overall CGPA, identify backlogs, and plan for future exams.
             </p>
             <p className="leading-relaxed">
-              Data is fetched directly from official JNTUK servers. We do not store your results on our servers. For official certification, always refer to the mark sheets issued by Jawaharlal Nehru Technological University, Kakinada.
+              Data is fetched from JNTUK published exams. We do not store your results on our servers. For official certification, always refer to mark sheets from Jawaharlal Nehru Technological University, Kakinada and https://jntukresults.edu.in.
             </p>
           </div>
         </div>

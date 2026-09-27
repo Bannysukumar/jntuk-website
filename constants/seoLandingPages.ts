@@ -48,7 +48,7 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
     howToTitle: "How to Check JNTUK Results Online",
     howToSteps: [
       "Click on the result tool that matches what you need – Academic Result, All Results, Backlog Report or Class Result.",
-      "Enter your 10-digit JNTUK hall ticket number carefully (for example: 226Q1A4304).",
+      "Enter your 10-character JNTUK hall ticket carefully (for example: 226Q1A4304).",
       "Submit the form and wait a few seconds while we fetch data from the official JNTUK servers.",
       "View or download your result safely from your mobile or desktop device.",
     ],
@@ -83,13 +83,13 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
   "jntuk-btech-results": {
     slug: "jntuk-btech-results",
     path: "/jntuk-btech-results",
-    metaTitle: "JNTUK B.Tech Results 2025 – R18, R22 Regular & Supply | JNTUK RESULTS",
+    metaTitle: "JNTUK B.Tech Results 2025 – R16, R19, R20, R23 | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUK B.Tech results 2025 for R18 and R22 regulations – regular and supply. Fast B.Tech JNTUK results with academic, all-semester and backlog views.",
-    h1: "JNTUK B.Tech Results – R18 & R22",
+      "Check JNTUK B.Tech results 2025 for R16, R19, R20 and R23 regulations – regular and supply. Fast B.Tech JNTUK results with academic, all-semester and backlog views.",
+    h1: "JNTUK B.Tech Results – R16, R19, R20, R23",
     intro: [
       "This page is dedicated to JNTUK B.Tech students who want a single place to understand and check their semester-wise results.",
-      "Whether you belong to R18 or R22 regulations, you can use our Academic Result and All Results tools to see your current semester performance and complete history.",
+      "Whether you belong to R16, R19, R20 or R23 (R20 is current for the 2022 regular batch), you can use our Academic Result and All Results tools to see your current semester performance and complete history.",
     ],
     howToTitle: "How to Check JNTUK B.Tech Results",
     howToSteps: [
@@ -100,7 +100,7 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
     ],
     aboutTitle: "About JNTUK B.Tech Result Tools",
     aboutParagraphs: [
-      "B.Tech results are released regulation-wise (R18, R22) and semester-wise (1-1, 1-2, 2-1, 2-2, 3-1, 3-2, 4-1, 4-2). Our tools help you navigate this easily without confusion.",
+      "B.Tech results are released regulation-wise (R16, R19, R20, R23) and semester-wise when JNTUK publishes them. Our tools help you navigate this easily without confusion.",
       "Using the same hall ticket number, you can also check backlogs, compare class results and verify grace marks eligibility from other sections of the site.",
     ],
     resultCtaLabel: "Check B.Tech Academic Result",
@@ -113,9 +113,9 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
           "Yes. Use the All Results tool to view all your B.Tech semester results in a single consolidated view for easier analysis.",
       },
       {
-        question: "Does this page support both R18 and R22?",
+        question: "Does this page support R16, R19, R20 and R23?",
         answer:
-          "Yes. As long as your hall ticket number is valid, the tools will fetch the correct regulation and semester data from official JNTUK servers.",
+          "Yes. JNTUK B.Tech commonly uses R16, R19, R20 and R23. R20 is current for the 2022 regular batch. As long as your hall ticket is valid, the tools fetch the regulation and semester data JNTUK has published.",
       },
     ],
     relatedSlugs: [
@@ -128,34 +128,34 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
   "jntuk-r18-results": {
     slug: "jntuk-r18-results",
     path: "/jntuk-r18-results",
-    metaTitle: "JNTUK R18 Results – B.Tech & B.Pharmacy | JNTUK RESULTS",
+    metaTitle: "JNTUK R16 Results – B.Tech & B.Pharmacy | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUK R18 results for B.Tech and B.Pharmacy – all semesters, regular and supply. Fast access to R18 JNTUK results, backlogs and class-wise performance.",
-    h1: "JNTUK R18 Results – All Semesters",
+      "Check published JNTUK R16 results for B.Tech and B.Pharmacy – regular and supply when the university has released them.",
+    h1: "JNTUK R16 Results – All Semesters",
     intro: [
-      "R18 is one of the most common regulations for JNTUK B.Tech and B.Pharmacy students. This page focuses on helping R18 students quickly reach the right result tools.",
-      "From here you can jump to Academic Result, All Results and Backlog Report tools that fully support R18 regulation results.",
+      "R16 is one of the JNTUK B.Tech and B.Pharmacy regulations. This page points you to the result tools for published R16 exams.",
+      "From here you can jump to Academic Result, All Results and Backlog Report. Official results remain at https://jntukresults.edu.in.",
     ],
-    howToTitle: "How to Check JNTUK R18 Results",
+    howToTitle: "How to Check JNTUK R16 Results",
     howToSteps: [
-      "Identify your regulation as R18 from your college or official documents.",
+      "Identify your regulation as R16 from your college or official documents.",
       "Click on the Academic Result or All Results section from this page.",
-      "Enter your hall ticket number and submit.",
-      "View your R18 results semester-wise, including regular and supply attempts.",
+      "Enter your 10-character hall ticket and submit.",
+      "View published R16 results, including regular and supply attempts when available.",
     ],
-    aboutTitle: "Understanding JNTUK R18 Results",
+    aboutTitle: "Understanding JNTUK R16 Results",
     aboutParagraphs: [
-      "Under R18 regulation, grading patterns, credit requirements and pass criteria are defined clearly by JNTUK. Our tools only fetch and display what JNTUK publishes.",
-      "You can also combine R18 result information with our Credit Checker, Grace Marks and Backlog Report tools to plan your academics better.",
+      "Under R16, grading and credit rules are defined by JNTUK. Our tools only fetch and display what JNTUK publishes.",
+      "You can also combine this with Credit Checker, Grace Marks and Backlog Report when those tools have data.",
     ],
-    resultCtaLabel: "Open R18 Academic Result Search",
+    resultCtaLabel: "Open R16 Academic Result Search",
     resultCtaHref: "/academicresult",
-    faqTitle: "R18 Results – FAQs",
+    faqTitle: "R16 Results – FAQs",
     faqs: [
       {
-        question: "How do I confirm that I am an R18 student?",
+        question: "How do I confirm that I am an R16 student?",
         answer:
-          "Usually your hall ticket, college notifications or exam timetables mention the regulation. If your batch started around 2018, you are likely under R18.",
+          "Your hall ticket, college notifications or exam timetables usually mention the regulation.",
       },
     ],
     relatedSlugs: [
@@ -169,34 +169,34 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
   "jntuk-r22-results": {
     slug: "jntuk-r22-results",
     path: "/jntuk-r22-results",
-    metaTitle: "JNTUK R22 Results – Latest B.Tech Regulation | JNTUK RESULTS",
+    metaTitle: "JNTUK R20 / R23 Results – Current Regulations | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUK R22 results for B.Tech – latest regulation, regular and supply exams. View R22 JNTUK results, backlogs and credits in one place.",
-    h1: "JNTUK R22 Results – Latest Regulation",
+      "Check published JNTUK R20 and R23 results. R20 is current for the 2022 regular batch.",
+    h1: "JNTUK R20 / R23 Results – Current Regulations",
     intro: [
-      "R22 is the newer regulation introduced by JNTUK for B.Tech students. This page is tailored for R22 batches who want a clear path to their semester results.",
-      "Use our result tools to track every R22 semester, including regular and supplementary exams, without confusion.",
+      "R20 and R23 are current JNTUK regulations. R20 is current for the 2022 regular batch. This page points you to result tools for published exams.",
+      "Use Academic Result or All Results. Official results remain at https://jntukresults.edu.in.",
     ],
-    howToTitle: "How to Check JNTUK R22 Results",
+    howToTitle: "How to Check JNTUK R20 and R23 Results",
     howToSteps: [
-      "Confirm that your batch follows the R22 regulation.",
+      "Confirm that your batch follows R20 or R23.",
       "Use the Academic Result or All Results tools linked from this page.",
-      "Enter your hall ticket number and submit the form.",
-      "Review your subject-wise grades, SGPA and overall academic standing.",
+      "Enter your 10-character hall ticket and submit the form.",
+      "Review subject-wise grades and the values JNTUK has published.",
     ],
-    aboutTitle: "About JNTUK R22 Regulation Results",
+    aboutTitle: "About JNTUK R20 and R23 Results",
     aboutParagraphs: [
-      "R22 brings updated syllabus structures and evaluation patterns. Our platform simply fetches what JNTUK publishes and presents it neatly for students.",
-      "If you are in R22, make sure to regularly track your credits and backlogs using the Credits Checker and Backlog Report tools.",
+      "R20 and R23 have their own syllabus and evaluation patterns. This site fetches what JNTUK publishes and presents it as returned.",
+      "Track credits and backlogs with the matching tools when those APIs have data.",
     ],
-    resultCtaLabel: "Check R22 Academic Result",
+    resultCtaLabel: "Check R20 / R23 Academic Result",
     resultCtaHref: "/academicresult",
-    faqTitle: "R22 Results – FAQs",
+    faqTitle: "R20 / R23 Results – FAQs",
     faqs: [
       {
-        question: "Are R22 results supported for all branches?",
+        question: "Are R20 and R23 results supported for all branches?",
         answer:
-          "Yes. As long as JNTUK has published the result for your branch and semester, our tools can fetch and display it for you.",
+          "If JNTUK has published the result for your branch and semester, the tools can display it. Official source: https://jntukresults.edu.in.",
       },
     ],
     relatedSlugs: [
@@ -302,7 +302,7 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
     howToTitle: "How to Check JNTUK 2-1 Results",
     howToSteps: [
       "Click the result search button below to open the Academic Result tool.",
-      "Enter your 10-digit hall ticket number and submit.",
+      "Enter your 10-character hall ticket and submit.",
       "Once the page loads, verify you are viewing the correct 2-1 exam session.",
       "Save or screenshot your result for future reference.",
     ],
@@ -462,7 +462,7 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
     howToTitle: "How to Check JNTUK 4-1 Results",
     howToSteps: [
       "Click the result search button below to open the Academic Result tool.",
-      "Enter your 10-digit JNTUK hall ticket number and submit.",
+      "Enter your 10-character JNTUK hall ticket and submit.",
       "Confirm that the exam session and semester correspond to 4-1.",
       "Review your subject-wise grades and note any subjects that may need attention before 4-2 or supply exams.",
     ],
@@ -491,9 +491,9 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
   "jntuk-bpharmacy-results": {
     slug: "jntuk-bpharmacy-results",
     path: "/jntuk-bpharmacy-results",
-    metaTitle: "JNTUK B.Pharmacy Results – R18, R22 Regular & Supply | JNTUK RESULTS",
+    metaTitle: "JNTUK B.Pharmacy Results – R16, R19, R20, R23 | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUK B.Pharmacy results for R18 and R22 regulations – regular and supply. Fast B.Pharmacy JNTUK results with academic and backlog views.",
+      "Check published JNTUK B.Pharmacy results for R16, R19, R20 and R23 – regular and supply when the university has released them.",
     h1: "JNTUK B.Pharmacy Results – All Semesters",
     intro: [
       "This page is designed specifically for JNTUK B.Pharmacy students who want a clear and simple way to access their semester-wise results.",

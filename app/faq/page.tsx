@@ -15,7 +15,7 @@ const Faq = () => {
     {
       question: "Which regulations are supported by this website?",
       answer:
-        "This website supports results for R18 regulation and above. It also considers RCRV (Revaluation) results. Please note that results below R18 regulation may not be fully supported.",
+        "This website supports JNTUK regulations R16, R19, R20, and R23 (R20 is current for the 2022 regular batch). It also considers RCRV (Revaluation) results when JNTUK has published them. Official results remain at https://jntukresults.edu.in.",
     },
     {
       question: "How do I view results for all my semesters at once?",
@@ -65,7 +65,7 @@ const Faq = () => {
     {
       question: "What should I do if my result is not showing?",
       answer:
-        "If your result is not showing, please check: 1) Your roll number is correct, 2) Your regulation is R18 or above, 3) The result has been officially released by JNTUK. If the issue persists, try clearing your browser cache or contact us through the Help Center.",
+        "If your result is not showing, please check: 1) Your 10-character hall ticket is correct, 2) Your regulation is R16, R19, R20, or R23, 3) The result has been published by JNTUK at https://jntukresults.edu.in. If the page says the result is queued, keep it open—the site retries automatically. If the issue persists, try clearing your browser cache or contact us through the Help Center.",
     },
     {
       question: "How do I get notifications about new exam results?",
@@ -182,7 +182,7 @@ const Faq = () => {
             </a>
           </div> */}
           <div className="flex justify-center m-2 text-xs	 text-gray-600">
-            <p>&copy; 2026 manajntuhresults.vercel.app</p>
+            <p>&copy; 2026 jntuk-website.vercel.app</p>
           </div>
         </center>
       </div>

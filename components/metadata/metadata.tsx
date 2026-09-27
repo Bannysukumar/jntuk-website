@@ -7,7 +7,7 @@ const MetaData = () => {
   const pathname = usePathname();
   return (
     <>
-      <meta property="og:url" content="https://manajntuhresults.vercel.app/" />
+      <meta property="og:url" content="https://jntuk-website.vercel.app/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="JNTUK RESULTS" />
       <meta
@@ -16,7 +16,7 @@ const MetaData = () => {
       />
       <meta
         property="og:image"
-        content="https://manajntuhresults.vercel.app/jntuhresults_md.png"
+        content="https://jntuk-website.vercel.app/jntuhresults_md.png"
       />
       <meta property="og:image:width" content="512" />
       <meta property="og:image:height" content="512" />
@@ -82,7 +82,7 @@ const MetaData = () => {
       <link rel="manifest" href="/manifest.json" />
       <link
         rel="canonical"
-        href={`https://manajntuhresults.vercel.app${pathname}`}
+        href={`https://jntuk-website.vercel.app${pathname}`}
       />
 
       <link rel="manifest" href="/site.webmanifest" />

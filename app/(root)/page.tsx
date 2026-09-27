@@ -261,7 +261,7 @@ export default function Home() {
                 Jawaharlal Nehru Technological University, Kakinada (JNTUK) is one of India&apos;s leading technical universities, offering undergraduate and postgraduate programmes in engineering, pharmacy, management, and computer applications. Students receive a unique 10-character roll number (letters and numbers, for example 226Q1A4304) that is used to access exam results, grade cards, and academic records throughout their course.
               </p>
               <p>
-                Results are published semester-wise and regulation-wise (e.g. R18, R22). JNTUK RESULTS helps you access these official results quickly, with tools for academic results, backlogs, credits, and revaluation (RCRV) in one place.
+                Results are published semester-wise and regulation-wise (R16, R19, R20, R23; R20 is current for the 2022 regular batch). JNTUK RESULTS helps you access these official results quickly, with tools for academic results, backlogs, credits, and revaluation (RCRV) in one place.
               </p>
             </div>
           </div>
@@ -276,7 +276,7 @@ export default function Home() {
                 JNTUK RESULTS is an initiative dedicated to simplifying the academic life of students at Jawaharlal Nehru Technological University, Kakinada. We know that checking results can be stressful, especially during major releases when official servers face heavy traffic. Our platform is designed to provide a fast, reliable, and user-friendly interface to access your grades without the wait.
               </p>
               <p>
-                From B.Tech and B.Pharmacy to MBA and MCA, we support consolidated results for R18 and newer regulations. Our mission is to provide not just marks, but meaningful insights into your academic progress. We do not modify or store your result data on our servers; we fetch it on demand from official JNTUK sources and present it in a clear, mobile-friendly layout.
+                From B.Tech and B.Pharmacy to MBA and MCA, we support consolidated results for JNTUK regulations R16–R23. Our mission is to provide not just marks, but meaningful insights into your academic progress. We do not modify or store your result data on our servers; we fetch it on demand from official JNTUK sources and present it in a clear, mobile-friendly layout.
               </p>
               <p>
                 For more about our mission and how we protect your privacy, see our <Link href="/about" className="text-blue-600 dark:text-blue-400 hover:underline">About Us</Link> and <Link href="/privacy" className="text-blue-600 dark:text-blue-400 hover:underline">Privacy Policy</Link> pages.
@@ -391,7 +391,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center space-y-2">
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              &copy; 2026 manajntuhresults.vercel.app - JNTUK RESULTS Portal
+              &copy; 2026 jntuk-website.vercel.app - JNTUK RESULTS Portal
             </p>
             <div>
               <Link

@@ -116,7 +116,7 @@ const Notification = () => {
             "Use Result Updates when you are looking for exam schedules, result release notices, or revaluation timelines. General Updates highlights broader announcements. You can refine results using the filters and load more pages when available.",
             "Notification text and links often point to official PDFs or portals maintained by JNTUK. Always download circulars from trusted sources and verify deadlines for fees, registrations, and revaluation with your college examination office.",
           ]}
-          note="We aggregate information for convenience; official wording on jntuk.ac.in and university notices remains authoritative."
+          note="We aggregate information for convenience; official wording on https://jntukresults.edu.in and https://www.jntuk.edu.in / jntuk.ac.in remains authoritative."
         />
 
         {/* Tabs */}

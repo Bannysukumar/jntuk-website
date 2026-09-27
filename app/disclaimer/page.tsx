@@ -32,7 +32,7 @@ const Disclaimer = () => {
                             <div>
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">No Official Affiliation</h2>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    JNTUK RESULTS (manajntuhresults.vercel.app) is an independent, third-party academic portal developed for the convenience of students. We are <strong>NOT</strong> affiliated with, authorized, maintained, sponsored, or endorsed by Jawaharlal Nehru Technological University, Kakinada (JNTUK) or any of its constituent colleges.
+                                    JNTUK RESULTS (jntuk-website.vercel.app) is an independent, third-party academic portal developed for the convenience of students. We are <strong>NOT</strong> affiliated with, authorized, maintained, sponsored, or endorsed by Jawaharlal Nehru Technological University, Kakinada (JNTUK) or any of its constituent colleges.
                                 </p>
                             </div>
                         </div>

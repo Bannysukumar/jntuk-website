@@ -63,7 +63,7 @@ export default function JntuhResultLandingPage({ config, allPages }: Props) {
                     Check Your JNTUK Result Online
                   </h2>
                   <p className="text-sm md:text-base text-gray-700 dark:text-gray-300">
-                    Use our fast Academic Result tool to fetch your official JNTUK result using your 10-digit hall ticket number.
+                    Use our fast Academic Result tool to fetch your official JNTUK result using your 10-character hall ticket.
                   </p>
                 </div>
               </div>

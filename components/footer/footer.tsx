@@ -14,7 +14,7 @@ const Footer = () => {
           It does consider the RCRV Results
         </div>
         <div className="font-serif mt-1 block text-left text-[#808080] ml-[17%] mb-4 text-[55%] md:text-[80%]">
-          It only works above R18 Regulation
+          It only works for JNTUK R16, R19, R20, R23 regulations
         </div>
         <center>
           <hr className="w-[64%] mt-4 mb-1 " />
@@ -154,7 +154,7 @@ const Footer = () => {
             remain the authority for marks and eligibility.
           </p>
           <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-500">
-            &copy; 2026 manajntuhresults.vercel.app - Your Premier JNTUK Results Portal
+            &copy; 2026 jntuk-website.vercel.app - Your Premier JNTUK Results Portal
           </p>
         </div>
       </div>

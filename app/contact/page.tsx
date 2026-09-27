@@ -56,7 +56,7 @@ const ContactUs = () => {
                                 <div>
                                     <h3 className="font-bold text-gray-900 dark:text-white">Location</h3>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                                        Hyderabad, Telangana, India
+                                        Kakinada, Andhra Pradesh, India
                                     </p>
                                 </div>
                             </div>

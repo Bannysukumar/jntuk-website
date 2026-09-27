@@ -38,10 +38,10 @@ const BacklogReport = () => {
           </h2>
           <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
             <p className="leading-relaxed">
-              The Backlog Report lists all subjects you have not yet passed across your semesters at JNTUK. Enter your 10-character roll number above (for example 226Q1A4304) to see a clear, semester-wise breakdown of pending subjects. This helps you plan which supply exams to appear for and stay on track for graduation.
+              The Backlog Report lists failing subjects you have not yet passed at JNTUK. On JNTUK UG grading, E (5) is a pass and F is a fail; COMPLETED is not a backlog. Enter your 10-character hall ticket above (for example 226Q1A4304) to see a semester-wise breakdown of pending subjects.
             </p>
             <p className="leading-relaxed">
-              Results are fetched from official JNTUK sources. For official records and mark sheets, always refer to the documents issued by Jawaharlal Nehru Technological University, Kakinada.
+              Results are fetched from JNTUK sources. For official records, refer to documents from Jawaharlal Nehru Technological University, Kakinada and https://jntukresults.edu.in.
             </p>
           </div>
         </div>
