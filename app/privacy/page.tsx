@@ -6,13 +6,13 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950">
       <div className="container mx-auto p-6 max-w-3xl pb-8">
       <h1 className="text-3xl font-bold mb-4">
-        Privacy Policy for Mana JNTUH Results
+        Privacy Policy for JNTUK RESULTS
       </h1>
       <p className="mb-4">
         <strong>Effective Date:</strong> December 28, 2025
       </p>
       <p className="mb-4">
-        Mana JNTUH Results (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) values your privacy. This Privacy
+        JNTUK RESULTS (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) values your privacy. This Privacy
         Policy explains how we collect, use, and protect information when you
         use our application (the &quot;App&quot;) or website. By using the App or website, you agree to the
         practices described below.
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
       <ul className="list-disc list-inside mb-4">
         <li>
           <strong>Personal Information:</strong> Name, email address, or student
-          ID (hall ticket number) only if you voluntarily provide it when checking results or using admin features.
+          ID (hall ticket number) only if you voluntarily provide it when checking results.
         </li>
         <li>
           <strong>Usage Information:</strong> Non-identifiable information such
@@ -33,12 +33,11 @@ export default function PrivacyPolicy() {
         </li>
         <li>
           <strong>Result Data:</strong> When you check results using your hall ticket number,
-          we fetch and display your academic results from JNTUH&apos;s official systems.
+          we fetch and display your academic results from JNTUK&apos;s official systems.
           This data is not stored on our servers.
         </li>
         <li>
-          <strong>Authentication Data:</strong> If you use admin features, we use Firebase Authentication
-          to securely manage your login credentials.
+          <strong>Local Storage:</strong> Some tools keep recent result views in your browser so you can reopen them quickly. You can clear this data from your browser settings.
         </li>
       </ul>
 
@@ -47,7 +46,7 @@ export default function PrivacyPolicy() {
       </h2>
       <ul className="list-disc list-inside mb-4">
         <li>Providing and improving the app&apos;s features and services</li>
-        <li>Fetching and displaying your JNTUH exam results</li>
+        <li>Fetching and displaying your JNTUK exam results</li>
         <li>Sending important updates or notifications (if you opt-in)</li>
         <li>Understanding how users interact with the app through analytics</li>
         <li>Maintaining app security and preventing abuse</li>
@@ -67,14 +66,14 @@ export default function PrivacyPolicy() {
         4. Data Retention and Deletion
       </h2>
       <p className="mb-4">
-        We only retain personal information (like email for admin accounts) as long as necessary to provide the service. Result data fetched via hall ticket number is handled locally in your browser and is not stored on our permanent servers. Users can clear their local cache at any time via the settings or navigation menu.
+        Result data fetched via hall ticket number is handled locally in your browser and is not stored on our permanent servers. Users can clear their local cache at any time via browser settings.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">
         5. Cookies and Tracking Technologies
       </h2>
       <p className="mb-4">
-        We use essential cookies for authentication and performance. We also use third-party cookies from Google Analytics and Google AdSense to understand user behavior and provide relevant content. You can manage cookie preferences through your browser settings.
+        We use essential cookies for performance. We also use third-party cookies from Google Analytics and Google AdSense to understand user behavior and provide relevant content. You can manage cookie preferences through your browser settings.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">6. Data Security</h2>
@@ -96,10 +95,6 @@ export default function PrivacyPolicy() {
         Our app uses the following third-party services that have their own privacy policies:
       </p>
       <ul className="list-disc list-inside mb-4">
-        <li>
-          <strong>Firebase (Google):</strong> Used for authentication, database (Firestore),
-          and analytics. <a href="https://firebase.google.com/support/privacy" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Firebase Privacy Policy</a>
-        </li>
         <li>
           <strong>Google Analytics:</strong> Used to understand app usage and improve user experience.
           <a href="https://policies.google.com/privacy" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer"> Google Privacy Policy</a>

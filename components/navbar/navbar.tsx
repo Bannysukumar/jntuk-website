@@ -41,7 +41,7 @@ const Navbar = () => {
           <span className="dark:hidden h-full flex items-center">
             <Image
               src="/jntuhresults_md.png"
-              alt="Mana JNTUH Results Logo"
+              alt="JNTUK RESULTS Logo"
               width={65}
               height={40}
               priority={false}
@@ -51,7 +51,7 @@ const Navbar = () => {
           <span className="hidden dark:block h-full flex items-center">
             <Image
               src="/jntuhresults_black.png"
-              alt="Mana JNTUH Results Logo"
+              alt="JNTUK RESULTS Logo"
               width={65}
               height={40}
               priority={false}
@@ -63,7 +63,7 @@ const Navbar = () => {
           <span className="dark:hidden h-full flex items-center">
             <Image
               src="/jntuhresults_md.png"
-              alt="Mana JNTUH Results Logo"
+              alt="JNTUK RESULTS Logo"
               width={130}
               height={60}
               priority={false}
@@ -73,7 +73,7 @@ const Navbar = () => {
           <span className="hidden dark:block h-full flex items-center">
             <Image
               src="/jntuhresults_md_black.png"
-              alt="Mana JNTUH Results Logo"
+              alt="JNTUK RESULTS Logo"
               width={130}
               height={60}
               priority={false}

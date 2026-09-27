@@ -58,23 +58,23 @@ export default function Home() {
               <Link
                 href="/"
                 className="text-blue-500 hover:text-blue-600 transition-colors"
-                aria-label="Mana JNTUH Results Home"
+                aria-label="JNTUK RESULTS Home"
               >
                 <Title />
               </Link>
             </div>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Your one-stop portal for JNTUH exam results, academic resources, and career opportunities
+              Your one-stop portal for JNTUK exam results, academic resources, and career opportunities
             </p>
           </div>
 
           {/* Visible H1 and intro for AdSense / quality guidelines */}
           <div className="max-w-3xl mx-auto text-center mb-6">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
-              Mana JNTUH Results – Official JNTUH Results Portal
+              JNTUK RESULTS – Official JNTUK Results Portal
             </h1>
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Mana JNTUH Results is the premier online platform for checking JNTUH exam results. Access results for all semesters including B.Tech, B.Pharmacy, M.Tech, MBA, and MCA. Check your grades, backlogs, and CGPA with a fast, mobile-friendly interface backed by official JNTUH data.
+              JNTUK RESULTS is the premier online platform for checking JNTUK exam results. Access results for all semesters including B.Tech, B.Pharmacy, M.Tech, MBA, and MCA. Check your grades, backlogs, and CGPA with a fast, mobile-friendly interface backed by official JNTUK data.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
           <div className="flex justify-center mb-8">
             <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 shadow-xl p-4 md:p-6 max-w-3xl">
               <p className="text-sm md:text-base font-medium text-center">
-                Jawaharlal Nehru Technological University, Hyderabad - Mana JNTUH Results Portal
+                Jawaharlal Nehru Technological University, Kakinada - JNTUK RESULTS Portal
               </p>
             </Card>
           </div>
@@ -197,7 +197,7 @@ export default function Home() {
                     <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-yellow-500 group-hover:translate-x-1 transition-all" />
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    Get all the latest Notifications from JNTUH
+                    Get all the latest Notifications from JNTUK
                   </p>
                 </div>
               </div>
@@ -251,17 +251,17 @@ export default function Home() {
 
         {/* Informational Content Section - AdSense Compliance Enhancement */}
         <section className="mt-16 mb-16 max-w-4xl mx-auto space-y-12">
-          {/* What is JNTUH - editorial content for AdSense value */}
+          {/* What is JNTUK - editorial content for AdSense value */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              What is JNTUH?
+              What is JNTUK?
             </h2>
             <div className="prose prose-blue dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 space-y-4">
               <p>
-                Jawaharlal Nehru Technological University, Hyderabad (JNTUH) is one of India&apos;s leading technical universities, offering undergraduate and postgraduate programmes in engineering, pharmacy, management, and computer applications. Students receive a unique 10-digit hall ticket number that is used to access exam results, grade cards, and academic records throughout their course.
+                Jawaharlal Nehru Technological University, Kakinada (JNTUK) is one of India&apos;s leading technical universities, offering undergraduate and postgraduate programmes in engineering, pharmacy, management, and computer applications. Students receive a unique 10-character roll number (letters and numbers, for example 226Q1A4304) that is used to access exam results, grade cards, and academic records throughout their course.
               </p>
               <p>
-                Results are published semester-wise and regulation-wise (e.g. R18, R22). Mana JNTUH Results helps you access these official results quickly, with tools for academic results, backlogs, credits, and revaluation (RCRV) in one place.
+                Results are published semester-wise and regulation-wise (e.g. R18, R22). JNTUK RESULTS helps you access these official results quickly, with tools for academic results, backlogs, credits, and revaluation (RCRV) in one place.
               </p>
             </div>
           </div>
@@ -269,14 +269,14 @@ export default function Home() {
           {/* About Section */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Your Essential JNTUH Academic Companion
+              Your Essential JNTUK Academic Companion
             </h2>
             <div className="prose prose-blue dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 space-y-4">
               <p>
-                Mana JNTUH Results is an initiative dedicated to simplifying the academic life of students at Jawaharlal Nehru Technological University, Hyderabad. We know that checking results can be stressful, especially during major releases when official servers face heavy traffic. Our platform is designed to provide a fast, reliable, and user-friendly interface to access your grades without the wait.
+                JNTUK RESULTS is an initiative dedicated to simplifying the academic life of students at Jawaharlal Nehru Technological University, Kakinada. We know that checking results can be stressful, especially during major releases when official servers face heavy traffic. Our platform is designed to provide a fast, reliable, and user-friendly interface to access your grades without the wait.
               </p>
               <p>
-                From B.Tech and B.Pharmacy to MBA and MCA, we support consolidated results for R18 and newer regulations. Our mission is to provide not just marks, but meaningful insights into your academic progress. We do not modify or store your result data on our servers; we fetch it on demand from official JNTUH sources and present it in a clear, mobile-friendly layout.
+                From B.Tech and B.Pharmacy to MBA and MCA, we support consolidated results for R18 and newer regulations. Our mission is to provide not just marks, but meaningful insights into your academic progress. We do not modify or store your result data on our servers; we fetch it on demand from official JNTUK sources and present it in a clear, mobile-friendly layout.
               </p>
               <p>
                 For more about our mission and how we protect your privacy, see our <Link href="/about" className="text-blue-600 dark:text-blue-400 hover:underline">About Us</Link> and <Link href="/privacy" className="text-blue-600 dark:text-blue-400 hover:underline">Privacy Policy</Link> pages.
@@ -287,10 +287,10 @@ export default function Home() {
           {/* Popular result SEO pages */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Popular JNTUH Result Pages
+              Popular JNTUK Result Pages
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Quickly open keyword-focused result pages for JNTUH regulations, semesters and special result types.
+              Quickly open keyword-focused result pages for JNTUK regulations, semesters and special result types.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {SEO_LANDING_PAGE_LIST.map((page) => (
@@ -314,7 +314,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">Smart CGPA Calculation</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Forget manual calculations. Our portal automatically computes your semester SGPA and overall CGPA based on the latest JNTUH grading systems, helping you track your eligibility for placements and higher studies.
+                Forget manual calculations. Our portal automatically computes your semester SGPA and overall CGPA based on the latest JNTUK grading systems, helping you track your eligibility for placements and higher studies.
               </p>
             </div>
             <div className="space-y-3">
@@ -332,7 +332,7 @@ export default function Home() {
           <div className="text-center bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 p-8 rounded-2xl border border-blue-100 dark:border-blue-900/30">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">How to use this Portal?</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Simply enter your 10-digit Hall Ticket Number in the Academic Result section. Our secure system fetches data directly from JNTUH servers, ensuring you get the most accurate information available. For a step-by-step guide, visit our <Link href="/guide" className="text-blue-600 hover:underline">Help Manual</Link>.
+              Simply enter your 10-character roll number in the Academic Result section. Our system fetches data from the JNTUK results API and will automatically retry if the result is still queued. For a step-by-step guide, visit our <Link href="/guide" className="text-blue-600 hover:underline">Help Manual</Link>.
             </p>
             <Link href="/guide" className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors font-semibold">
               Read the Full Guide <ArrowRight className="h-4 w-4" />
@@ -345,7 +345,7 @@ export default function Home() {
               Student Resources &amp; in-depth guides
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-6 leading-relaxed">
-              Beyond result tools, read detailed articles on JNTUH regulations, hall tickets, SGPA/CGPA,
+              Beyond result tools, read detailed articles on JNTUK regulations, hall tickets, SGPA/CGPA,
               credits, supply exams, revaluation, and how to use this portal responsibly—with clear
               disclaimers about official documents.
             </p>
@@ -391,7 +391,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center space-y-2">
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              &copy; 2026 manajntuhresults.vercel.app - Mana JNTUH Results Portal
+              &copy; 2026 manajntuhresults.vercel.app - JNTUK RESULTS Portal
             </p>
             <div>
               <Link

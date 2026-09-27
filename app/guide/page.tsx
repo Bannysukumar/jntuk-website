@@ -7,7 +7,7 @@ const Guide = () => {
     const steps = [
         {
             title: "Get Your Hall Ticket Number",
-            description: "Ensure you have your 10-digit JNTUH Hall Ticket number (e.g., 20X01A0501) ready. Double-check for any typos.",
+            description: "Ensure you have your 10-character JNTUK roll number (e.g., 226Q1A4304) ready. Letters and numbers only. Double-check for any typos.",
             icon: Search,
         },
         {
@@ -17,7 +17,7 @@ const Guide = () => {
         },
         {
             title: "Enter Details & Submit",
-            description: "Paste your roll number into the search box. Our system will immediately start communicating with JNTUH servers to fetch your data.",
+            description: "Paste your roll number into the search box. Our system will immediately start communicating with JNTUK servers to fetch your data.",
             icon: CheckCircle,
         },
         {
@@ -33,10 +33,10 @@ const Guide = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
-                        How to Check JNTUH Results
+                        How to Check JNTUK Results
                     </h1>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                        A step-by-step guide to using the Mana JNTUH Results portal effectively.
+                        A step-by-step guide to using the JNTUK RESULTS portal effectively.
                     </p>
                 </div>
 
@@ -74,7 +74,7 @@ const Guide = () => {
                             <div className="space-y-4">
                                 <h4 className="text-xl font-semibold underline underline-offset-4">Result Preparation</h4>
                                 <p className="text-blue-100 text-sm leading-relaxed">
-                                    If the JNTUH server shows &quot;Result is being prepared,&quot; check back after 15-20 minutes. This is a common occurrence during mass result releases.
+                                    If the JNTUK server shows &quot;Result is being prepared,&quot; check back after 15-20 minutes. This is a common occurrence during mass result releases.
                                 </p>
                             </div>
                             <div className="space-y-4">

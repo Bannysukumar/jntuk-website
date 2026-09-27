@@ -47,7 +47,7 @@ const ExcelResult = () => {
   return (
     <>
       <h1 className="text-center font-bold text-xl my-4">
-        Enter Your Excel Sheet provided by jntuh and get the result in a
+        Enter Your Excel Sheet provided by jntuk and get the result in a
         structured manner
       </h1>
       <div className="w-full flex justify-center mb-8">

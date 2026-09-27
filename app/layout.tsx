@@ -8,7 +8,7 @@ import SpeedInsightsWrapper from "@/components/analytics/SpeedInsightsWrapper";
 import StructuredData from "@/components/metadata/structured-data";
 import CanonicalUrl from "@/components/metadata/canonical-url";
 import BreadcrumbSchema from "@/components/metadata/breadcrumb-schema";
-import AdminWrapper from "@/components/admin/AdminWrapper";
+import AppShell from "@/components/layout/AppShell";
 import NativeInit from "@/components/native/native-init";
 import OfflineIndicator from "@/components/native/offline-indicator";
 import NativeNotificationHandler from "@/components/native/native-notification-handler";
@@ -16,12 +16,7 @@ import AdSenseLoader from "@/components/ads/AdSenseLoader";
 import dynamic from "next/dynamic";
 import { SITE_URL } from "@/lib/seo";
 
-// Lazy load heavy components
 const AIChatBot = dynamic(() => import("@/components/ai/AIChatBot"), {
-  ssr: false,
-});
-
-const RealTimeNotification = dynamic(() => import("@/components/notifications/RealTimeNotification"), {
   ssr: false,
 });
 
@@ -35,30 +30,30 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "⚡ JNTUH Results 2025 – BTech, BPharmacy, RCRV | Mana JNTUH Results",
-    template: "%s | JNTUH RESULTS",
+    default: "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS",
+    template: "%s | JNTUK RESULTS",
   },
   description:
-    "Check JNTUH results 2025, JNTUH BTech results, RCRV, and supply results online. Mana JNTUH Results – official portal for JNTUH exam results, grades, CGPA, backlogs. Academic Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Notifications.",
+    "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results, grades, CGPA, backlogs. Academic Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Notifications.",
   keywords: [
-    "jntuh results",
-    "jntuh results 2025",
-    "jntuh btech results",
-    "jntuh rcrv results",
-    "jntuh supply results",
-    "mana jntuh results",
-    "jntuh exam results",
-    "jntuh results online",
-    "jntuh bpharmacy results",
-    "jntuh mtech results",
-    "jntuh mba results",
-    "jntuh mca results",
-    "jntuh academic results",
-    "jntuh backlog report",
-    "jntuh all semester results",
-    "jntuh results r18",
-    "jntuh results r16",
-    "jawaharlal nehru technological university hyderabad results",
+    "jntuk results",
+    "jntuk results 2025",
+    "jntuk btech results",
+    "jntuk rcrv results",
+    "jntuk supply results",
+    "jntuk results",
+    "jntuk exam results",
+    "jntuk results online",
+    "jntuk bpharmacy results",
+    "jntuk mtech results",
+    "jntuk mba results",
+    "jntuk mca results",
+    "jntuk academic results",
+    "jntuk backlog report",
+    "jntuk all semester results",
+    "jntuk results r18",
+    "jntuk results r16",
+    "jawaharlal nehru technological university kakinada results",
   ],
   authors: [{ name: "Adepu Sukumar" }],
   creator: "Adepu Sukumar",
@@ -78,30 +73,30 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    siteName: "JNTUH RESULTS",
-    title: "⚡ JNTUH Results 2025 – BTech, BPharmacy, RCRV | Mana JNTUH Results",
+    siteName: "JNTUK RESULTS",
+    title: "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS",
     description:
-      "Check JNTUH results 2025, JNTUH BTech results, RCRV, and supply results online. Mana JNTUH Results – official portal for JNTUH exam results, grades, CGPA, backlogs.",
+      "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results, grades, CGPA, backlogs.",
     images: [
       {
         url: `${SITE_URL}/jntuhresults_md.png`,
         width: 512,
         height: 512,
-        alt: "JNTUH RESULTS Logo",
+        alt: "JNTUK RESULTS Logo",
       },
       {
         url: `${SITE_URL}/icon-512x512.png`,
         width: 512,
         height: 512,
-        alt: "JNTUH RESULTS Icon",
+        alt: "JNTUK RESULTS Icon",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "⚡ JNTUH Results 2025 – BTech, BPharmacy, RCRV | Mana JNTUH Results",
+    title: "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS",
     description:
-      "Check JNTUH results 2025, JNTUH BTech results, RCRV, and supply results online. Mana JNTUH Results – official portal for JNTUH exam results.",
+      "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results.",
     images: [`${SITE_URL}/jntuhresults_md.png`, `${SITE_URL}/icon-512x512.png`],
     creator: "@Bannysukumar",
   },
@@ -114,7 +109,7 @@ export const metadata: Metadata = {
   category: "Education",
   classification: "University Results Portal",
   other: {
-    "application-name": "JNTUH RESULTS",
+    "application-name": "JNTUK RESULTS",
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
@@ -178,14 +173,13 @@ export default function RootLayout({
           <NativeInit />
           <NativeNotificationHandler />
           <OfflineIndicator />
-          <AdminWrapper>
+          <AppShell>
             {children}
-          </AdminWrapper>
+          </AppShell>
           <div className=" md:block">
             <Toaster position="bottom-right" reverseOrder={false} />
           </div>
           <AIChatBot />
-          <RealTimeNotification />
         </ThemeProvider>
       </body>
     </html>

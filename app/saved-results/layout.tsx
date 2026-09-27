@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Saved Results",
-  description: "View your saved JNTUH results locally",
+  description: "View your saved JNTUK results locally",
   robots: { index: false, follow: true },
 };
 

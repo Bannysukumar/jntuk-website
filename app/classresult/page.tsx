@@ -23,14 +23,9 @@ const AcademicResult = () => {
         if (browser.includes("android") || browser.includes("iphone")) {
           const text = await navigator.clipboard.readText();
           try {
-            const hallticketfirsttwodigits = text.slice(0, 2);
-            if (
-              text.length === 10 &&
-              ["18", "19", "20", "21", "22", "23"].includes(
-                hallticketfirsttwodigits,
-              )
-            ) {
-              sethallticketno(text);
+            const roll = text.toUpperCase().replace(/[^A-Z0-9]/g, "");
+            if (roll.length === 10) {
+              sethallticketno(roll);
             }
           } catch {
             console.log("error");
@@ -46,7 +41,7 @@ const AcademicResult = () => {
   const onSubmit = async () => {
     if (isCooldown) return;
     if (hallticketno.length < 10) {
-      toast.error("The Hallticket should be of 10 digits");
+      toast.error("Enter a 10-character roll number (letters and numbers only), e.g. 226Q1A4304");
       return;
     }
     setIsCooldown(true);
@@ -75,13 +70,13 @@ const AcademicResult = () => {
         </div>
       </div>
       <ToolPageEditorial
-        heading="About JNTUH Class Results on This Portal"
+        heading="About JNTUK Class Results on This Portal"
         paragraphs={[
-          "Class Result helps you view semester-wise performance in a format similar to a class roll. After you enter your hall ticket number, the portal fetches data aligned with JNTUH’s published results so you can review subjects, grades, and totals in one place.",
+          "Class Result helps you view semester-wise performance in a format similar to a class roll. After you enter your hall ticket number, the portal fetches data aligned with JNTUK’s published results so you can review subjects, grades, and totals in one place.",
           "Use this tool alongside Academic Result or Academic All Result if you need a different layout or a full consolidated history. Results are retrieved from official sources when you request them; always verify important decisions (promotion, eligibility, placements) using your original grade card from the university.",
-          "Mana JNTUH Results is an independent student portal and is not affiliated with JNTUH. If something looks incomplete, wait for the official release or try again later when servers are stable.",
+          "JNTUK RESULTS is an independent student portal and is not affiliated with JNTUK. If something looks incomplete, wait for the official release or try again later when servers are stable.",
         ]}
-        note="For official certification, rely only on mark sheets and documents issued by Jawaharlal Nehru Technological University, Hyderabad."
+        note="For official certification, rely only on mark sheets and documents issued by Jawaharlal Nehru Technological University, Kakinada."
       />
       <Footer />
     </>

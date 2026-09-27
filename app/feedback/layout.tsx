@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Submit Feedback | Mana JNTUH Results",
-  description: "Submit your feedback and suggestions for Mana JNTUH Results",
+  title: "Submit Feedback | JNTUK RESULTS",
+  description: "Submit your feedback and suggestions for JNTUK RESULTS",
 };
 
 export default function FeedbackLayout({

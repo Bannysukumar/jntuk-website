@@ -15,7 +15,7 @@ const GraceMarksProof = () => {
   const onSubmit = async () => {
     if (isCooldown) return;
     if (hallticketno.length < 10) {
-      toast.error("The Hallticket should be of 10 digits");
+      toast.error("Enter a 10-character roll number (letters and numbers only), e.g. 226Q1A4304");
       return;
     }
     setIsCooldown(true);
@@ -37,9 +37,9 @@ const GraceMarksProof = () => {
         paragraphs={[
           "After grace marks are applied (where applicable), students sometimes need a clear record of how marks were adjusted. The Grace Marks Proof view summarises proof-related details tied to your hall ticket when the upstream system returns that information.",
           "Use your 10-digit hall ticket number to fetch the report. If no proof data appears, your result may not yet include grace adjustments, or the semester may not be covered yet—check again after full result publication.",
-          "Keep a copy of your official grade card from JNTUH for placements and higher studies. This portal is an independent helper and does not replace university-issued documents.",
+          "Keep a copy of your official grade card from JNTUK for placements and higher studies. This portal is an independent helper and does not replace university-issued documents.",
         ]}
-        note="Official proof and corrections are issued by JNTUH; use this page only as a supplementary reference."
+        note="Official proof and corrections are issued by JNTUK; use this page only as a supplementary reference."
       />
       <Footer />
     </>

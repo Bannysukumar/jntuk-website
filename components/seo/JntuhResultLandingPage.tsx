@@ -60,10 +60,10 @@ export default function JntuhResultLandingPage({ config, allPages }: Props) {
                 </div>
                 <div>
                   <h2 id="result-search" className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-1">
-                    Check Your JNTUH Result Online
+                    Check Your JNTUK Result Online
                   </h2>
                   <p className="text-sm md:text-base text-gray-700 dark:text-gray-300">
-                    Use our fast Academic Result tool to fetch your official JNTUH result using your 10-digit hall ticket number.
+                    Use our fast Academic Result tool to fetch your official JNTUK result using your 10-digit hall ticket number.
                   </p>
                 </div>
               </div>
@@ -115,11 +115,11 @@ export default function JntuhResultLandingPage({ config, allPages }: Props) {
               <div className="flex items-center gap-2 mb-3">
                 <BookOpen className="h-5 w-5 text-blue-600 dark:text-blue-300" />
                 <h2 id="related-pages" className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
-                  Explore More JNTUH Result Pages
+                  Explore More JNTUK Result Pages
                 </h2>
               </div>
               <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-3">
-                Use these quick links to open other popular JNTUH result tools and semester-specific pages.
+                Use these quick links to open other popular JNTUK result tools and semester-specific pages.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {relatedPages.map((page) => (

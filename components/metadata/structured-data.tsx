@@ -4,8 +4,8 @@ export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "JNTUH RESULTS",
-    alternateName: ["JNTUH Results", "JNTUH Results Portal", "Mana JNTUH Results"],
+    name: "JNTUK RESULTS",
+    alternateName: ["JNTUK Results", "JNTUK Results Portal", "JNTUK RESULTS"],
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -15,7 +15,7 @@ export default function StructuredData() {
     },
     image: `${SITE_URL}/icon-512x512.png`,
     description:
-      "JNTUH RESULTS - Official portal for checking JNTUH (Jawaharlal Nehru Technological University Hyderabad) exam results online. Get your UG & PG results, CGPA, backlogs, and academic performance.",
+      "JNTUK RESULTS - Official portal for checking JNTUK (Jawaharlal Nehru Technological University Kakinada) exam results online. Get your UG & PG results, CGPA, backlogs, and academic performance.",
     sameAs: [
       "https://github.com/Bannysukumar",
       "https://www.linkedin.com/in/adepusukumar",
@@ -28,7 +28,7 @@ export default function StructuredData() {
     },
     brand: {
       "@type": "Brand",
-      name: "JNTUH RESULTS",
+      name: "JNTUK RESULTS",
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/icon-512x512.png`,
@@ -41,7 +41,7 @@ export default function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "JNTUH RESULTS",
+    name: "JNTUK RESULTS",
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -50,7 +50,7 @@ export default function StructuredData() {
       height: 512,
     },
     description:
-      "JNTUH RESULTS - Check JNTUH results 2025, JNTUH BTech results, RCRV, supply results online. Mana JNTUH Results for UG & PG including B.Tech, B.Pharmacy, M.Tech, MBA, MCA.",
+      "JNTUK RESULTS - Check JNTUK results 2025, JNTUK BTech results, RCRV, supply results online. JNTUK RESULTS for UG & PG including B.Tech, B.Pharmacy, M.Tech, MBA, MCA.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -80,9 +80,8 @@ export default function StructuredData() {
       { "@type": "SiteNavigationElement", name: "Calendars", url: `${SITE_URL}/calendars`, description: "Academic calendars and exam schedules" },
       { "@type": "SiteNavigationElement", name: "Syllabus", url: `${SITE_URL}/syllabus`, description: "Access detailed syllabus subject wise" },
       { "@type": "SiteNavigationElement", name: "Jobs & Careers", url: `${SITE_URL}/carrers`, description: "Find internships and jobs" },
-      { "@type": "SiteNavigationElement", name: "Notifications", url: `${SITE_URL}/notifications`, description: "Latest JNTUH notifications" },
+      { "@type": "SiteNavigationElement", name: "Notifications", url: `${SITE_URL}/notifications`, description: "Latest JNTUK notifications" },
       { "@type": "SiteNavigationElement", name: "Help Center", url: `${SITE_URL}/helpcenter`, description: "Get help and support" },
-      { "@type": "SiteNavigationElement", name: "Group Chat", url: `${SITE_URL}/group-chat`, description: "Real-time group chat for students" },
     ],
   };
 
@@ -92,26 +91,26 @@ export default function StructuredData() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Is Mana JNTUH Results official?",
+        name: "Is JNTUK RESULTS official?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Mana JNTUH Results is an independent portal that fetches and displays results from JNTUH (Jawaharlal Nehru Technological University Hyderabad). It is not operated by JNTUH but provides fast, user-friendly access to official JNTUH result data.",
+          text: "JNTUK RESULTS is an independent portal that fetches and displays results from JNTUK (Jawaharlal Nehru Technological University Kakinada). It is not operated by JNTUK but provides fast, user-friendly access to official JNTUK result data.",
         },
       },
       {
         "@type": "Question",
-        name: "How fast are JNTUH results updated?",
+        name: "How fast are JNTUK results updated?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "JNTUH results are updated on Mana JNTUH Results as soon as they are published by the university. The portal checks for new results regularly so you can view your BTech, BPharmacy, RCRV, supply, and other exam results quickly.",
+          text: "JNTUK results are updated on JNTUK RESULTS as soon as they are published by the university. The portal checks for new results regularly so you can view your BTech, BPharmacy, RCRV, supply, and other exam results quickly.",
         },
       },
       {
         "@type": "Question",
-        name: "Which JNTUH results are available?",
+        name: "Which JNTUK results are available?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Mana JNTUH Results supports Academic Result, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks Eligibility and Proof, RCRV, supply results, and regular semester results for UG and PG courses including BTech, BPharmacy, MTech, MBA, MCA.",
+          text: "JNTUK RESULTS supports Academic Result, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks Eligibility and Proof, RCRV, supply results, and regular semester results for UG and PG courses including BTech, BPharmacy, MTech, MBA, MCA.",
         },
       },
     ],
@@ -120,8 +119,8 @@ export default function StructuredData() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "JNTUH RESULTS - Main Features",
-    description: "Key features and pages available on JNTUH RESULTS portal",
+    name: "JNTUK RESULTS - Main Features",
+    description: "Key features and pages available on JNTUK RESULTS portal",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "All Results", url: `${SITE_URL}/academicallresult`, description: "View all semester results" },
       { "@type": "ListItem", position: 2, name: "Academic Result", url: `${SITE_URL}/academicresult`, description: "Check academic performance with hall ticket" },
@@ -134,9 +133,8 @@ export default function StructuredData() {
       { "@type": "ListItem", position: 9, name: "Calendars", url: `${SITE_URL}/calendars`, description: "Academic calendars" },
       { "@type": "ListItem", position: 10, name: "Syllabus", url: `${SITE_URL}/syllabus`, description: "Access syllabus for all courses" },
       { "@type": "ListItem", position: 11, name: "Jobs & Careers", url: `${SITE_URL}/carrers`, description: "Find internships and jobs" },
-      { "@type": "ListItem", position: 12, name: "Notifications", url: `${SITE_URL}/notifications`, description: "Latest JNTUH notifications" },
+      { "@type": "ListItem", position: 12, name: "Notifications", url: `${SITE_URL}/notifications`, description: "Latest JNTUK notifications" },
       { "@type": "ListItem", position: 13, name: "Help Center", url: `${SITE_URL}/helpcenter`, description: "Get help and support" },
-      { "@type": "ListItem", position: 14, name: "Group Chat", url: `${SITE_URL}/group-chat`, description: "Real-time group chat" },
     ],
   };
 

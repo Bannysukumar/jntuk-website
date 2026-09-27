@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.manajntuhresults.mobile',
-  appName: 'Mana JNTUH Results',
+  appName: 'JNTUK RESULTS',
   webDir: 'out',
   // Standalone app - no remote URL to ensure it's not a web wrapper
   // All API calls use external endpoints or client-side logic

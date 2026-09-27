@@ -20,7 +20,6 @@ const SEGMENT_NAMES: Record<string, string> = {
   notifications: "Notifications",
   helpcenter: "Help Center",
   faq: "FAQ",
-  "group-chat": "Group Chat",
   privacy: "Privacy Policy",
   result: "Result",
 };

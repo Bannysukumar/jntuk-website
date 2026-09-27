@@ -42,8 +42,8 @@ const NoticePopup = () => {
 
                 <p className="text-sm font-normal text-left">
                   We are excited to announce the launch of{" "}
-                  <strong>JNTUHConnect App</strong>, a centralized platform
-                  built to help JNTUH students stay informed with timely and
+                  <strong>JNTUKConnect App</strong>, a centralized platform
+                  built to help JNTUK students stay informed with timely and
                   reliable academic updates.
                 </p>
 
@@ -72,10 +72,10 @@ const NoticePopup = () => {
                   </a>
                 </div> */}
                 {/* <p className="text-sm font-normal text-justify"> */}
-                {/*   &nbsp;&nbsp;&nbsp;I&apos;m Adepu Sukumar, the one behind the JNTUH */}
+                {/*   &nbsp;&nbsp;&nbsp;I&apos;m Adepu Sukumar, the one behind the JNTUK */}
                 {/*   Results Vercel application. From a mere idea born out of */}
                 {/*   curiosity when preparing for my placement, it has now become */}
-                {/*   an indispensable tool for the entire JNTUH community. */}
+                {/*   an indispensable tool for the entire JNTUK community. */}
                 {/* </p> */}
                 {/*   <br /> */}
                 {/*   <p className="text-sm font-normal text-justify"> */}
@@ -86,17 +86,17 @@ const NoticePopup = () => {
                 {/*   </p> */}
                 {/*   <br /> */}
                 {/*   <p className="text-sm font-normal text-justify"> */}
-                {/*     For those interested in developing a similar solution to JNTUH */}
+                {/*     For those interested in developing a similar solution to JNTUK */}
                 {/*     Results on Vercel, I&apos;m sharing the complete{" "} */}
                 {/*     <Link */}
-                {/*       href="https://github.com/Bannysukumar/JNTUHRESULTS-SERVICE/blob/main/jntuhresults/Executables/jntuhresultscraper.py" */}
+                {/*       href="https://github.com/Bannysukumar/JNTUKRESULTS-SERVICE/blob/main/jntukresults/Executables/jntukresultscraper.py" */}
                 {/*       target="_blank" */}
                 {/*       className="text-blue-500" */}
                 {/*     > */}
                 {/*       core code */}
                 {/*     </Link> */}
                 {/*     . If any college wishes to create a similar application using */}
-                {/*     local Excel sheets directly provided by JNTUH University, */}
+                {/*     local Excel sheets directly provided by JNTUK University, */}
                 {/*     contact me on{" "} */}
                 {/*     <Link */}
                 {/*       href="https://www.instagram.com/hacking_with_banny" */}

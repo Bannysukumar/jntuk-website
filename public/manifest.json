@@ -6,9 +6,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "JNTUH RESULTS",
-  "description": "JNTUH RESULTS - Check your JNTUH exam results online instantly! Get your JNTUH results for UG & PG courses including B.Tech, M.Tech, MBA, MCA, B.Pharmacy. View grades, CGPA, backlogs, and academic performance. Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Jobs & Careers, and Notifications.",
-  "short_name": "JNTUH RESULTS",
+  "name": "JNTUK RESULTS",
+  "description": "JNTUK RESULTS - Check your JNTUK exam results online instantly! Get your JNTUK results for UG & PG courses including B.Tech, M.Tech, MBA, MCA, B.Pharmacy. View grades, CGPA, backlogs, and academic performance. Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Jobs & Careers, and Notifications.",
+  "short_name": "JNTUK RESULTS",
   "icons": [
     {
       "src": "/icon-192x192.png",

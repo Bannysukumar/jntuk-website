@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { JNTUH_API_BASE_URL, getJntuhApiHeaders } from "@/lib/jntuh-api";
+import { JNTUK_API_BASE_URL, getJntukApiHeaders } from "@/lib/jntuk-api";
 
-const EXTERNAL_API_BASE = JNTUH_API_BASE_URL;
+const EXTERNAL_API_BASE = JNTUK_API_BASE_URL;
 
 export async function GET(request: NextRequest) {
   try {
@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
 
     const response = await fetch(externalUrl.toString(), {
       method: "GET",
-      headers: getJntuhApiHeaders(),
+      headers: getJntukApiHeaders(),
       next: { revalidate: 60 }, // Cache 1 min for faster repeat loads
     });
 

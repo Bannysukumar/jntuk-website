@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     const apiKey = await getGeminiApiKey();
     if (!apiKey) {
       return NextResponse.json(
-        { error: "AI Assistant is not configured. Please set the API key in Admin panel." },
+        { error: "AI Assistant is not configured." },
         { status: 503 }
       );
     }
@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     messages.push({
       role: "system",
       content:
-        "You are the official AI assistant for the Mana JNTUH Results website. " +
+        "You are the official AI assistant for the JNTUK RESULTS website. " +
         "You must ONLY answer questions related to studies, academics, exams, results, colleges, branches, subject doubts, career guidance, and university-related information. " +
         "If the user asks anything that is not study/education related, politely refuse and say that you can only answer study-related questions.",
     });

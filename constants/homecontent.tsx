@@ -12,12 +12,6 @@ export const HomeContent = [
     link: "/resultcontrast",
   },
   {
-    title: "Class Results",
-    Description:
-      "View the results of your classmates and compare your performance with theirs",
-    link: "/classresult",
-  },
-  {
     title: "Backlog Report",
     Description: "Access your overall backlogs report with an hallticket",
     link: "/backlogreport",
@@ -25,7 +19,7 @@ export const HomeContent = [
 
   {
     title: "Notifications",
-    Description: "Get all the latest Notifications from JNTUH",
+    Description: "Get all the latest Notifications from JNTUK",
     link: "/notifications",
   },
 ];

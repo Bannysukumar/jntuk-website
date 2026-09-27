@@ -15,7 +15,7 @@ const AcademicAllResult = () => {
   const onSubmit = async () => {
     if (isCooldown) return;
     if (hallticketno.length < 10) {
-      toast.error("The Hallticket should be of 10 digits");
+      toast.error("Enter a 10-character roll number (letters and numbers only), e.g. 226Q1A4304");
       return;
     }
     setIsCooldown(true);
@@ -40,10 +40,10 @@ const AcademicAllResult = () => {
           </h2>
           <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
             <p className="leading-relaxed">
-              The Academic All Results tool shows every exam result you have taken at JNTUH in one consolidated view. Instead of checking each semester separately, you enter your hall ticket number once and see all semesters, including regular and supply attempts, in a single page. This makes it easier to track your overall CGPA, identify backlogs, and plan for future exams.
+              The Academic All Results tool shows every exam result you have taken at JNTUK in one consolidated view. Instead of checking each semester separately, you enter your hall ticket number once and see all semesters, including regular and supply attempts, in a single page. This makes it easier to track your overall CGPA, identify backlogs, and plan for future exams.
             </p>
             <p className="leading-relaxed">
-              Data is fetched directly from official JNTUH servers. We do not store your results on our servers. For official certification, always refer to the mark sheets issued by Jawaharlal Nehru Technological University, Hyderabad.
+              Data is fetched directly from official JNTUK servers. We do not store your results on our servers. For official certification, always refer to the mark sheets issued by Jawaharlal Nehru Technological University, Kakinada.
             </p>
           </div>
         </div>

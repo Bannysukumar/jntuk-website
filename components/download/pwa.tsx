@@ -64,12 +64,12 @@ const Pwa = () => {
           >
             <div className="p-2">
               <div className="flex justify-center font-bold text-lg mb-2">
-                Mana JNTUH Results
+                JNTUK RESULTS
               </div>
               <div className="flex text-center text-xs mb-1">
                 Ensure uninterrupted access to your results, syllabus, and
                 notifications anytime, anywhere by staying connected through the
-                Mana JNTUH Results app
+                JNTUK RESULTS app
               </div>
               <div className="flex text-center justify-center text-[10px] text-gray-500 mb-2">
                 Click Button Below for secure Installation of app .

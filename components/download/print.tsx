@@ -29,7 +29,7 @@ const Print = ({ componentRef }: { componentRef: any }) => {
       const textContent = componentRef.current.innerText || componentRef.current.textContent || '';
       
       await shareContent({
-        title: `JNTUH Result - ${htno || 'Hall Ticket'}`,
+        title: `JNTUK Result - ${htno || 'Hall Ticket'}`,
         text: textContent.substring(0, 500) + (textContent.length > 500 ? '...' : ''),
         url: `https://manajntuhresults.vercel.app/academicresult/result?htno=${htno}`,
         dialogTitle: 'Share Result',
@@ -65,7 +65,7 @@ const Print = ({ componentRef }: { componentRef: any }) => {
         } else {
           // Fallback: save as HTML file
           const htmlContent = componentRef.current.innerHTML;
-          const filename = `jntuh-result-${htno}-${new Date().toISOString().split('T')[0]}.html`;
+          const filename = `jntuk-result-${htno}-${new Date().toISOString().split('T')[0]}.html`;
           await saveFile(filename, htmlContent);
           toast.success('Result saved to device');
         }

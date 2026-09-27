@@ -56,8 +56,8 @@ export default function SavedResults() {
     const name = result.details?.name || 'Student';
     
     await shareContent({
-      title: `JNTUH Result - ${rollNumber}`,
-      text: `Check out ${name}'s JNTUH result (Hall Ticket: ${rollNumber})`,
+      title: `JNTUK Result - ${rollNumber}`,
+      text: `Check out ${name}'s JNTUK result (Hall Ticket: ${rollNumber})`,
       url: `https://manajntuhresults.vercel.app/academicresult/result?htno=${rollNumber}`,
       dialogTitle: 'Share Result',
     });

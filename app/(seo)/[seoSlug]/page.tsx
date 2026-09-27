@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: config.metaDescription,
       url,
       type: "website",
-      siteName: "JNTUH RESULTS",
+      siteName: "JNTUK RESULTS",
     },
     twitter: {
       card: "summary_large_image",

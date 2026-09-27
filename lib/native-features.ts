@@ -16,7 +16,7 @@ export const isNative = () => Capacitor.isNativePlatform();
 export const getApiBaseUrl = () => {
   if (isNative()) {
     // Use external API endpoints for native apps
-    return 'https://jntuhresults.up.railway.app';
+    return 'http://185.216.203.209:8088';
   }
   // Use relative paths for web (works with Next.js API routes)
   return '';
@@ -178,14 +178,14 @@ export const hapticFeedback = async (style: ImpactStyle = ImpactStyle.Medium) =>
  * Share result as text
  */
 export const shareResult = async (hallTicket: string, resultData: any) => {
-  const resultText = `JNTUH Result for Hall Ticket: ${hallTicket}\n\n` +
+  const resultText = `JNTUK Result for Hall Ticket: ${hallTicket}\n\n` +
     `CGPA: ${resultData.cgpa || 'N/A'}\n` +
     `Total Credits: ${resultData.totalCredits || 'N/A'}\n` +
     `Backlogs: ${resultData.backlogs || 0}\n\n` +
     `View full result at: https://manajntuhresults.vercel.app`;
 
   await shareContent({
-    title: 'JNTUH Result',
+    title: 'JNTUK Result',
     text: resultText,
     dialogTitle: 'Share Result',
   });

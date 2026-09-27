@@ -1,43 +1,43 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/seo";
 
-const HOME_TITLE = "⚡ JNTUH Results 2025 – BTech, BPharmacy, RCRV | Mana JNTUH Results";
+const HOME_TITLE = "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS";
 const HOME_DESCRIPTION =
-  "Check JNTUH results 2025, JNTUH BTech results, RCRV, and supply results online. Mana JNTUH Results – official portal for JNTUH exam results, grades, CGPA, backlogs. Academic Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Notifications.";
+  "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results, grades, CGPA, backlogs. Academic Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Notifications.";
 
 export const metadata: Metadata = {
   title: HOME_TITLE,
   description: HOME_DESCRIPTION,
   keywords: [
-    "jntuh results",
-    "jntuh results 2025",
-    "jntuh btech results",
-    "jntuh rcrv results",
-    "jntuh supply results",
-    "mana jntuh results",
-    "jntuh exam results",
-    "jntuh results online",
-    "jntuh bpharmacy results",
-    "jntuh mtech results",
-    "jntuh mba results",
-    "jntuh mca results",
-    "jntuh academic results",
-    "jntuh backlog report",
-    "jntuh all semester results",
-    "jntuh results r18",
-    "jntuh results r16",
-    "jawaharlal nehru technological university hyderabad results",
+    "jntuk results",
+    "jntuk results 2025",
+    "jntuk btech results",
+    "jntuk rcrv results",
+    "jntuk supply results",
+    "jntuk results",
+    "jntuk exam results",
+    "jntuk results online",
+    "jntuk bpharmacy results",
+    "jntuk mtech results",
+    "jntuk mba results",
+    "jntuk mca results",
+    "jntuk academic results",
+    "jntuk backlog report",
+    "jntuk all semester results",
+    "jntuk results r18",
+    "jntuk results r16",
+    "jawaharlal nehru technological university kakinada results",
   ],
   openGraph: {
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
     url: SITE_URL,
-    siteName: "JNTUH RESULTS",
+    siteName: "JNTUK RESULTS",
     type: "website",
     locale: "en_US",
     images: [
-      { url: `${SITE_URL}/jntuhresults_md.png`, width: 512, height: 512, alt: "JNTUH RESULTS Logo" },
-      { url: `${SITE_URL}/icon-512x512.png`, width: 512, height: 512, alt: "JNTUH RESULTS Icon" },
+      { url: `${SITE_URL}/jntuhresults_md.png`, width: 512, height: 512, alt: "JNTUK RESULTS Logo" },
+      { url: `${SITE_URL}/icon-512x512.png`, width: 512, height: 512, alt: "JNTUK RESULTS Icon" },
     ],
   },
   twitter: {

@@ -3,16 +3,16 @@ import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Grace Marks",
-  description: "Check JNTUH grace marks eligibility and get proof documents for verification.",
+  description: "Check JNTUK grace marks eligibility and get proof documents for verification.",
   alternates: { canonical: `${SITE_URL}/grace-marks` },
   openGraph: {
     type: "website",
-    title: "Grace Marks | JNTUH Results",
-    description: "Check JNTUH grace marks eligibility and get proof documents.",
+    title: "Grace Marks | JNTUK Results",
+    description: "Check JNTUK grace marks eligibility and get proof documents.",
     url: `${SITE_URL}/grace-marks`,
-    siteName: "JNTUH RESULTS",
+    siteName: "JNTUK RESULTS",
   },
-  twitter: { card: "summary_large_image", title: "Grace Marks | JNTUH Results", description: "Check JNTUH grace marks eligibility and get proof documents." },
+  twitter: { card: "summary_large_image", title: "Grace Marks | JNTUK Results", description: "Check JNTUK grace marks eligibility and get proof documents." },
 };
 
 export default function GraceMarksLayout({

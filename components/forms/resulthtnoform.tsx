@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Ticket, Loader2 } from "lucide-react";
 import { ImpactStyle } from "@capacitor/haptics";
+import { normalizeRollNumber, ROLL_NUMBER_LENGTH } from "@/lib/jntuk-api";
 
 interface FormProps {
   title: string;
@@ -56,16 +57,15 @@ const Form = ({
                 type="text"
                 value={hallticketno}
                 onChange={(event) => {
-                  const value = event.target.value.toUpperCase();
-                  sethallticketno(value);
+                  sethallticketno(normalizeRollNumber(event.target.value));
                 }}
-                maxLength={10}
-                placeholder={hallticketno2 !== undefined ? "Enter first hall ticket no" : "Enter your hall ticket no"}
+                maxLength={ROLL_NUMBER_LENGTH}
+                placeholder={hallticketno2 !== undefined ? "226Q1A4304" : "226Q1A4304"}
                 className="h-12 text-center text-lg font-mono tracking-wider"
                 disabled={isDisabled}
               />
               <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                {hallticketno.length} / 10 characters
+                {hallticketno.length} / {ROLL_NUMBER_LENGTH} characters · letters and numbers only
               </p>
             </div>
 
@@ -81,16 +81,15 @@ const Form = ({
                   type="text"
                   value={hallticketno2 ?? ""}
                   onChange={(event) => {
-                    const value = event.target.value.toUpperCase();
-                    sethallticketno2?.(value);
+                    sethallticketno2?.(normalizeRollNumber(event.target.value));
                   }}
-                  maxLength={10}
-                  placeholder="Enter second hall ticket no"
+                  maxLength={ROLL_NUMBER_LENGTH}
+                  placeholder="226Q1A4304"
                   className="h-12 text-center text-lg font-mono tracking-wider"
                   disabled={isDisabled}
                 />
                 <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                  {hallticketno2?.length || 0} / 10 characters
+                  {hallticketno2?.length || 0} / {ROLL_NUMBER_LENGTH} characters · letters and numbers only
                 </p>
               </div>
             )}
@@ -98,7 +97,7 @@ const Form = ({
             <NativeButton
               type="submit"
               className="w-full h-12 text-lg font-semibold"
-              disabled={isDisabled || hallticketno.length < 10 || (hallticketno2 !== undefined && (hallticketno2?.length || 0) < 10)}
+              disabled={isDisabled || hallticketno.length < ROLL_NUMBER_LENGTH || (hallticketno2 !== undefined && (hallticketno2?.length || 0) < ROLL_NUMBER_LENGTH)}
               onClick={onSubmit}
               hapticStyle={ImpactStyle.Medium}
             >

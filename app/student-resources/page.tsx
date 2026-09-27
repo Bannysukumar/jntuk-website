@@ -8,14 +8,14 @@ export default function StudentResourcesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Student Resources — Mana JNTUH Results",
+    name: "Student Resources — JNTUK RESULTS",
     description:
-      "Educational resources for JNTUH students on results, regulations, credits, and examinations.",
+      "Educational resources for JNTUK students on results, regulations, credits, and examinations.",
     url: `${SITE_URL}/student-resources`,
-    isPartOf: { "@type": "WebSite", name: "Mana JNTUH Results", url: SITE_URL },
+    isPartOf: { "@type": "WebSite", name: "JNTUK RESULTS", url: SITE_URL },
     publisher: {
       "@type": "Organization",
-      name: "Mana JNTUH Results",
+      name: "JNTUK RESULTS",
       url: SITE_URL,
     },
   };
@@ -34,11 +34,11 @@ export default function StudentResourcesPage() {
             </div>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            Student Resources &amp; Guides (JNTUH)
+            Student Resources &amp; Guides (JNTUK)
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Practical explanations for students of Jawaharlal Nehru Technological University,
-            Hyderabad. This page is written for learners—not search engines—and complements our{" "}
+            Kakinada. This page is written for learners—not search engines—and complements our{" "}
             <Link href="/guide" className="text-blue-600 dark:text-blue-400 hover:underline">
               step-by-step guide
             </Link>{" "}
@@ -54,13 +54,13 @@ export default function StudentResourcesPage() {
           <section aria-labelledby="sec-about-portal">
             <h2 id="sec-about-portal" className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white mb-4">
               <BookOpen className="h-7 w-7 text-blue-600 shrink-0" />
-              What Mana JNTUH Results is (and is not)
+              What JNTUK RESULTS is (and is not)
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              Mana JNTUH Results is an <strong>independent</strong> web portal built to help students
+              JNTUK RESULTS is an <strong>independent</strong> web portal built to help students
               access and understand examination outcomes faster. We provide tools such as academic
               results, consolidated views, backlog summaries, credit checks, notifications, and
-              optional grace-marks helpers. We are <strong>not</strong> affiliated with JNTUH, your
+              optional grace-marks helpers. We are <strong>not</strong> affiliated with JNTUK, your
               college, or any government body. For official decisions—promotion, degree award,
               scholarships, or placements—you must rely on{" "}
               <strong>original grade cards, memos, and circulars</strong> issued by the university
@@ -79,7 +79,7 @@ export default function StudentResourcesPage() {
               Regulations (R18, R22, and others)—why they matter
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              JNTUH offers several curriculum regulations over time (for example R18 and R22). Your
+              JNTUK offers several curriculum regulations over time (for example R18 and R22). Your
               regulation defines <strong>credit structure</strong>, <strong>evaluation scheme</strong>,
               and sometimes <strong>grace-mark rules</strong>. Two students in different regulations
               may have different subject codes, credit totals, or promotion criteria even if their
@@ -139,7 +139,7 @@ export default function StudentResourcesPage() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               If you did not pass a subject in the regular attempt, you may appear for{" "}
               <strong>supplementary (supply)</strong> examinations when announced. Fees, timelines,
-              and registration rules change each cycle—follow the official notification PDFs on JNTUH
+              and registration rules change each cycle—follow the official notification PDFs on JNTUK
               portals and notices from your college exam cell.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -171,13 +171,13 @@ export default function StudentResourcesPage() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Always cross-check critical information on{" "}
               <strong>university websites, examination portals, and circulars</strong> published by
-              JNTUH. Colleges often mirror notices but may add internal deadlines—follow both
+              JNTUK. Colleges often mirror notices but may add internal deadlines—follow both
               your department and the university when they differ.
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
               <li>Your institution’s examination cell for fee payments and hall ticket issues.</li>
               <li>
-                Official JNTUH result portals for downloading provisional marks sheets when
+                Official JNTUK result portals for downloading provisional marks sheets when
                 released.
               </li>
               <li>
@@ -201,7 +201,7 @@ export default function StudentResourcesPage() {
             <p className="text-amber-950/90 dark:text-amber-100/90 text-sm leading-relaxed mb-3">
               This website may display third-party ads to support hosting and development. Ads are
               served according to our policies and Google’s programme rules. Editorial content on
-              pages like this is written to genuinely help students; it is not copied from JNTUH
+              pages like this is written to genuinely help students; it is not copied from JNTUK
               handbooks verbatim and should not be treated as legal advice.
             </p>
             <p className="text-amber-950/90 dark:text-amber-100/90 text-sm leading-relaxed">
@@ -226,8 +226,8 @@ export default function StudentResourcesPage() {
           <Link href="/" className="text-blue-600 dark:text-blue-400 hover:underline">
             Home
           </Link>
-          <Link href="/jntuh-results" className="text-blue-600 dark:text-blue-400 hover:underline">
-            JNTUH Results hub
+          <Link href="/jntuk-results" className="text-blue-600 dark:text-blue-400 hover:underline">
+            JNTUK Results hub
           </Link>
           <Link href="/helpcenter" className="text-blue-600 dark:text-blue-400 hover:underline">
             Help Center

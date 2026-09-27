@@ -1,4 +1,4 @@
-# AdSense review checklist (Mana JNTUH Results)
+# AdSense review checklist (JNTUK RESULTS)
 
 Use this **after** each rejection to improve odds on the next request. Google does not publish exact thresholds; “low value content” usually means **not enough original, user-first editorial content** vs. **ads + thin tool pages**.
 

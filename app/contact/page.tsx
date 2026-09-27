@@ -69,7 +69,7 @@ const ContactUs = () => {
                             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send us a Message</h2>
                             <div className="space-y-6">
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    We value your input and strive to improve the Mana JNTUH Results portal every day. Whether you&apos;ve found a bug, have a feature suggestion, or just want to say thanks, we&apos;re all ears.
+                                    We value your input and strive to improve the JNTUK RESULTS portal every day. Whether you&apos;ve found a bug, have a feature suggestion, or just want to say thanks, we&apos;re all ears.
                                 </p>
 
                                 <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800">

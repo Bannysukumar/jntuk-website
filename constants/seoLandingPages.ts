@@ -1,19 +1,19 @@
 import { SITE_URL } from "@/lib/seo";
 
 export type SeoLandingSlug =
-  | "jntuh-results"
-  | "jntuh-btech-results"
-  | "jntuh-r18-results"
-  | "jntuh-r22-results"
-  | "jntuh-1-1-results"
-  | "jntuh-1-2-results"
-  | "jntuh-2-1-results"
-  | "jntuh-3-1-results"
-  | "jntuh-supply-results"
-  | "jntuh-revaluation-results"
-  | "jntuh-4-1-results"
-  | "jntuh-bpharmacy-results"
-  | "jntuh-mtech-results";
+  | "jntuk-results"
+  | "jntuk-btech-results"
+  | "jntuk-r18-results"
+  | "jntuk-r22-results"
+  | "jntuk-1-1-results"
+  | "jntuk-1-2-results"
+  | "jntuk-2-1-results"
+  | "jntuk-3-1-results"
+  | "jntuk-supply-results"
+  | "jntuk-revaluation-results"
+  | "jntuk-4-1-results"
+  | "jntuk-bpharmacy-results"
+  | "jntuk-mtech-results";
 
 export interface SeoLandingPageConfig {
   slug: SeoLandingSlug;
@@ -34,78 +34,78 @@ export interface SeoLandingPageConfig {
 }
 
 export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
-  "jntuh-results": {
-    slug: "jntuh-results",
-    path: "/jntuh-results",
-    metaTitle: "JNTUH Results 2025 – All Semesters & Branches | Mana JNTUH Results",
+  "jntuk-results": {
+    slug: "jntuk-results",
+    path: "/jntuk-results",
+    metaTitle: "JNTUK Results 2025 – All Semesters & Branches | JNTUK RESULTS",
     metaDescription:
-      "Check all JNTUH results 2025 in one place – B.Tech, B.Pharmacy, M.Tech, MBA, MCA and more. Fast, mobile-friendly JNTUH results portal with academic, backlog and class results.",
-    h1: "JNTUH Results 2025 – All Courses & Semesters",
+      "Check all JNTUK results 2025 in one place – B.Tech, B.Pharmacy, M.Tech, MBA, MCA and more. Fast, mobile-friendly JNTUK results portal with academic, backlog and class results.",
+    h1: "JNTUK Results 2025 – All Courses & Semesters",
     intro: [
-      "This page is your starting point for all JNTUH results. Whether you are a B.Tech, B.Pharmacy, M.Tech, MBA or MCA student, you can quickly navigate to the correct JNTUH result tool from here.",
-      "Mana JNTUH Results connects you to academic results, all-semester consolidated reports, backlog reports, class-wise results and more, using your original hall ticket number.",
+      "This page is your starting point for all JNTUK results. Whether you are a B.Tech, B.Pharmacy, M.Tech, MBA or MCA student, you can quickly navigate to the correct JNTUK result tool from here.",
+      "JNTUK RESULTS connects you to academic results, all-semester consolidated reports, backlog reports, class-wise results and more, using your original hall ticket number.",
     ],
-    howToTitle: "How to Check JNTUH Results Online",
+    howToTitle: "How to Check JNTUK Results Online",
     howToSteps: [
       "Click on the result tool that matches what you need – Academic Result, All Results, Backlog Report or Class Result.",
-      "Enter your 10-digit JNTUH hall ticket number carefully (for example: 21XXXXXXXX).",
-      "Submit the form and wait a few seconds while we fetch data from the official JNTUH servers.",
+      "Enter your 10-digit JNTUK hall ticket number carefully (for example: 226Q1A4304).",
+      "Submit the form and wait a few seconds while we fetch data from the official JNTUK servers.",
       "View or download your result safely from your mobile or desktop device.",
     ],
-    aboutTitle: "About JNTUH Results on Mana JNTUH Results",
+    aboutTitle: "About JNTUK Results on JNTUK RESULTS",
     aboutParagraphs: [
-      "JNTUH publishes results regulation-wise and semester-wise. During peak result days, the official site may be slow. Mana JNTUH Results helps you access the same results using a clean and fast interface.",
-      "We do not modify your marks or grades. All data is fetched directly from official JNTUH result servers and only presented in a more student-friendly way.",
+      "JNTUK publishes results regulation-wise and semester-wise. During peak result days, the official site may be slow. JNTUK RESULTS helps you access the same results using a clean and fast interface.",
+      "We do not modify your marks or grades. All data is fetched directly from official JNTUK result servers and only presented in a more student-friendly way.",
     ],
     resultCtaLabel: "Go to Academic Result Search",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH Results – Frequently Asked Questions",
+    faqTitle: "JNTUK Results – Frequently Asked Questions",
     faqs: [
       {
-        question: "Which JNTUH results can I check from this page?",
+        question: "Which JNTUK results can I check from this page?",
         answer:
-          "From this page you can navigate to Academic Result, All-Semester Result, Backlog Report, Class Result, Credit Checker, Grace Marks tools and more. Each tool uses your hall ticket number to fetch official JNTUH data.",
+          "From this page you can navigate to Academic Result, All-Semester Result, Backlog Report, Class Result, Credit Checker, Grace Marks tools and more. Each tool uses your hall ticket number to fetch official JNTUK data.",
       },
       {
-        question: "Are these JNTUH results official?",
+        question: "Are these JNTUK results official?",
         answer:
-          "Yes. Mana JNTUH Results uses the same official JNTUH result APIs and endpoints. We only present the information in a faster and more user-friendly interface.",
+          "Yes. JNTUK RESULTS uses the same official JNTUK result APIs and endpoints. We only present the information in a faster and more user-friendly interface.",
       },
     ],
     relatedSlugs: [
-      "jntuh-btech-results",
-      "jntuh-supply-results",
-      "jntuh-revaluation-results",
-      "jntuh-r18-results",
-      "jntuh-r22-results",
+      "jntuk-btech-results",
+      "jntuk-supply-results",
+      "jntuk-revaluation-results",
+      "jntuk-r18-results",
+      "jntuk-r22-results",
     ],
   },
-  "jntuh-btech-results": {
-    slug: "jntuh-btech-results",
-    path: "/jntuh-btech-results",
-    metaTitle: "JNTUH B.Tech Results 2025 – R18, R22 Regular & Supply | Mana JNTUH Results",
+  "jntuk-btech-results": {
+    slug: "jntuk-btech-results",
+    path: "/jntuk-btech-results",
+    metaTitle: "JNTUK B.Tech Results 2025 – R18, R22 Regular & Supply | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH B.Tech results 2025 for R18 and R22 regulations – regular and supply. Fast B.Tech JNTUH results with academic, all-semester and backlog views.",
-    h1: "JNTUH B.Tech Results – R18 & R22",
+      "Check JNTUK B.Tech results 2025 for R18 and R22 regulations – regular and supply. Fast B.Tech JNTUK results with academic, all-semester and backlog views.",
+    h1: "JNTUK B.Tech Results – R18 & R22",
     intro: [
-      "This page is dedicated to JNTUH B.Tech students who want a single place to understand and check their semester-wise results.",
+      "This page is dedicated to JNTUK B.Tech students who want a single place to understand and check their semester-wise results.",
       "Whether you belong to R18 or R22 regulations, you can use our Academic Result and All Results tools to see your current semester performance and complete history.",
     ],
-    howToTitle: "How to Check JNTUH B.Tech Results",
+    howToTitle: "How to Check JNTUK B.Tech Results",
     howToSteps: [
-      "Keep your JNTUH B.Tech hall ticket number ready.",
+      "Keep your JNTUK B.Tech hall ticket number ready.",
       "Click on the Academic Result or All Results tool from this page.",
       "Enter your hall ticket number exactly as printed on your ID card or hall ticket.",
       "Submit and wait a few seconds to view your B.Tech results for the selected regulation and semester.",
     ],
-    aboutTitle: "About JNTUH B.Tech Result Tools",
+    aboutTitle: "About JNTUK B.Tech Result Tools",
     aboutParagraphs: [
       "B.Tech results are released regulation-wise (R18, R22) and semester-wise (1-1, 1-2, 2-1, 2-2, 3-1, 3-2, 4-1, 4-2). Our tools help you navigate this easily without confusion.",
       "Using the same hall ticket number, you can also check backlogs, compare class results and verify grace marks eligibility from other sections of the site.",
     ],
     resultCtaLabel: "Check B.Tech Academic Result",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH B.Tech Results – FAQs",
+    faqTitle: "JNTUK B.Tech Results – FAQs",
     faqs: [
       {
         question: "Can I see all my B.Tech semester results at once?",
@@ -115,37 +115,37 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       {
         question: "Does this page support both R18 and R22?",
         answer:
-          "Yes. As long as your hall ticket number is valid, the tools will fetch the correct regulation and semester data from official JNTUH servers.",
+          "Yes. As long as your hall ticket number is valid, the tools will fetch the correct regulation and semester data from official JNTUK servers.",
       },
     ],
     relatedSlugs: [
-      "jntuh-results",
-      "jntuh-r18-results",
-      "jntuh-r22-results",
-      "jntuh-supply-results",
+      "jntuk-results",
+      "jntuk-r18-results",
+      "jntuk-r22-results",
+      "jntuk-supply-results",
     ],
   },
-  "jntuh-r18-results": {
-    slug: "jntuh-r18-results",
-    path: "/jntuh-r18-results",
-    metaTitle: "JNTUH R18 Results – B.Tech & B.Pharmacy | Mana JNTUH Results",
+  "jntuk-r18-results": {
+    slug: "jntuk-r18-results",
+    path: "/jntuk-r18-results",
+    metaTitle: "JNTUK R18 Results – B.Tech & B.Pharmacy | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH R18 results for B.Tech and B.Pharmacy – all semesters, regular and supply. Fast access to R18 JNTUH results, backlogs and class-wise performance.",
-    h1: "JNTUH R18 Results – All Semesters",
+      "Check JNTUK R18 results for B.Tech and B.Pharmacy – all semesters, regular and supply. Fast access to R18 JNTUK results, backlogs and class-wise performance.",
+    h1: "JNTUK R18 Results – All Semesters",
     intro: [
-      "R18 is one of the most common regulations for JNTUH B.Tech and B.Pharmacy students. This page focuses on helping R18 students quickly reach the right result tools.",
+      "R18 is one of the most common regulations for JNTUK B.Tech and B.Pharmacy students. This page focuses on helping R18 students quickly reach the right result tools.",
       "From here you can jump to Academic Result, All Results and Backlog Report tools that fully support R18 regulation results.",
     ],
-    howToTitle: "How to Check JNTUH R18 Results",
+    howToTitle: "How to Check JNTUK R18 Results",
     howToSteps: [
       "Identify your regulation as R18 from your college or official documents.",
       "Click on the Academic Result or All Results section from this page.",
       "Enter your hall ticket number and submit.",
       "View your R18 results semester-wise, including regular and supply attempts.",
     ],
-    aboutTitle: "Understanding JNTUH R18 Results",
+    aboutTitle: "Understanding JNTUK R18 Results",
     aboutParagraphs: [
-      "Under R18 regulation, grading patterns, credit requirements and pass criteria are defined clearly by JNTUH. Our tools only fetch and display what JNTUH publishes.",
+      "Under R18 regulation, grading patterns, credit requirements and pass criteria are defined clearly by JNTUK. Our tools only fetch and display what JNTUK publishes.",
       "You can also combine R18 result information with our Credit Checker, Grace Marks and Backlog Report tools to plan your academics better.",
     ],
     resultCtaLabel: "Open R18 Academic Result Search",
@@ -159,34 +159,34 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       },
     ],
     relatedSlugs: [
-      "jntuh-btech-results",
-      "jntuh-results",
-      "jntuh-1-1-results",
-      "jntuh-1-2-results",
-      "jntuh-2-1-results",
+      "jntuk-btech-results",
+      "jntuk-results",
+      "jntuk-1-1-results",
+      "jntuk-1-2-results",
+      "jntuk-2-1-results",
     ],
   },
-  "jntuh-r22-results": {
-    slug: "jntuh-r22-results",
-    path: "/jntuh-r22-results",
-    metaTitle: "JNTUH R22 Results – Latest B.Tech Regulation | Mana JNTUH Results",
+  "jntuk-r22-results": {
+    slug: "jntuk-r22-results",
+    path: "/jntuk-r22-results",
+    metaTitle: "JNTUK R22 Results – Latest B.Tech Regulation | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH R22 results for B.Tech – latest regulation, regular and supply exams. View R22 JNTUH results, backlogs and credits in one place.",
-    h1: "JNTUH R22 Results – Latest Regulation",
+      "Check JNTUK R22 results for B.Tech – latest regulation, regular and supply exams. View R22 JNTUK results, backlogs and credits in one place.",
+    h1: "JNTUK R22 Results – Latest Regulation",
     intro: [
-      "R22 is the newer regulation introduced by JNTUH for B.Tech students. This page is tailored for R22 batches who want a clear path to their semester results.",
+      "R22 is the newer regulation introduced by JNTUK for B.Tech students. This page is tailored for R22 batches who want a clear path to their semester results.",
       "Use our result tools to track every R22 semester, including regular and supplementary exams, without confusion.",
     ],
-    howToTitle: "How to Check JNTUH R22 Results",
+    howToTitle: "How to Check JNTUK R22 Results",
     howToSteps: [
       "Confirm that your batch follows the R22 regulation.",
       "Use the Academic Result or All Results tools linked from this page.",
       "Enter your hall ticket number and submit the form.",
       "Review your subject-wise grades, SGPA and overall academic standing.",
     ],
-    aboutTitle: "About JNTUH R22 Regulation Results",
+    aboutTitle: "About JNTUK R22 Regulation Results",
     aboutParagraphs: [
-      "R22 brings updated syllabus structures and evaluation patterns. Our platform simply fetches what JNTUH publishes and presents it neatly for students.",
+      "R22 brings updated syllabus structures and evaluation patterns. Our platform simply fetches what JNTUK publishes and presents it neatly for students.",
       "If you are in R22, make sure to regularly track your credits and backlogs using the Credits Checker and Backlog Report tools.",
     ],
     resultCtaLabel: "Check R22 Academic Result",
@@ -196,124 +196,124 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       {
         question: "Are R22 results supported for all branches?",
         answer:
-          "Yes. As long as JNTUH has published the result for your branch and semester, our tools can fetch and display it for you.",
+          "Yes. As long as JNTUK has published the result for your branch and semester, our tools can fetch and display it for you.",
       },
     ],
     relatedSlugs: [
-      "jntuh-btech-results",
-      "jntuh-results",
-      "jntuh-1-1-results",
-      "jntuh-1-2-results",
-      "jntuh-2-1-results",
+      "jntuk-btech-results",
+      "jntuk-results",
+      "jntuk-1-1-results",
+      "jntuk-1-2-results",
+      "jntuk-2-1-results",
     ],
   },
-  "jntuh-1-1-results": {
-    slug: "jntuh-1-1-results",
-    path: "/jntuh-1-1-results",
-    metaTitle: "JNTUH 1-1 Results – First Year First Semester | Mana JNTUH Results",
+  "jntuk-1-1-results": {
+    slug: "jntuk-1-1-results",
+    path: "/jntuk-1-1-results",
+    metaTitle: "JNTUK 1-1 Results – First Year First Semester | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH 1-1 results for B.Tech and B.Pharmacy. First year first semester regular and supply results with fast, mobile-friendly access.",
-    h1: "JNTUH 1-1 Results – First Year, First Semester",
+      "Check JNTUK 1-1 results for B.Tech and B.Pharmacy. First year first semester regular and supply results with fast, mobile-friendly access.",
+    h1: "JNTUK 1-1 Results – First Year, First Semester",
     intro: [
-      "The first semester (1-1) is very important for any JNTUH student. This page helps you quickly access JNTUH 1-1 results without confusion.",
+      "The first semester (1-1) is very important for any JNTUK student. This page helps you quickly access JNTUK 1-1 results without confusion.",
       "Use the links below to open the Academic Result tool and check your first semester performance.",
     ],
-    howToTitle: "How to Check JNTUH 1-1 Results",
+    howToTitle: "How to Check JNTUK 1-1 Results",
     howToSteps: [
       "Click on the Academic Result tool from this page.",
       "Enter your hall ticket number and submit the form.",
       "Select the appropriate exam (regular or supply) if required.",
       "View your subject-wise marks and total SGPA for 1-1.",
     ],
-    aboutTitle: "About JNTUH 1-1 Results",
+    aboutTitle: "About JNTUK 1-1 Results",
     aboutParagraphs: [
       "1-1 results set the foundation for your entire degree. Tracking your performance early helps you plan improvements and avoid backlogs.",
-      "You can revisit this page whenever new 1-1 regular or supply results are released by JNTUH.",
+      "You can revisit this page whenever new 1-1 regular or supply results are released by JNTUK.",
     ],
     resultCtaLabel: "Open 1-1 Academic Result Tool",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH 1-1 Results – FAQs",
+    faqTitle: "JNTUK 1-1 Results – FAQs",
     faqs: [
       {
         question: "Can I see both regular and supply 1-1 results here?",
         answer:
-          "Yes. Once JNTUH publishes the supply result, you can use the same Academic Result tool to check your updated marks.",
+          "Yes. Once JNTUK publishes the supply result, you can use the same Academic Result tool to check your updated marks.",
       },
     ],
     relatedSlugs: [
-      "jntuh-1-2-results",
-      "jntuh-btech-results",
-      "jntuh-r18-results",
-      "jntuh-r22-results",
-      "jntuh-results",
+      "jntuk-1-2-results",
+      "jntuk-btech-results",
+      "jntuk-r18-results",
+      "jntuk-r22-results",
+      "jntuk-results",
     ],
   },
-  "jntuh-1-2-results": {
-    slug: "jntuh-1-2-results",
-    path: "/jntuh-1-2-results",
-    metaTitle: "JNTUH 1-2 Results – First Year Second Semester | Mana JNTUH Results",
+  "jntuk-1-2-results": {
+    slug: "jntuk-1-2-results",
+    path: "/jntuk-1-2-results",
+    metaTitle: "JNTUK 1-2 Results – First Year Second Semester | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH 1-2 results for first year second semester – regular and supply. Fast access to 1-2 JNTUH results, backlogs and credits.",
-    h1: "JNTUH 1-2 Results – First Year, Second Semester",
+      "Check JNTUK 1-2 results for first year second semester – regular and supply. Fast access to 1-2 JNTUK results, backlogs and credits.",
+    h1: "JNTUK 1-2 Results – First Year, Second Semester",
     intro: [
-      "This page is focused on JNTUH 1-2 results for first year students. You can quickly access your second semester performance from here.",
+      "This page is focused on JNTUK 1-2 results for first year students. You can quickly access your second semester performance from here.",
       "Use our tools to view subject-wise marks, SGPA and overall progress at the end of your first year.",
     ],
-    howToTitle: "How to Check JNTUH 1-2 Results",
+    howToTitle: "How to Check JNTUK 1-2 Results",
     howToSteps: [
       "Navigate to the Academic Result tool using the button below.",
       "Enter your hall ticket number carefully.",
-      "Submit and wait a few seconds while the result is fetched from JNTUH.",
+      "Submit and wait a few seconds while the result is fetched from JNTUK.",
       "Review your 1-2 semester performance and note any backlogs to clear in future exams.",
     ],
-    aboutTitle: "About JNTUH 1-2 Semester Results",
+    aboutTitle: "About JNTUK 1-2 Semester Results",
     aboutParagraphs: [
-      "1-2 completes your first year at JNTUH. Combining 1-1 and 1-2 results gives you a clear picture of your starting academic position.",
+      "1-2 completes your first year at JNTUK. Combining 1-1 and 1-2 results gives you a clear picture of your starting academic position.",
       "From here, you can also move on to higher semester result tools like 2-1 and 2-2 as your course progresses.",
     ],
     resultCtaLabel: "Open 1-2 Academic Result Tool",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH 1-2 Results – FAQs",
+    faqTitle: "JNTUK 1-2 Results – FAQs",
     faqs: [
       {
         question: "Do I need a different hall ticket number for 1-2?",
         answer:
-          "No. The same JNTUH hall ticket number is used for all semesters including 1-1 and 1-2. Just make sure you enter it correctly.",
+          "No. The same JNTUK hall ticket number is used for all semesters including 1-1 and 1-2. Just make sure you enter it correctly.",
       },
     ],
     relatedSlugs: [
-      "jntuh-1-1-results",
-      "jntuh-2-1-results",
-      "jntuh-btech-results",
-      "jntuh-results",
+      "jntuk-1-1-results",
+      "jntuk-2-1-results",
+      "jntuk-btech-results",
+      "jntuk-results",
     ],
   },
-  "jntuh-2-1-results": {
-    slug: "jntuh-2-1-results",
-    path: "/jntuh-2-1-results",
-    metaTitle: "JNTUH 2-1 Results – Second Year First Semester | Mana JNTUH Results",
+  "jntuk-2-1-results": {
+    slug: "jntuk-2-1-results",
+    path: "/jntuk-2-1-results",
+    metaTitle: "JNTUK 2-1 Results – Second Year First Semester | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH 2-1 results for B.Tech and B.Pharmacy – regular and supply. Track your second year first semester performance easily.",
-    h1: "JNTUH 2-1 Results – Second Year, First Semester",
+      "Check JNTUK 2-1 results for B.Tech and B.Pharmacy – regular and supply. Track your second year first semester performance easily.",
+    h1: "JNTUK 2-1 Results – Second Year, First Semester",
     intro: [
-      "The 2-1 semester is where core engineering subjects start to become more intensive. This page helps you directly reach your JNTUH 2-1 results.",
+      "The 2-1 semester is where core engineering subjects start to become more intensive. This page helps you directly reach your JNTUK 2-1 results.",
       "Use our Academic Result and All Results tools to monitor your progress in the second year.",
     ],
-    howToTitle: "How to Check JNTUH 2-1 Results",
+    howToTitle: "How to Check JNTUK 2-1 Results",
     howToSteps: [
       "Click the result search button below to open the Academic Result tool.",
       "Enter your 10-digit hall ticket number and submit.",
       "Once the page loads, verify you are viewing the correct 2-1 exam session.",
       "Save or screenshot your result for future reference.",
     ],
-    aboutTitle: "About JNTUH 2-1 Results",
+    aboutTitle: "About JNTUK 2-1 Results",
     aboutParagraphs: [
       "2-1 results usually include several core subjects that heavily influence your CGPA. Monitoring these results early helps you balance future semesters.",
       "You can also combine 2-1 data with our Credit Checker, Backlog Report and Grace Marks tools to understand your academic position.",
     ],
     resultCtaLabel: "Open 2-1 Academic Result Tool",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH 2-1 Results – FAQs",
+    faqTitle: "JNTUK 2-1 Results – FAQs",
     faqs: [
       {
         question: "Can I see my backlogs from earlier semesters here?",
@@ -322,78 +322,78 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       },
     ],
     relatedSlugs: [
-      "jntuh-1-2-results",
-      "jntuh-3-1-results",
-      "jntuh-results",
-      "jntuh-btech-results",
+      "jntuk-1-2-results",
+      "jntuk-3-1-results",
+      "jntuk-results",
+      "jntuk-btech-results",
     ],
   },
-  "jntuh-3-1-results": {
-    slug: "jntuh-3-1-results",
-    path: "/jntuh-3-1-results",
-    metaTitle: "JNTUH 3-1 Results – Third Year First Semester | Mana JNTUH Results",
+  "jntuk-3-1-results": {
+    slug: "jntuk-3-1-results",
+    path: "/jntuk-3-1-results",
+    metaTitle: "JNTUK 3-1 Results – Third Year First Semester | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH 3-1 results for third year first semester. Track your 3-1 performance, backlogs and progress towards final year.",
-    h1: "JNTUH 3-1 Results – Third Year, First Semester",
+      "Check JNTUK 3-1 results for third year first semester. Track your 3-1 performance, backlogs and progress towards final year.",
+    h1: "JNTUK 3-1 Results – Third Year, First Semester",
     intro: [
-      "By 3-1, most students are deep into core subjects and electives. This page focuses on helping you quickly check your JNTUH 3-1 results.",
+      "By 3-1, most students are deep into core subjects and electives. This page focuses on helping you quickly check your JNTUK 3-1 results.",
       "Use the result tools from here to see how you are progressing towards your final year and graduation requirements.",
     ],
-    howToTitle: "How to Check JNTUH 3-1 Results",
+    howToTitle: "How to Check JNTUK 3-1 Results",
     howToSteps: [
       "Use the button below to open the Academic Result tool.",
       "Enter your hall ticket number and submit.",
       "Confirm that the exam session and semester shown correspond to 3-1.",
       "Analyze your grades and identify any subjects that might need improvement next semester.",
     ],
-    aboutTitle: "About JNTUH 3-1 Semester Results",
+    aboutTitle: "About JNTUK 3-1 Semester Results",
     aboutParagraphs: [
       "3-1 is often a turning point where students start focusing on placements, higher studies and internships. Strong 3-1 performance improves your overall profile.",
       "Make use of our other tools like Credit Checker and Backlog Report to ensure you are on track for a smooth final year.",
     ],
     resultCtaLabel: "Open 3-1 Academic Result Tool",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH 3-1 Results – FAQs",
+    faqTitle: "JNTUK 3-1 Results – FAQs",
     faqs: [
       {
         question: "Do 3-1 marks affect my final CGPA?",
         answer:
-          "Yes. All semester results including 3-1 contribute to your final CGPA as per JNTUH regulations. Tracking them early helps you plan better.",
+          "Yes. All semester results including 3-1 contribute to your final CGPA as per JNTUK regulations. Tracking them early helps you plan better.",
       },
     ],
     relatedSlugs: [
-      "jntuh-2-1-results",
-      "jntuh-results",
-      "jntuh-btech-results",
-      "jntuh-supply-results",
+      "jntuk-2-1-results",
+      "jntuk-results",
+      "jntuk-btech-results",
+      "jntuk-supply-results",
     ],
   },
-  "jntuh-supply-results": {
-    slug: "jntuh-supply-results",
-    path: "/jntuh-supply-results",
-    metaTitle: "JNTUH Supply Results – Supplementary Exams | Mana JNTUH Results",
+  "jntuk-supply-results": {
+    slug: "jntuk-supply-results",
+    path: "/jntuk-supply-results",
+    metaTitle: "JNTUK Supply Results – Supplementary Exams | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH supply results for B.Tech, B.Pharmacy and other courses. Track supplementary exam performance and backlog clearance status.",
-    h1: "JNTUH Supply Results – Supplementary Examinations",
+      "Check JNTUK supply results for B.Tech, B.Pharmacy and other courses. Track supplementary exam performance and backlog clearance status.",
+    h1: "JNTUK Supply Results – Supplementary Examinations",
     intro: [
-      "If you have appeared for JNTUH supplementary exams, this page helps you understand how to track your supply results.",
-      "Mana JNTUH Results allows you to see updated marks after supply exams and monitor which backlogs are cleared.",
+      "If you have appeared for JNTUK supplementary exams, this page helps you understand how to track your supply results.",
+      "JNTUK RESULTS allows you to see updated marks after supply exams and monitor which backlogs are cleared.",
     ],
-    howToTitle: "How to Check JNTUH Supply Results",
+    howToTitle: "How to Check JNTUK Supply Results",
     howToSteps: [
       "Use the Academic Result tool to fetch your latest result using your hall ticket number.",
       "Check whether the exam session indicates a supplementary attempt.",
       "Compare your previous result with the latest one to confirm backlog clearance.",
       "Optionally, use the Backlog Report tool to see a consolidated view of all remaining subjects.",
     ],
-    aboutTitle: "About JNTUH Supplementary Results",
+    aboutTitle: "About JNTUK Supplementary Results",
     aboutParagraphs: [
       "Supply exams are a chance to clear backlogs without losing an academic year. Our platform helps you quickly verify whether your backlog has been cleared in the latest attempt.",
-      "We always fetch data from official JNTUH servers, so the status you see here matches the university records.",
+      "We always fetch data from official JNTUK servers, so the status you see here matches the university records.",
     ],
     resultCtaLabel: "Check Latest Supply Result",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH Supply Results – FAQs",
+    faqTitle: "JNTUK Supply Results – FAQs",
     faqs: [
       {
         question: "How do I know if a backlog is cleared?",
@@ -402,38 +402,38 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       },
     ],
     relatedSlugs: [
-      "jntuh-results",
-      "jntuh-btech-results",
-      "jntuh-revaluation-results",
-      "jntuh-r18-results",
+      "jntuk-results",
+      "jntuk-btech-results",
+      "jntuk-revaluation-results",
+      "jntuk-r18-results",
     ],
   },
-  "jntuh-revaluation-results": {
-    slug: "jntuh-revaluation-results",
-    path: "/jntuh-revaluation-results",
-    metaTitle: "JNTUH Revaluation Results (RCRV) – Recounting & Revaluation | Mana JNTUH Results",
+  "jntuk-revaluation-results": {
+    slug: "jntuk-revaluation-results",
+    path: "/jntuk-revaluation-results",
+    metaTitle: "JNTUK Revaluation Results (RCRV) – Recounting & Revaluation | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH revaluation (RCRV) results for B.Tech, B.Pharmacy and other courses. Track recounting, revaluation and challenge valuation status online.",
-    h1: "JNTUH Revaluation Results – RCRV & Recounting",
+      "Check JNTUK revaluation (RCRV) results for B.Tech, B.Pharmacy and other courses. Track recounting, revaluation and challenge valuation status online.",
+    h1: "JNTUK Revaluation Results – RCRV & Recounting",
     intro: [
-      "If you applied for recounting or revaluation (RCRV) of your JNTUH exam papers, this page explains how to verify the updated results.",
+      "If you applied for recounting or revaluation (RCRV) of your JNTUK exam papers, this page explains how to verify the updated results.",
       "Revaluation results can change your marks and impact backlogs, so it is important to check them carefully using your hall ticket number.",
     ],
-    howToTitle: "How to Check JNTUH Revaluation Results",
+    howToTitle: "How to Check JNTUK Revaluation Results",
     howToSteps: [
-      "Wait for the official JNTUH notification that revaluation results are released.",
+      "Wait for the official JNTUK notification that revaluation results are released.",
       "Use the Academic Result tool linked below and enter your hall ticket number.",
       "Verify if the result page mentions RCRV or revaluation status for the subjects you applied for.",
       "Compare the new marks with your previous result and check if any backlogs are now cleared.",
     ],
-    aboutTitle: "About JNTUH Revaluation (RCRV) Process",
+    aboutTitle: "About JNTUK Revaluation (RCRV) Process",
     aboutParagraphs: [
-      "Revaluation allows students to request re-checking of their answer scripts if they believe there is a valuation mistake. JNTUH publishes updated results after processing these requests.",
+      "Revaluation allows students to request re-checking of their answer scripts if they believe there is a valuation mistake. JNTUK publishes updated results after processing these requests.",
       "Our portal helps you quickly verify whether your marks have increased, decreased or remained the same after revaluation.",
     ],
     resultCtaLabel: "Check Latest Revaluation Result",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH Revaluation Results – FAQs",
+    faqTitle: "JNTUK Revaluation Results – FAQs",
     faqs: [
       {
         question: "Will revaluation always increase my marks?",
@@ -442,38 +442,38 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       },
     ],
     relatedSlugs: [
-      "jntuh-supply-results",
-      "jntuh-results",
-      "jntuh-btech-results",
-      "jntuh-bpharmacy-results",
+      "jntuk-supply-results",
+      "jntuk-results",
+      "jntuk-btech-results",
+      "jntuk-bpharmacy-results",
     ],
   },
-  "jntuh-4-1-results": {
-    slug: "jntuh-4-1-results",
-    path: "/jntuh-4-1-results",
-    metaTitle: "JNTUH 4-1 Results – Final Year First Semester | Mana JNTUH Results",
+  "jntuk-4-1-results": {
+    slug: "jntuk-4-1-results",
+    path: "/jntuk-4-1-results",
+    metaTitle: "JNTUK 4-1 Results – Final Year First Semester | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH 4-1 results for final year first semester. Track your 4-1 performance, backlogs and CGPA before graduation.",
-    h1: "JNTUH 4-1 Results – Final Year, First Semester",
+      "Check JNTUK 4-1 results for final year first semester. Track your 4-1 performance, backlogs and CGPA before graduation.",
+    h1: "JNTUK 4-1 Results – Final Year, First Semester",
     intro: [
-      "The 4-1 semester is a crucial stage in JNTUH where students get closer to graduation, placements and higher studies. This page is dedicated to helping you quickly check your JNTUH 4-1 results.",
+      "The 4-1 semester is a crucial stage in JNTUK where students get closer to graduation, placements and higher studies. This page is dedicated to helping you quickly check your JNTUK 4-1 results.",
       "Use our Academic Result and All Results tools to see how your 4-1 performance contributes to your final CGPA and graduation eligibility.",
     ],
-    howToTitle: "How to Check JNTUH 4-1 Results",
+    howToTitle: "How to Check JNTUK 4-1 Results",
     howToSteps: [
       "Click the result search button below to open the Academic Result tool.",
-      "Enter your 10-digit JNTUH hall ticket number and submit.",
+      "Enter your 10-digit JNTUK hall ticket number and submit.",
       "Confirm that the exam session and semester correspond to 4-1.",
       "Review your subject-wise grades and note any subjects that may need attention before 4-2 or supply exams.",
     ],
-    aboutTitle: "About JNTUH 4-1 Semester Results",
+    aboutTitle: "About JNTUK 4-1 Semester Results",
     aboutParagraphs: [
       "4-1 usually contains important core and elective subjects that significantly influence your final CGPA. Monitoring your 4-1 result early helps you plan for placements and higher studies.",
       "You can combine your 4-1 result data with tools like Credit Checker, Backlog Report and Grace Marks Eligibility to understand your exact academic status before graduation.",
     ],
     resultCtaLabel: "Open 4-1 Academic Result Tool",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH 4-1 Results – FAQs",
+    faqTitle: "JNTUK 4-1 Results – FAQs",
     faqs: [
       {
         question: "Does my 4-1 result affect eligibility for placements?",
@@ -482,89 +482,89 @@ export const SEO_LANDING_PAGES: Record<SeoLandingSlug, SeoLandingPageConfig> = {
       },
     ],
     relatedSlugs: [
-      "jntuh-3-1-results",
-      "jntuh-btech-results",
-      "jntuh-results",
-      "jntuh-supply-results",
+      "jntuk-3-1-results",
+      "jntuk-btech-results",
+      "jntuk-results",
+      "jntuk-supply-results",
     ],
   },
-  "jntuh-bpharmacy-results": {
-    slug: "jntuh-bpharmacy-results",
-    path: "/jntuh-bpharmacy-results",
-    metaTitle: "JNTUH B.Pharmacy Results – R18, R22 Regular & Supply | Mana JNTUH Results",
+  "jntuk-bpharmacy-results": {
+    slug: "jntuk-bpharmacy-results",
+    path: "/jntuk-bpharmacy-results",
+    metaTitle: "JNTUK B.Pharmacy Results – R18, R22 Regular & Supply | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH B.Pharmacy results for R18 and R22 regulations – regular and supply. Fast B.Pharmacy JNTUH results with academic and backlog views.",
-    h1: "JNTUH B.Pharmacy Results – All Semesters",
+      "Check JNTUK B.Pharmacy results for R18 and R22 regulations – regular and supply. Fast B.Pharmacy JNTUK results with academic and backlog views.",
+    h1: "JNTUK B.Pharmacy Results – All Semesters",
     intro: [
-      "This page is designed specifically for JNTUH B.Pharmacy students who want a clear and simple way to access their semester-wise results.",
+      "This page is designed specifically for JNTUK B.Pharmacy students who want a clear and simple way to access their semester-wise results.",
       "Using your hall ticket number, you can quickly open Academic Result and All Results tools to view your B.Pharmacy performance across all semesters and regulations.",
     ],
-    howToTitle: "How to Check JNTUH B.Pharmacy Results",
+    howToTitle: "How to Check JNTUK B.Pharmacy Results",
     howToSteps: [
-      "Keep your JNTUH B.Pharmacy hall ticket number ready.",
+      "Keep your JNTUK B.Pharmacy hall ticket number ready.",
       "Click on the Academic Result or All Results tool from this page.",
       "Enter your hall ticket number exactly as printed on your college ID or hall ticket.",
       "Submit the form and wait a few seconds to see your B.Pharmacy subject-wise marks and grades.",
     ],
-    aboutTitle: "About JNTUH B.Pharmacy Results",
+    aboutTitle: "About JNTUK B.Pharmacy Results",
     aboutParagraphs: [
-      "JNTUH B.Pharmacy results are released semester-wise and regulation-wise, similar to B.Tech. Our tools give you a clean interface to access these results without confusion or delays.",
+      "JNTUK B.Pharmacy results are released semester-wise and regulation-wise, similar to B.Tech. Our tools give you a clean interface to access these results without confusion or delays.",
       "From this page, you can also navigate to other helpful tools like Backlog Report, Grace Marks Eligibility and Class Result to get a complete picture of your academic journey.",
     ],
     resultCtaLabel: "Check B.Pharmacy Academic Result",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH B.Pharmacy Results – FAQs",
+    faqTitle: "JNTUK B.Pharmacy Results – FAQs",
     faqs: [
       {
-        question: "Are B.Pharmacy results fetched from official JNTUH servers?",
+        question: "Are B.Pharmacy results fetched from official JNTUK servers?",
         answer:
-          "Yes. All B.Pharmacy results shown through Mana JNTUH Results are fetched from official JNTUH result endpoints. We only improve the speed and presentation.",
+          "Yes. All B.Pharmacy results shown through JNTUK RESULTS are fetched from official JNTUK result endpoints. We only improve the speed and presentation.",
       },
     ],
     relatedSlugs: [
-      "jntuh-results",
-      "jntuh-btech-results",
-      "jntuh-r18-results",
-      "jntuh-supply-results",
+      "jntuk-results",
+      "jntuk-btech-results",
+      "jntuk-r18-results",
+      "jntuk-supply-results",
     ],
   },
-  "jntuh-mtech-results": {
-    slug: "jntuh-mtech-results",
-    path: "/jntuh-mtech-results",
-    metaTitle: "JNTUH M.Tech Results – All Specializations | Mana JNTUH Results",
+  "jntuk-mtech-results": {
+    slug: "jntuk-mtech-results",
+    path: "/jntuk-mtech-results",
+    metaTitle: "JNTUK M.Tech Results – All Specializations | JNTUK RESULTS",
     metaDescription:
-      "Check JNTUH M.Tech results for all specializations – regular and supply exams. Fast JNTUH M.Tech result access with a student-friendly interface.",
-    h1: "JNTUH M.Tech Results – All Specializations",
+      "Check JNTUK M.Tech results for all specializations – regular and supply exams. Fast JNTUK M.Tech result access with a student-friendly interface.",
+    h1: "JNTUK M.Tech Results – All Specializations",
     intro: [
-      "Postgraduate M.Tech students at JNTUH often need a quick way to verify semester results across different specializations. This page is focused on M.Tech result access.",
+      "Postgraduate M.Tech students at JNTUK often need a quick way to verify semester results across different specializations. This page is focused on M.Tech result access.",
       "Using your M.Tech hall ticket number, you can open the Academic Result tool and see your latest performance in a clear, responsive layout.",
     ],
-    howToTitle: "How to Check JNTUH M.Tech Results",
+    howToTitle: "How to Check JNTUK M.Tech Results",
     howToSteps: [
       "Click on the Academic Result search button below.",
-      "Enter your JNTUH M.Tech hall ticket number and submit the form.",
-      "Wait a few seconds while we fetch your official result from JNTUH servers.",
+      "Enter your JNTUK M.Tech hall ticket number and submit the form.",
+      "Wait a few seconds while we fetch your official result from JNTUK servers.",
       "Review your subject-wise grades and semester performance.",
     ],
-    aboutTitle: "About JNTUH M.Tech Result Access",
+    aboutTitle: "About JNTUK M.Tech Result Access",
     aboutParagraphs: [
-      "M.Tech results at JNTUH are published course-wise and semester-wise. Mana JNTUH Results helps you access these quickly without struggling with slow or overloaded servers.",
+      "M.Tech results at JNTUK are published course-wise and semester-wise. JNTUK RESULTS helps you access these quickly without struggling with slow or overloaded servers.",
       "From here, you can also move to other tools on the site such as Notifications and Syllabus pages to stay updated about exam schedules and curriculum.",
     ],
     resultCtaLabel: "Check M.Tech Academic Result",
     resultCtaHref: "/academicresult",
-    faqTitle: "JNTUH M.Tech Results – FAQs",
+    faqTitle: "JNTUK M.Tech Results – FAQs",
     faqs: [
       {
         question: "Can I use the same tool for all M.Tech branches?",
         answer:
-          "Yes. As long as your hall ticket number is valid, the Academic Result tool can fetch M.Tech results for any specialization published by JNTUH.",
+          "Yes. As long as your hall ticket number is valid, the Academic Result tool can fetch M.Tech results for any specialization published by JNTUK.",
       },
     ],
     relatedSlugs: [
-      "jntuh-results",
-      "jntuh-btech-results",
-      "jntuh-revaluation-results",
+      "jntuk-results",
+      "jntuk-btech-results",
+      "jntuk-revaluation-results",
     ],
   },
 };

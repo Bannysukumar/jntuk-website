@@ -36,7 +36,7 @@ const NotificationResults = ({
     if (navigator.share) {
       navigator.share({
         title: result.title,
-        text: `Check out this JNTUH notification: ${result.title}`,
+        text: `Check out this JNTUK notification: ${result.title}`,
         url: result.link,
       });
     }

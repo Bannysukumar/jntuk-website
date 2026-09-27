@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { JNTUH_API_BASE_URL, getJntuhApiHeaders } from "@/lib/jntuh-api";
+import { JNTUK_API_BASE_URL, getJntukApiHeaders } from "@/lib/jntuk-api";
 
-const EXTERNAL_API_BASE = JNTUH_API_BASE_URL;
-const PROXY_CACHE_TTL_SEC = 120; // 2 minutes for result cache
-const NOTIFICATIONS_CACHE_TTL_SEC = 90; // 90 sec for notifications
-const CACHEABLE_ENDPOINTS = ["getAcademicResult", "getAllResult", "getBacklogs", "getCreditsChecker", "getClassResults", "notifications"];
+const EXTERNAL_API_BASE = JNTUK_API_BASE_URL;
+const PROXY_CACHE_TTL_SEC = 120;
+const NOTIFICATIONS_CACHE_TTL_SEC = 90;
+const CACHEABLE_ENDPOINTS = [
+  "getAcademicResult",
+  "getAllResult",
+  "getBacklogs",
+  "getCreditsChecker",
+  "notifications",
+];
 
 function getProxyCacheKey(endpoint: string, searchParams: URLSearchParams): string | null {
   if (endpoint === "notifications") {
@@ -13,7 +19,8 @@ function getProxyCacheKey(endpoint: string, searchParams: URLSearchParams): stri
     const regulation = searchParams.get("regulation") ?? "";
     const title = searchParams.get("title") ?? "";
     const year = searchParams.get("year") ?? "";
-    return `proxy:notifications:${page}:${degree}:${regulation}:${title}:${year}`;
+    const category = searchParams.get("category") ?? "all";
+    return `proxy:notifications:${page}:${category}:${degree}:${regulation}:${title}:${year}`;
   }
   if (!CACHEABLE_ENDPOINTS.includes(endpoint)) return null;
   const rollNumber = searchParams.get("rollNumber")?.trim().toUpperCase();
@@ -56,7 +63,7 @@ export async function GET(request: NextRequest) {
             headers: {
               "Access-Control-Allow-Origin": "*",
               "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-              "Access-Control-Allow-Headers": "Content-Type",
+              "Access-Control-Allow-Headers": "Content-Type, X-Api-Key",
               "X-Proxy-Cache": "HIT",
             },
           });
@@ -67,7 +74,6 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // Build the external API URL with all query parameters
   const externalUrl = new URL(`${EXTERNAL_API_BASE}/${endpoint}`);
   searchParams.forEach((value, key) => {
     if (key !== "endpoint") {
@@ -78,58 +84,45 @@ export async function GET(request: NextRequest) {
   try {
     const response = await fetch(externalUrl.toString(), {
       method: "GET",
-      headers: getJntuhApiHeaders(),
+      headers: getJntukApiHeaders(endpoint !== "health"),
       next: { revalidate: 0 },
     });
 
-    if (!response.ok) {
-      // Try to get error details from the response
-      let errorData;
-      try {
-        const contentType = response.headers.get("content-type");
-        if (contentType && contentType.includes("application/json")) {
-          errorData = await response.json();
-        } else {
-          const text = await response.text();
-          try {
-            errorData = JSON.parse(text);
-          } catch {
-            errorData = { error: text || `External API returned ${response.status}` };
-          }
-        }
-      } catch {
-        errorData = { error: `External API returned ${response.status}` };
-      }
-      
-      return NextResponse.json(
-        errorData,
-        { status: response.status }
-      );
-    }
-
     const contentType = response.headers.get("content-type");
-    let data;
-    
-    if (contentType && contentType.includes("application/json")) {
-      data = await response.json();
-    } else {
-      const text = await response.text();
-      try {
-        data = JSON.parse(text);
-      } catch {
-        data = { error: "Invalid JSON response", raw: text };
+    let data: any;
+    try {
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        try {
+          data = JSON.parse(text);
+        } catch {
+          data = { error: text || `External API returned ${response.status}` };
+        }
       }
+    } catch {
+      data = { error: `External API returned ${response.status}` };
     }
 
-    // Cache successful responses for cacheable endpoints
-    if (cacheKey && response.status === 200 && data && typeof data === "object") {
+    if (
+      cacheKey &&
+      response.status === 200 &&
+      data &&
+      typeof data === "object"
+    ) {
       const isResult = "details" in data;
-      const isNotifications = endpoint === "notifications" && (Array.isArray(data) || (data as any).results != null);
+      const isNotifications =
+        endpoint === "notifications" &&
+        (Array.isArray(data) || (data as any).results != null);
       if (isResult || isNotifications) {
         try {
           const redis = await getRedis();
           if (redis) {
-            const ttl = endpoint === "notifications" ? NOTIFICATIONS_CACHE_TTL_SEC : PROXY_CACHE_TTL_SEC;
+            const ttl =
+              endpoint === "notifications"
+                ? NOTIFICATIONS_CACHE_TTL_SEC
+                : PROXY_CACHE_TTL_SEC;
             await redis.set(cacheKey, JSON.stringify(data), "EX", ttl);
           }
         } catch {
@@ -143,7 +136,7 @@ export async function GET(request: NextRequest) {
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Headers": "Content-Type, X-Api-Key",
       },
     });
   } catch (error: any) {
@@ -161,8 +154,7 @@ export async function OPTIONS() {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Headers": "Content-Type, X-Api-Key",
     },
   });
 }
-

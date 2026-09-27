@@ -9,7 +9,8 @@ import TotalResult from "@/components/result/totalResult";
 import ResultDetailsSkeleton from "@/components/skeleton/ResultDetailsSkeleton";
 import AcademicResultSkeleton from "@/components/skeleton/AcademicResultsSkeleton";
 import Print from "@/components/download/print";
-import { fetchAcademicResult } from "@/components/api/fetchResults";
+import { fetchAcademicResult, fetchHardRefresh } from "@/components/api/fetchResults";
+import { isValidRollNumber, normalizeRollNumber } from "@/lib/jntuk-api";
 import { saveResultToLocal, isNative, hapticFeedback } from "@/lib/native-features";
 import { ImpactStyle } from "@capacitor/haptics";
 import toast from "react-hot-toast";
@@ -25,8 +26,8 @@ const AcademicResultResult = () => {
   const isNativeApp = isNative();
 
   useEffect(() => {
-    const currentHtno = (htno || "").trim().toUpperCase();
-    if (!currentHtno || currentHtno.length < 10) {
+    const currentHtno = normalizeRollNumber(htno || "");
+    if (!isValidRollNumber(currentHtno)) {
       setLoading(false);
       router.push("/academicresult");
       return;
@@ -112,12 +113,19 @@ const AcademicResultResult = () => {
                 <Save size={16} className={isSaving ? "animate-pulse" : ""} />
               </button>
             )}
-            <div
-              className="border border-white p-1 md:p-2 md:hidden rounded cursor-pointer justify-center items-center  hidden"
-              onClick={() => {}}
+            <button
+              className="border border-white p-1 md:p-2 rounded cursor-pointer justify-center items-center hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+              title="Hard refresh from JNTUK"
+              onClick={async () => {
+                if (!htno) return;
+                setLoading(true);
+                const refreshed = await fetchHardRefresh(normalizeRollNumber(htno));
+                if (refreshed) setAcademicResult(refreshed);
+                setLoading(false);
+              }}
             >
-              <RefreshCcw size={6} />
-            </div>
+              <RefreshCcw size={16} />
+            </button>
           </div>
         </div>
         {academicResult ? (
@@ -137,7 +145,7 @@ const AcademicResultResult = () => {
         )}
       </div>
       <div className="flex justify-center text-[6px] text-black">
-        jntuhresults.vercel.app
+        JNTUK RESULTS
       </div>
       {/* <QuickNavigation htno={htno} /> */}
       <Print componentRef={componentRef} />

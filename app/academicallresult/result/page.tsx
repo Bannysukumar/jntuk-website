@@ -93,7 +93,7 @@ const AcademicAllResultResult = () => {
         />
 
         <div className="flex justify-center text-[6px] text-black">
-          jntuhresults.vercel.app
+          JNTUK RESULTS
         </div>
       </div>
 

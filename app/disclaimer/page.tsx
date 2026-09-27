@@ -18,7 +18,7 @@ const Disclaimer = () => {
                         Disclaimer
                     </h1>
                     <p className="text-lg text-gray-600 dark:text-gray-400">
-                        Important information regarding the use of Mana JNTUH Results portal.
+                        Important information regarding the use of JNTUK RESULTS portal.
                     </p>
                 </div>
 
@@ -32,7 +32,7 @@ const Disclaimer = () => {
                             <div>
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">No Official Affiliation</h2>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Mana JNTUH Results (manajntuhresults.vercel.app) is an independent, third-party academic portal developed for the convenience of students. We are <strong>NOT</strong> affiliated with, authorized, maintained, sponsored, or endorsed by Jawaharlal Nehru Technological University, Hyderabad (JNTUH) or any of its constituent colleges.
+                                    JNTUK RESULTS (manajntuhresults.vercel.app) is an independent, third-party academic portal developed for the convenience of students. We are <strong>NOT</strong> affiliated with, authorized, maintained, sponsored, or endorsed by Jawaharlal Nehru Technological University, Kakinada (JNTUK) or any of its constituent colleges.
                                 </p>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const Disclaimer = () => {
                             <div>
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Information Accuracy</h2>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    While we strive to provide accurate and up-to-date information fetched from official JNTUH sources, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the results or information contained on this website.
+                                    While we strive to provide accurate and up-to-date information fetched from official JNTUK sources, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the results or information contained on this website.
                                 </p>
                                 <p className="text-gray-600 dark:text-gray-400 mt-4 font-semibold italic">
                                     Any reliance you place on such information is strictly at your own risk.
@@ -61,7 +61,7 @@ const Disclaimer = () => {
                             <div>
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Official Use Warning</h2>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    The results displayed on this portal are for immediate information to the examinees and do not constitute a legal document. For official purposes, students are advised to rely only on the original marks sheets/certificates issued by JNTUH. In case of any discrepancy, the records maintained by the University shall be final.
+                                    The results displayed on this portal are for immediate information to the examinees and do not constitute a legal document. For official purposes, students are advised to rely only on the original marks sheets/certificates issued by JNTUK. In case of any discrepancy, the records maintained by the University shall be final.
                                 </p>
                             </div>
                         </div>

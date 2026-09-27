@@ -26,7 +26,6 @@ const CONTENT_RICH_ROUTES = [
   "/feedback",
   "/privacy",
   "/calendars",
-  "/group-chat",
   "/grace-marks",
   "/saved-results",
   "/excelresult",
@@ -34,9 +33,6 @@ const CONTENT_RICH_ROUTES = [
 
 function isContentRichRoute(pathname: string | null): boolean {
   if (!pathname) return false;
-
-  // Never show ads on admin pages
-  if (pathname.startsWith("/admin")) return false;
 
   // Check exact match or prefix for content-rich routes
   for (const route of CONTENT_RICH_ROUTES) {
@@ -46,10 +42,7 @@ function isContentRichRoute(pathname: string | null): boolean {
   }
 
   // Result pages (e.g. /academicallresult/result, /classresult/result) - have result content
-  if (
-    pathname.includes("/result") &&
-    !pathname.startsWith("/admin")
-  ) {
+  if (pathname.includes("/result")) {
     return true;
   }
 

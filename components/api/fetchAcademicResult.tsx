@@ -137,15 +137,15 @@ export async function fetchAcademicResult(htno: string) {
 
   const urlList = isNative()
     ? [
-        "https://jntuhresults.up.railway.app/api/academicresult?htno=",
-        "https://jntuhresultss.vercel.app/api/academicresult?htno=",
-        "https://jntuhresultsss.vercel.app/api/academicresult?htno=",
+        "https://jntukresults.up.railway.app/api/academicresult?htno=",
+        "https://jntukresultss.vercel.app/api/academicresult?htno=",
+        "https://jntukresultsss.vercel.app/api/academicresult?htno=",
       ]
     : [
         "/api/academicresult?htno=",
-        "https://jntuhresults.up.railway.app/api/academicresult?htno=",
-        "https://jntuhresultss.vercel.app/api/academicresult?htno=",
-        "https://jntuhresultsss.vercel.app/api/academicresult?htno=",
+        "https://jntukresults.up.railway.app/api/academicresult?htno=",
+        "https://jntukresultss.vercel.app/api/academicresult?htno=",
+        "https://jntukresultsss.vercel.app/api/academicresult?htno=",
       ];
 
   // Race all URLs in parallel — first successful response wins (faster than sequential)
@@ -249,7 +249,7 @@ export async function fetchAcademicallResult(htno: string) {
   }
 
   const url =
-    "https://jntuhresults.up.railway.app/api/academicallresult?htno=" + htno;
+    "https://jntukresults.up.railway.app/api/academicallresult?htno=" + htno;
   try {
     // Use native HTTP for native apps (bypasses CORS), axios for web
     const response = isNative()

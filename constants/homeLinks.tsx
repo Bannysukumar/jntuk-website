@@ -28,18 +28,13 @@ export const homeLinks = [
     description: "Access your overall backlogs report with an hallticket",
     link: "/backlogreport",
   },
+  // Class results stay off the homepage — they are heavy on JNTUK.
   // {
   //   title: "Results Contrast",
   //   description:
   //     "Compare your academic performance across all semesters with your classmate.",
   //   link: "/resultcontrast",
   // },
-  {
-    title: "Class Results",
-    description:
-      "View the results of your classmates and compare your performance with theirs",
-    link: "classresult",
-  },
   {
     title: "Grace Marks Eligibility",
     description:

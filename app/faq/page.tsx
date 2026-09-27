@@ -8,7 +8,7 @@ import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 const Faq = () => {
   const faqs = [
     {
-      question: "How do I check my JNTUH results on this website?",
+      question: "How do I check my JNTUK results on this website?",
       answer:
         "To check your results, simply navigate to the Academic Result page, enter your roll number (HT number) in the search box, and click on the 'Results' button. The website will fetch and display all your semester results, including regular and supplementary exams, along with your CGPA calculation.",
     },
@@ -50,7 +50,7 @@ const Faq = () => {
     {
       question: "Why is my result showing as 'being prepared'?",
       answer:
-        "If you see a message that your result is being prepared, it means the JNTUH server is still processing your result. Please wait a few minutes and try again. The result will be available once JNTUH officially releases it.",
+        "If you see a message that your result is being prepared, it means the JNTUK server is still processing your result. Please wait a few minutes and try again. The result will be available once JNTUK officially releases it.",
     },
     {
       question: "Can I download or print my results?",
@@ -60,17 +60,17 @@ const Faq = () => {
     {
       question: "How accurate are the results shown on this website?",
       answer:
-        "The results are fetched directly from the official JNTUH servers, so they are as accurate as the official JNTUH website. However, for official purposes, always refer to the original JNTUH results website.",
+        "The results are fetched directly from the official JNTUK servers, so they are as accurate as the official JNTUK website. However, for official purposes, always refer to the original JNTUK results website.",
     },
     {
       question: "What should I do if my result is not showing?",
       answer:
-        "If your result is not showing, please check: 1) Your roll number is correct, 2) Your regulation is R18 or above, 3) The result has been officially released by JNTUH. If the issue persists, try clearing your browser cache or contact us through the Help Center.",
+        "If your result is not showing, please check: 1) Your roll number is correct, 2) Your regulation is R18 or above, 3) The result has been officially released by JNTUK. If the issue persists, try clearing your browser cache or contact us through the Help Center.",
     },
     {
       question: "How do I get notifications about new exam results?",
       answer:
-        "Visit the 'Notifications' page to see all the latest exam notifications and result announcements from JNTUH. You can filter notifications by degree, regulation, year, and exam type.",
+        "Visit the 'Notifications' page to see all the latest exam notifications and result announcements from JNTUK. You can filter notifications by degree, regulation, year, and exam type.",
     },
     {
       question: "Is my data stored or shared?",

@@ -11,7 +11,7 @@ const HelpCenter = () => {
   const helpOptions = [
     {
       title: "Frequently Asked Questions",
-      description: "Find answers to the most commonly asked questions about using Mana JNTUH Results portal.",
+      description: "Find answers to the most commonly asked questions about using JNTUK RESULTS portal.",
       icon: HelpCircle,
       href: "/faq",
       iconBg: "bg-blue-100 dark:bg-blue-900/30",
@@ -62,7 +62,7 @@ const HelpCenter = () => {
             </h1>
           </div>
           <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-            Get help, find answers, and learn how to make the most of Mana JNTUH Results portal
+            Get help, find answers, and learn how to make the most of JNTUK RESULTS portal
           </p>
         </div>
 

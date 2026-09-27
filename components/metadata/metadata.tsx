@@ -9,10 +9,10 @@ const MetaData = () => {
     <>
       <meta property="og:url" content="https://manajntuhresults.vercel.app/" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="JNTUH RESULTS" />
+      <meta property="og:title" content="JNTUK RESULTS" />
       <meta
         property="og:description"
-        content="Check your JNTUH exam results online instantly! Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks Eligibility, Syllabus, Jobs & Careers, and Notifications. Official JNTUH Results portal for Jawaharlal Nehru Technological University Hyderabad."
+        content="Check your JNTUK exam results online instantly! Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks Eligibility, Syllabus, Jobs & Careers, and Notifications. Official JNTUK Results portal for Jawaharlal Nehru Technological University Kakinada."
       />
       <meta
         property="og:image"
@@ -20,10 +20,10 @@ const MetaData = () => {
       />
       <meta property="og:image:width" content="512" />
       <meta property="og:image:height" content="512" />
-      <meta property="og:image:alt" content="Mana JNTUH Results Logo" />
+      <meta property="og:image:alt" content="JNTUK RESULTS Logo" />
       <meta
         property="keywords"
-        content="mana jntuh results, mana jntuhresults, manajntuh results, mana jntuh results online, mana jntuh results portal, check mana jntuh results, jntuh, jntuh Results, jntuh vercel, vercel jntuh, jntuh results vercel,  jntuhresults, jntuh notifications, JNTUH Results Engineering, JNTUH Engineering Results, jntuh bpharmacy results, jntuh bphar results, jntuh mtech results, jntuh mba results, jntuh mca results, jntuh all semester results"
+        content="jntuk results, jntuk results online, jntuk results portal, check jntuk results, jntuk, jntuk Results, jntuk vercel, vercel jntuk, jntuk results vercel, jntukresults, jntuk notifications, JNTUK Results Engineering, JNTUK Engineering Results, jntuk bpharmacy results, jntuk bphar results, jntuk mtech results, jntuk mba results, jntuk mca results, jntuk all semester results"
       />
       <meta name="publisher" content="Adepu Sukumar" />
       <meta name="creator" content="Adepu Sukumar" />
@@ -31,15 +31,15 @@ const MetaData = () => {
       <meta name="twitter:card" content="summary" />
       <meta
         property="twitter:title"
-        content="JNTUH RESULTS"
+        content="JNTUK RESULTS"
       />
       <meta
         property="twitter:description"
-        content="Check your JNTUH exam results online instantly! Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Jobs & Careers, and Notifications. Get your JNTUH results for UG & PG courses including B.Tech, M.Tech, MBA, MCA, B.Pharmacy."
+        content="Check your JNTUK exam results online instantly! Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Jobs & Careers, and Notifications. Get your JNTUK results for UG & PG courses including B.Tech, M.Tech, MBA, MCA, B.Pharmacy."
       />
       {/* <meta */}
       {/*   name="description" */}
-      {/*   content="Easily access your JNTUH results for {relevant course and semester} - Find out your grades, CGPA, backlogs, Jobs, Internships and more in one place. Check now!" */}
+      {/*   content="Easily access your JNTUK results for {relevant course and semester} - Find out your grades, CGPA, backlogs, Jobs, Internships and more in one place. Check now!" */}
       {/* /> */}
       <meta
         name="google-site-verification"

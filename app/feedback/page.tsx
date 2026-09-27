@@ -77,7 +77,7 @@ export default function FeedbackPage() {
             Share Your Feedback
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Your thoughts help us improve. Share your suggestions, report issues, or tell us what you love about Mana JNTUH Results.
+            Your thoughts help us improve. Share your suggestions, report issues, or tell us what you love about JNTUK RESULTS.
           </p>
         </div>
 

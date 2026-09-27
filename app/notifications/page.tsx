@@ -101,22 +101,22 @@ const Notification = () => {
               <Bell className="h-8 w-8" />
             </div>
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
-              JNTUH Notifications
+              JNTUK Notifications
             </h1>
           </div>
           <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-            Stay updated with the latest result notifications and announcements from JNTUH
+            Stay updated with the latest result notifications and announcements from JNTUK
           </p>
         </div>
 
         <ToolPageEditorial
-          heading="How to Use JNTUH Notifications on Mana JNTUH Results"
+          heading="How to Use JNTUK Notifications on JNTUK RESULTS"
           paragraphs={[
-            "JNTUH publishes hundreds of examination and result-related circulars each academic year. This page brings together filtered lists so you can find degree-specific, regulation-specific, and year-specific notifications without browsing multiple PDFs manually.",
+            "JNTUK publishes hundreds of examination and result-related circulars each academic year. This page brings together filtered lists so you can find degree-specific, regulation-specific, and year-specific notifications without browsing multiple PDFs manually.",
             "Use Result Updates when you are looking for exam schedules, result release notices, or revaluation timelines. General Updates highlights broader announcements. You can refine results using the filters and load more pages when available.",
-            "Notification text and links often point to official PDFs or portals maintained by JNTUH. Always download circulars from trusted sources and verify deadlines for fees, registrations, and revaluation with your college examination office.",
+            "Notification text and links often point to official PDFs or portals maintained by JNTUK. Always download circulars from trusted sources and verify deadlines for fees, registrations, and revaluation with your college examination office.",
           ]}
-          note="We aggregate information for convenience; official wording on jntuh.ac.in and university notices remains authoritative."
+          note="We aggregate information for convenience; official wording on jntuk.ac.in and university notices remains authoritative."
         />
 
         {/* Tabs */}
@@ -148,7 +148,7 @@ const Notification = () => {
                   Latest General Updates
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Stay updated with the most recent announcements and notifications from JNTUH
+                  Stay updated with the most recent announcements and notifications from JNTUK
                 </p>
               </div>
               <NotificationResults

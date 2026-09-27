@@ -48,9 +48,9 @@ const NotificationExamCode = ({
       const regex = new RegExp(key, "g");
       documentTitle = documentTitle.replace(regex, value.toString());
     }
-    setDocumentTitle("JNTUH " + documentTitle);
+    setDocumentTitle("JNTUK " + documentTitle);
 
-    document.title = "JNTUH " + documentTitle;
+    document.title = "JNTUK " + documentTitle;
 
     if (formatted_date !== null) {
       var rcrvdate = rcrvdetails[formatted_date as keyof typeof rcrvdetails];
@@ -89,7 +89,7 @@ const NotificationExamCode = ({
                   <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 dark:bg-gray-700/60 backdrop-blur-sm">
                       <User className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                      <span className="font-medium">MANA JNTUH</span>
+                      <span className="font-medium">JNTUK RESULTS</span>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 dark:bg-gray-700/60 backdrop-blur-sm">
                       <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400" />

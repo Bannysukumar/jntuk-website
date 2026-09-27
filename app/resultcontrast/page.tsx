@@ -15,7 +15,7 @@ const ResultContrast = () => {
   const onSubmit = async () => {
     if (isCooldown) return;
     if (hallticketno.length < 10 || hallticketno2.length < 10) {
-      toast.error("The Hallticket should be of 10 digits");
+      toast.error("Enter a 10-character roll number (letters and numbers only), e.g. 226Q1A4304");
       return;
     }
     setIsCooldown(true);
@@ -40,13 +40,13 @@ const ResultContrast = () => {
         isDisabled={isCooldown}
       />
       <ToolPageEditorial
-        heading="Compare Two Students’ JNTUH Results (Result Contrast)"
+        heading="Compare Two Students’ JNTUK Results (Result Contrast)"
         paragraphs={[
-          "Result Contrast lets you compare academic performance between two valid JNTUH hall ticket numbers side by side. It is often used by classmates to compare CGPA trends, subject-wise performance, or backlogs in a single view—without sharing passwords or unofficial screenshots.",
+          "Result Contrast lets you compare academic performance between two valid JNTUK hall ticket numbers side by side. It is often used by classmates to compare CGPA trends, subject-wise performance, or backlogs in a single view—without sharing passwords or unofficial screenshots.",
           "Enter both 10-digit hall ticket numbers and submit. The comparison is based on data returned from official result systems at the time of your request. Different regulations or missing semester data may affect what can be shown; if one student’s result is still being prepared, try again after the official release.",
-          "Use this feature responsibly and respect privacy: only compare hall tickets when both students agree. Mana JNTUH Results does not store your marks on our servers permanently; we display what the upstream APIs return for your session.",
+          "Use this feature responsibly and respect privacy: only compare hall tickets when both students agree. JNTUK RESULTS does not store your marks on our servers permanently; we display what the upstream APIs return for your session.",
         ]}
-        note="This tool is for informational purposes only. Official standings and eligibility are determined by JNTUH and your institution."
+        note="This tool is for informational purposes only. Official standings and eligibility are determined by JNTUK and your institution."
       />
       <Footer />
     </>

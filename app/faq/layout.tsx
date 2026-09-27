@@ -4,16 +4,16 @@ import { SITE_URL } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about checking JNTUH results, hall ticket number, and using the portal.",
+    "Frequently asked questions about checking JNTUK results, hall ticket number, and using the portal.",
   alternates: { canonical: `${SITE_URL}/faq` },
   openGraph: {
     type: "website",
-    title: "FAQ | JNTUH Results",
-    description: "Frequently asked questions about JNTUH results and the portal.",
+    title: "FAQ | JNTUK Results",
+    description: "Frequently asked questions about JNTUK results and the portal.",
     url: `${SITE_URL}/faq`,
-    siteName: "JNTUH RESULTS",
+    siteName: "JNTUK RESULTS",
   },
-  twitter: { card: "summary_large_image", title: "FAQ | JNTUH Results", description: "Frequently asked questions about JNTUH results and the portal." },
+  twitter: { card: "summary_large_image", title: "FAQ | JNTUK Results", description: "Frequently asked questions about JNTUK results and the portal." },
 };
 
 export default function RootLayout({
