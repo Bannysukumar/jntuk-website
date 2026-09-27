@@ -3,7 +3,6 @@ import { saveToLocalStorage } from "../customfunctions/localStorage";
 import { isNative, nativeHttpGet } from "@/lib/native-features";
 import {
   JNTUK_API_BASE_URL,
-  QUEUED_RESULT_MESSAGE,
   getJntukApiHeaders,
   isValidRollNumber,
   normalizeRollNumber,
@@ -18,7 +17,7 @@ const RESULT_CACHE_TTL_MS = 5 * 60 * 1000;
 const RESULT_CACHE_KEY_PREFIX = "jntuk_result_";
 const REQUEST_TIMEOUT_MS = 20 * 1000;
 const POLL_DELAY_MS = 40 * 1000;
-const MAX_POLLS = 15;
+const MAX_POLLS = 8;
 
 const resultMemoryCache = new Map<
   string,
@@ -102,26 +101,21 @@ async function requestUpstream(
   };
 }
 
-export type FetchOptions = {
-  signal?: AbortSignal | null;
-  skipCache?: boolean;
-  onQueued?: (polls: number) => void;
-};
-
 async function requestWithPoll(
   endpoint: string,
   params: Record<string, string>,
   signal?: AbortSignal | null,
-  polls = 0,
-  onQueued?: (polls: number) => void
+  polls = 0
 ): Promise<{ status: number; data: any }> {
   const response = await requestUpstream(endpoint, params, signal);
   if (response.status === 202 && polls < MAX_POLLS) {
-    onQueued?.(polls + 1);
     toast.dismiss();
-    toast(QUEUED_RESULT_MESSAGE, { duration: 8000 });
+    toast(
+      response.data?.message ||
+        "Result is queued. Checking again in about 40 seconds..."
+    );
     await sleep(POLL_DELAY_MS, signal);
-    return requestWithPoll(endpoint, params, signal, polls + 1, onQueued);
+    return requestWithPoll(endpoint, params, signal, polls + 1);
   }
   return response;
 }
@@ -177,7 +171,7 @@ export function clearCachedResult(htno: string): void {
 
 export const fetchAcademicResult = async (
   htno: string,
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null; skipCache?: boolean }
 ): Promise<null | AcademicResulProps> => {
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return null;
@@ -201,9 +195,7 @@ export const fetchAcademicResult = async (
       const response = await requestWithPoll(
         "getAcademicResult",
         { rollNumber: key },
-        signal,
-        0,
-        options?.onQueued
+        signal
       );
 
       if (response.status === 200 && response.data && "details" in response.data) {
@@ -215,8 +207,10 @@ export const fetchAcademicResult = async (
 
       toast.dismiss();
       if (response.status === 202) {
-        options?.onQueued?.(MAX_POLLS);
-        toast(QUEUED_RESULT_MESSAGE, { duration: 8000 });
+        toast(
+          response.data?.message ||
+            "Result is still being prepared. Please try again shortly."
+        );
         return null;
       }
       toastForStatus(response.status, response.data);
@@ -252,7 +246,7 @@ export const fetchAcademicResult = async (
 
 export const fetchHardRefresh = async (
   htno: string,
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null }
 ): Promise<null | AcademicResulProps> => {
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return null;
@@ -278,7 +272,6 @@ export const fetchHardRefresh = async (
     return fetchAcademicResult(key, {
       signal: options?.signal,
       skipCache: true,
-      onQueued: options?.onQueued,
     });
   } catch (e: any) {
     toast.dismiss();
@@ -290,7 +283,7 @@ export const fetchHardRefresh = async (
 
 export const fetchAllResult = async (
   htno: string,
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null }
 ) => {
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return false;
@@ -300,9 +293,7 @@ export const fetchAllResult = async (
     const response = await requestWithPoll(
       "getAllResult",
       { rollNumber: key },
-      options?.signal,
-      0,
-      options?.onQueued
+      options?.signal
     );
 
     if (response.status === 200 && response.data && "details" in response.data) {
@@ -338,7 +329,7 @@ export const fetchAllResult = async (
 
 export const fetchBacklogReport = async (
   htno: string,
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null }
 ) => {
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return false;
@@ -348,9 +339,7 @@ export const fetchBacklogReport = async (
     const response = await requestWithPoll(
       "getBacklogs",
       { rollNumber: key },
-      options?.signal,
-      0,
-      options?.onQueued
+      options?.signal
     );
 
     if (response.status === 200 && response.data && "details" in response.data) {
@@ -384,7 +373,7 @@ export const fetchBacklogReport = async (
 
 export const fetchCreditsCheckerReport = async (
   htno: string,
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null }
 ) => {
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return false;
@@ -394,9 +383,7 @@ export const fetchCreditsCheckerReport = async (
     const response = await requestWithPoll(
       "getCreditsChecker",
       { rollNumber: key },
-      options?.signal,
-      0,
-      options?.onQueued
+      options?.signal
     );
 
     if (response.status === 200 && response.data && "details" in response.data) {
@@ -434,7 +421,7 @@ export const fetchCreditsCheckerReport = async (
 export const fetchCreditContrastReport = async (
   htno1: string,
   htno2: string,
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null }
 ) => {
   const key1 = normalizeRollNumber(htno1);
   const key2 = normalizeRollNumber(htno2);
@@ -445,9 +432,7 @@ export const fetchCreditContrastReport = async (
     const response = await requestWithPoll(
       "getResultContrast",
       { rollNumber1: key1, rollNumber2: key2 },
-      options?.signal,
-      0,
-      options?.onQueued
+      options?.signal
     );
 
     if (response.status === 200 && response.data && "studentProfiles" in response.data) {
@@ -463,7 +448,8 @@ export const fetchCreditContrastReport = async (
     toast.dismiss();
     if (response.status === 202) {
       toast(
-        "Waiting until both hall tickets have results. A 202 means one or both are still being fetched from JNTUK."
+        response.data?.message ||
+          "Comparison is still being prepared. Please try again shortly."
       );
       return false;
     }
@@ -530,7 +516,7 @@ export const fetchNotifications = async (params: Params): Promise<Result[] | nul
 export const fetchClassResult = async (
   htno: string,
   type: string = "academicresult",
-  options?: FetchOptions
+  options?: { signal?: AbortSignal | null }
 ) => {
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return false;
@@ -540,9 +526,7 @@ export const fetchClassResult = async (
     const response = await requestWithPoll(
       "getClassResults",
       { rollNumber: key, type },
-      options?.signal,
-      0,
-      options?.onQueued
+      options?.signal
     );
 
     if (response.status === 200 && response.data && response.data.length > 0) {
@@ -606,18 +590,6 @@ export const fetchGraceMarksEligibility = async (
     }
 
     toast.dismiss();
-    if (response.status === 404 || response.status === 406) {
-      const message =
-        response.status === 404
-          ? "This hall ticket has no stored 4-2 result, so grace marks cannot be checked yet."
-          : "Grace marks are not applicable for this record, or the checker is not configured.";
-      saveToLocalStorage(
-        key + "-GraceMarksEligibility",
-        JSON.stringify({ _errorStatus: response.status, message })
-      );
-      toast(message, { duration: 8000 });
-      return true;
-    }
     if (response.data?.status === "success") {
       toast(response.data.message);
       return false;
@@ -630,7 +602,7 @@ export const fetchGraceMarksEligibility = async (
     if (error?.response?.status === 400) {
       toast.error(error.response.data.detail || error.response.data.error);
     } else {
-      toast.error("Could not check grace marks. Try again later.");
+      toast.error("SERVER ISSUE!!");
     }
     return false;
   }
@@ -688,11 +660,15 @@ export const fetchLatestNotifications = async (): Promise<Result[] | null> => {
     return latestNotificationsCache.data;
   }
   try {
-    const response = await requestUpstream("getlatestnotifications", {});
+    const url = `/api/getlatestnotifications`;
+    const response = await axios.get(url, {
+      timeout: 12000,
+      validateStatus: (status) => status < 500,
+    });
 
     if (response.status === 200) {
-      if (response.data?.status === "failure") {
-        return [];
+      if (response.data?.status === "success" || response.data?.status === "failure") {
+        return null;
       }
       let data: Result[] | null = null;
       if (Array.isArray(response.data)) {
@@ -715,56 +691,6 @@ export const fetchLatestNotifications = async (): Promise<Result[] | null> => {
     if (error.response?.status >= 500 || !error.response) {
       console.error("An error occurred while fetching latest notifications:", error);
     }
-    return null;
-  }
-};
-
-function unwrapList(data: any): any[] {
-  if (Array.isArray(data)) return data;
-  if (Array.isArray(data?.jobs)) return data.jobs;
-  if (Array.isArray(data?.calendars)) return data.calendars;
-  if (Array.isArray(data?.syllabus)) return data.syllabus;
-  if (Array.isArray(data?.results)) return data.results;
-  if (Array.isArray(data?.data)) return data.data;
-  if (data && typeof data === "object" && Object.keys(data).length > 0) return [data];
-  return [];
-}
-
-export const fetchJobs = async (): Promise<any[]> => {
-  const response = await requestUpstream("jobs", {});
-  if (response.status !== 200) return [];
-  return unwrapList(response.data);
-};
-
-export const fetchCalendars = async (): Promise<any[]> => {
-  const response = await requestUpstream("calendars", {});
-  if (response.status !== 200) return [];
-  return unwrapList(response.data);
-};
-
-export const fetchSyllabus = async (): Promise<any[]> => {
-  const response = await requestUpstream("syllabus", {});
-  if (response.status !== 200) return [];
-  return unwrapList(response.data);
-};
-
-export const fetchCmmPdf = async (htno: string): Promise<Blob | null> => {
-  const key = normalizeRollNumber(htno);
-  if (!isValidRollNumber(key)) return null;
-  try {
-    const url = isNative()
-      ? `${UPSTREAM_API_BASE}/getCMM?rollNumber=${key}`
-      : `/api/proxy?endpoint=getCMM&rollNumber=${key}`;
-    const response = await fetch(url, {
-      headers: isNative() ? getJntukApiHeaders() : undefined,
-    });
-    if (!response.ok) return null;
-    const contentType = response.headers.get("content-type") || "";
-    const blob = await response.blob();
-    if (!blob || blob.size < 80) return null;
-    if (contentType.includes("json") || blob.type.includes("json")) return null;
-    return blob;
-  } catch {
     return null;
   }
 };

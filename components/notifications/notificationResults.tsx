@@ -63,7 +63,7 @@ const NotificationResults = ({
           No Notifications Found
         </p>
         <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-          No notifications from the JNTUK API for these filters.
+          Try adjusting your search filters to see more results
         </p>
       </Card>
     );

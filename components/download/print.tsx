@@ -31,7 +31,7 @@ const Print = ({ componentRef }: { componentRef: any }) => {
       await shareContent({
         title: `JNTUK Result - ${htno || 'Hall Ticket'}`,
         text: textContent.substring(0, 500) + (textContent.length > 500 ? '...' : ''),
-        url: `https://jntuk-website.vercel.app/academicresult/result?htno=${htno}`,
+        url: `https://manajntuhresults.vercel.app/academicresult/result?htno=${htno}`,
         dialogTitle: 'Share Result',
       });
     }
@@ -80,7 +80,7 @@ const Print = ({ componentRef }: { componentRef: any }) => {
 
   return (
     <>
-      <div className="fixed bottom-4 left-4 m-0 flex gap-2 z-[40]">
+      <div className="fixed bottom-0 right-0 m-5 flex gap-2 z-[401]">
         {isNativeApp && (
           <>
             <div

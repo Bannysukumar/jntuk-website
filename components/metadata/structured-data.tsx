@@ -15,7 +15,7 @@ export default function StructuredData() {
     },
     image: `${SITE_URL}/icon-512x512.png`,
     description:
-      "Independent student tool for JNTUK (Jawaharlal Nehru Technological University, Kakinada) exam results, CGPA, backlogs, and academic performance.",
+      "JNTUK RESULTS - Official portal for checking JNTUK (Jawaharlal Nehru Technological University Kakinada) exam results online. Get your UG & PG results, CGPA, backlogs, and academic performance.",
     sameAs: [
       "https://github.com/Bannysukumar",
       "https://www.linkedin.com/in/adepusukumar",
@@ -79,7 +79,7 @@ export default function StructuredData() {
       { "@type": "SiteNavigationElement", name: "Grace Marks Proof", url: `${SITE_URL}/grace-marks/proof`, description: "Get grace marks proof document" },
       { "@type": "SiteNavigationElement", name: "Calendars", url: `${SITE_URL}/calendars`, description: "Academic calendars and exam schedules" },
       { "@type": "SiteNavigationElement", name: "Syllabus", url: `${SITE_URL}/syllabus`, description: "Access detailed syllabus subject wise" },
-      { "@type": "SiteNavigationElement", name: "Jobs & Careers", url: `${SITE_URL}/careers`, description: "Find internships and jobs" },
+      { "@type": "SiteNavigationElement", name: "Jobs & Careers", url: `${SITE_URL}/carrers`, description: "Find internships and jobs" },
       { "@type": "SiteNavigationElement", name: "Notifications", url: `${SITE_URL}/notifications`, description: "Latest JNTUK notifications" },
       { "@type": "SiteNavigationElement", name: "Help Center", url: `${SITE_URL}/helpcenter`, description: "Get help and support" },
     ],
@@ -132,7 +132,7 @@ export default function StructuredData() {
       { "@type": "ListItem", position: 8, name: "Grace Marks Proof", url: `${SITE_URL}/grace-marks/proof`, description: "Get grace marks proof document" },
       { "@type": "ListItem", position: 9, name: "Calendars", url: `${SITE_URL}/calendars`, description: "Academic calendars" },
       { "@type": "ListItem", position: 10, name: "Syllabus", url: `${SITE_URL}/syllabus`, description: "Access syllabus for all courses" },
-      { "@type": "ListItem", position: 11, name: "Jobs & Careers", url: `${SITE_URL}/careers`, description: "Find internships and jobs" },
+      { "@type": "ListItem", position: 11, name: "Jobs & Careers", url: `${SITE_URL}/carrers`, description: "Find internships and jobs" },
       { "@type": "ListItem", position: 12, name: "Notifications", url: `${SITE_URL}/notifications`, description: "Latest JNTUK notifications" },
       { "@type": "ListItem", position: 13, name: "Help Center", url: `${SITE_URL}/helpcenter`, description: "Get help and support" },
     ],

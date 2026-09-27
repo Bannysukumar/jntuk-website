@@ -7,14 +7,12 @@ import AcademicAllResult from "@/components/result/academicallresult";
 import Print from "@/components/download/print";
 import { getFromLocalStorage } from "@/components/customfunctions/localStorage";
 import { fetchAllResult } from "@/components/api/fetchResults";
-import QueuedState from "@/components/result/QueuedState";
 
 const AcademicAllResultResult = () => {
   const router = useRouter();
   const htno = (useSearchParams().get("htno") || "").trim().toUpperCase();
   const [allResult, setAllResult] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [queued, setQueued] = useState(false);
   const componentRef = useRef(null);
 
   useEffect(() => {
@@ -37,10 +35,7 @@ const AcademicAllResultResult = () => {
     const doFetch = async () => {
       setLoading(true);
       try {
-        const ok = await fetchAllResult(htno, {
-          signal: abortController.signal,
-          onQueued: () => setQueued(true),
-        });
+        const ok = await fetchAllResult(htno, { signal: abortController.signal });
         if (cancelled || abortController.signal.aborted) return;
         if (ok) {
           const data = getFromLocalStorage(htno + "-AllResult");
@@ -65,8 +60,12 @@ const AcademicAllResultResult = () => {
     };
   }, [htno, router]);
 
-  if (loading || (queued && !allResult)) {
-    return <QueuedState />;
+  if (loading) {
+    return (
+      <div className="m-2 text-[30%] sm:text-[45%] md:text-[60%] lg:text-[100%]">
+        <div className="text-center font-bold my-5">Loading...</div>
+      </div>
+    );
   }
   if (allResult === null) {
     return (

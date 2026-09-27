@@ -20,23 +20,21 @@ const AIChatBot = dynamic(() => import("@/components/ai/AIChatBot"), {
   ssr: false,
 });
 
-const inter = Inter({
+const inter = Inter({ 
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
   preload: true,
   adjustFontFallback: true,
-  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "JNTUK exam results – B.Tech, supply, RCRV | JNTUK Results",
+    default: "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS",
     template: "%s | JNTUK RESULTS",
   },
   description:
-    "Check JNTUK exam results for Jawaharlal Nehru Technological University, Kakinada. Independent student tool for academic results, backlogs, credits, and notifications.",
+    "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results, grades, CGPA, backlogs. Academic Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Notifications.",
   keywords: [
     "jntuk results",
     "jntuk results 2025",
@@ -53,10 +51,8 @@ export const metadata: Metadata = {
     "jntuk academic results",
     "jntuk backlog report",
     "jntuk all semester results",
+    "jntuk results r18",
     "jntuk results r16",
-    "jntuk results r19",
-    "jntuk results r20",
-    "jntuk results r23",
     "jawaharlal nehru technological university kakinada results",
   ],
   authors: [{ name: "Adepu Sukumar" }],
@@ -78,9 +74,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "JNTUK RESULTS",
-    title: "JNTUK exam results – B.Tech, supply, RCRV | JNTUK Results",
+    title: "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS",
     description:
-      "Independent student tool for JNTUK (Kakinada) exam results, grades, CGPA, and backlogs.",
+      "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results, grades, CGPA, backlogs.",
     images: [
       {
         url: `${SITE_URL}/jntuhresults_md.png`,
@@ -98,9 +94,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JNTUK exam results – B.Tech, supply, RCRV | JNTUK Results",
+    title: "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS",
     description:
-      "Independent student tool for JNTUK (Kakinada) exam results, grades, CGPA, and backlogs.",
+      "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results.",
     images: [`${SITE_URL}/jntuhresults_md.png`, `${SITE_URL}/icon-512x512.png`],
     creator: "@Bannysukumar",
   },
@@ -154,12 +150,17 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="google-adsense-account" content="ca-pub-1589551808134823" />
         
-        {/* AdSense loads conditionally via AdSenseLoader */}
+        {/* Optimized Google Fonts - Load with display=swap */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter:wght@300&family=Roboto+Slab&display=swap"
+          rel="stylesheet"
+        />
+        {/* AdSense loads conditionally via AdSenseLoader - only on content-rich pages (AdSense policy compliance) */}
         <CanonicalUrl />
         <StructuredData />
         <BreadcrumbSchema />
       </head>
-      <body className={`${inter.variable} ${inter.className} font-sans`}>
+      <body className={inter.className}>
         <GoogleAnalytics />
         <SpeedInsightsWrapper />
         <AdSenseLoader />

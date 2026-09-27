@@ -7,14 +7,12 @@ import { getFromLocalStorage } from "@/components/customfunctions/localStorage";
 import AcademicResult from "@/components/result/academicresult";
 import Print from "@/components/download/print";
 import { fetchBacklogReport } from "@/components/api/fetchResults";
-import QueuedState from "@/components/result/QueuedState";
 
 const BacklogReportResult = () => {
   const router = useRouter();
   const htno = (useSearchParams().get("htno") || "").trim().toUpperCase();
   const [backlogreport, setBacklogreport] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [queued, setQueued] = useState(false);
   const componentRef = useRef(null);
 
   useEffect(() => {
@@ -35,10 +33,7 @@ const BacklogReportResult = () => {
     const doFetch = async () => {
       setLoading(true);
       try {
-        const ok = await fetchBacklogReport(htno, {
-          signal: abortController.signal,
-          onQueued: () => setQueued(true),
-        });
+        const ok = await fetchBacklogReport(htno, { signal: abortController.signal });
         if (cancelled || abortController.signal.aborted) return;
         if (ok) {
           const data = getFromLocalStorage(htno + "-Backlogreport");
@@ -63,8 +58,12 @@ const BacklogReportResult = () => {
     };
   }, [htno, router]);
 
-  if (loading || (queued && !backlogreport)) {
-    return <QueuedState />;
+  if (loading) {
+    return (
+      <div className="m-2 text-[30%] sm:text-[45%] md:text-[60%] lg:text-[100%]">
+        <div className="text-center font-bold my-5">Loading...</div>
+      </div>
+    );
   }
   if (backlogreport === null) {
     return (

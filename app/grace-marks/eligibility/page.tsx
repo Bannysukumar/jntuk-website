@@ -36,7 +36,7 @@ const GraceMarksEligibility = () => {
         heading="Understanding Grace Marks Eligibility (JNTUK)"
         paragraphs={[
           "Grace marks are sometimes applied according to university rules when a student is just short of a passing mark or needs marginal relief in specific subjects. Eligibility depends on your regulation, subject marks, and the examination branch’s current policy—not every student will qualify automatically.",
-          "Only if 4-2 is already stored. If Gemini or file storage are not configured, proof upload will not work. A 404 or 406 means this hall ticket is not eligible or 4-2 is missing.",
+          "This page checks eligibility based on your hall ticket and the data available from connected services. Enter your hall ticket number to see whether grace-related rules may apply to your record for the semesters covered.",
           "Policies can change by notification; always read the latest circulars on the JNTUK website and confirm with your college examination cell before assuming you will receive grace marks.",
         ]}
         note="Displayed information is for guidance only. Final grace marks and promotion decisions rest with JNTUK."

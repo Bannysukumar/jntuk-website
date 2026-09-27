@@ -1,55 +1,50 @@
 export const homeLinks = [
   {
-    title: "Backlogs",
-    description: "See subjects that still need to be cleared for this hall ticket.",
-    link: "/backlogreport",
+    title: "Academic Result",
+    description:
+      " Access your overall academic performance with just an hallticket.",
+    link: "/academicresult",
   },
   {
-    title: "All attempts",
-    description: "Regular, supply, and RCRV attempts grouped by semester.",
-    link: "/academicallresult",
-  },
-  {
-    title: "Credits",
-    description: "Year-wise credits returned by the JNTUK API.",
+    title: "Credit Checker",
+    description:
+      "Check your credits to find out how many you need to move on to the next year or to graduate",
     link: "/creditchecker",
   },
   {
-    title: "Notifications",
-    description: "Result updates and circulars published through this portal.",
-    link: "/notifications",
-  },
-];
-
-export const moreToolLinks = [
-  {
-    title: "Result Contrast",
-    description: "Compare two hall tickets after both results are ready.",
-    link: "/resultcontrast",
-  },
-  {
-    title: "Class results",
-    description: "Heavy request. May be refused when the scrape queue is busy.",
-    link: "/classresult",
-  },
-  {
-    title: "Grace marks",
-    description: "Only if 4-2 is already stored for this hall ticket.",
-    link: "/grace-marks/eligibility",
-  },
-  {
-    title: "Jobs & Careers",
-    description: "Internships and jobs when the jobs API has listings.",
-    link: "/careers",
-  },
-  {
-    title: "Calendars",
-    description: "Academic calendars loaded from the JNTUK API.",
-    link: "/calendars",
+    title: "Jobs and Careers",
+    description:
+      "Explore carrer paths!!!...    Find internships, jobs and kickstart your professional journey",
+    link: "/carrers",
   },
   {
     title: "Syllabus",
-    description: "Syllabus files loaded from the JNTUK API.",
+    description:
+      "Access detailed syllabus subject wise for your academic year.",
     link: "/syllabus",
+  },
+  {
+    title: "Backlog Report",
+    description: "Access your overall backlogs report with an hallticket",
+    link: "/backlogreport",
+  },
+  // Class results stay off the homepage — they are heavy on JNTUK.
+  // {
+  //   title: "Results Contrast",
+  //   description:
+  //     "Compare your academic performance across all semesters with your classmate.",
+  //   link: "/resultcontrast",
+  // },
+  {
+    title: "Grace Marks Eligibility",
+    description:
+      "Check if you are eligible for grace marks based on your academic performance",
+    link: "/grace-marks/eligibility",
+  },
+  {
+    title: "Grace Marks Proof",
+    description:
+      "Get proof document for grace marks eligibility verification",
+    link: "/grace-marks/proof",
   },
 ];

@@ -30,7 +30,7 @@ const AboutUs = () => {
               JNTUK RESULTS was born out of a simple necessity: to provide students of Jawaharlal Nehru Technological University, Kakinada (JNTUK) with a more efficient way to access and analyze their academic performance. We understand the stress and anticipation that comes with exam results, and our goal is to make that experience as smooth as possible.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              Our platform shows CGPA and SGPA values returned by the JNTUK API, plus backlog and credit tools. We do not recompute CGPA on the frontend. Result data is fetched on demand; university-issued documents remain the authority.
+              Our platform goes beyond just displaying marks. We provide advanced tools like CGPA calculators, backlog trackers, and credit checkers to help students plan their academic journey with clarity and confidence. All result data is fetched directly from official JNTUK systems; we do not store your marks on our servers, so you get accurate, up-to-date information with a focus on speed and usability.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               We are an independent project run for the benefit of the JNTUK student community. We are not affiliated with or endorsed by JNTUK. For official certificates and mark sheets, students should always refer to the documents issued by the university.
@@ -43,7 +43,7 @@ const AboutUs = () => {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Who We Serve</h2>
           <div className="prose prose-blue dark:prose-invert max-w-none space-y-4">
             <p className="text-gray-700 dark:text-gray-300">
-              JNTUK Results is built for students at JNTUK-affiliated colleges: B.Tech, B.Pharmacy, M.Tech, MBA, MCA, and other programmes under R16, R19, R20, and R23. Use it to check a published semester, view saved attempts, track backlogs, or compare two hall tickets. We do not claim official university status.
+              JNTUK RESULTS is built for every student enrolled in JNTUK-affiliated colleges: B.Tech, B.Pharmacy, M.Tech, MBA, MCA, and other programmes under R18, R22, and newer regulations. Whether you need to check a single semester result, view all results in one place, track backlogs, verify credits for promotion, or compare results with a classmate, our tools are designed to work on both mobile and desktop without compromising on accuracy or privacy.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               We also maintain pages dedicated to supply results, revaluation (RCRV), grace marks eligibility, academic calendars, syllabus, and job opportunities so that students can find relevant information and result-checking tools in one portal. If you have feedback or run into any issue, our Help Center and contact options are available for support.
@@ -84,7 +84,7 @@ const AboutUs = () => {
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">1</div>
               <div>
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Comprehensive Analysis</h4>
-                <p className="text-gray-600 dark:text-gray-400">View published JNTUK attempts, including RCRV when the API returns them. Older semesters appear only if they were scraped while live.</p>
+                <p className="text-gray-600 dark:text-gray-400">View all your results from R18 regulation onwards in one consolidated report, including RCRV results.</p>
               </div>
             </div>
             <div className="flex gap-4">

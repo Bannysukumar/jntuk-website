@@ -163,7 +163,7 @@ const SideMenubar = () => {
             ))}
           </div> */}
           <div className="flex justify-center m-2 text-xs text-muted-foreground">
-            © 2026 jntuk-website.vercel.app
+            © 2026 manajntuhresults.vercel.app
           </div>
         </div>
       </footer>

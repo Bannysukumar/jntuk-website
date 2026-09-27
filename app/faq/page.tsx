@@ -10,12 +10,12 @@ const Faq = () => {
     {
       question: "How do I check my JNTUK results on this website?",
       answer:
-        "Open Academic Result, enter your 10-character hall ticket, and choose Get Results. The page shows whatever semesters the JNTUK API returns, including the API CGPA. It does not invent missing years from 1-1 to 4-2.",
+        "To check your results, simply navigate to the Academic Result page, enter your roll number (HT number) in the search box, and click on the 'Results' button. The website will fetch and display all your semester results, including regular and supplementary exams, along with your CGPA calculation.",
     },
     {
       question: "Which regulations are supported by this website?",
       answer:
-        "This site is built for JNTUK regulations R16, R19, R20, and R23. RCRV is shown when JNTUK has published it. Only currently live exams (and previously saved attempts for that hall ticket) appear.",
+        "This website supports results for R18 regulation and above. It also considers RCRV (Revaluation) results. Please note that results below R18 regulation may not be fully supported.",
     },
     {
       question: "How do I view results for all my semesters at once?",
@@ -65,7 +65,7 @@ const Faq = () => {
     {
       question: "What should I do if my result is not showing?",
       answer:
-        "Check that the hall ticket is 10 letters and numbers, that JNTUK has published that exam, and that the page is still open while a 202 queued fetch runs. You can also use Hard Refresh on the result page.",
+        "If your result is not showing, please check: 1) Your roll number is correct, 2) Your regulation is R18 or above, 3) The result has been officially released by JNTUK. If the issue persists, try clearing your browser cache or contact us through the Help Center.",
     },
     {
       question: "How do I get notifications about new exam results?",
@@ -182,7 +182,7 @@ const Faq = () => {
             </a>
           </div> */}
           <div className="flex justify-center m-2 text-xs	 text-gray-600">
-            <p>&copy; 2026 jntuk-website.vercel.app</p>
+            <p>&copy; 2026 manajntuhresults.vercel.app</p>
           </div>
         </center>
       </div>

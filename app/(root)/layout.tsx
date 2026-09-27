@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/seo";
 
-const HOME_TITLE = "JNTUK exam results – B.Tech, supply, RCRV | JNTUK Results";
+const HOME_TITLE = "⚡ JNTUK Results 2025 – BTech, BPharmacy, RCRV | JNTUK RESULTS";
 const HOME_DESCRIPTION =
-  "Independent student tool for JNTUK (Kakinada) exam results, grades, CGPA, and backlogs.";
+  "Check JNTUK results 2025, JNTUK BTech results, RCRV, and supply results online. JNTUK RESULTS – official portal for JNTUK exam results, grades, CGPA, backlogs. Academic Results, Backlog Report, Class Results, Credit Checker, Grace Marks, Syllabus, Notifications.";
 
 export const metadata: Metadata = {
   title: HOME_TITLE,
@@ -24,10 +24,8 @@ export const metadata: Metadata = {
     "jntuk academic results",
     "jntuk backlog report",
     "jntuk all semester results",
+    "jntuk results r18",
     "jntuk results r16",
-    "jntuk results r19",
-    "jntuk results r20",
-    "jntuk results r23",
     "jawaharlal nehru technological university kakinada results",
   ],
   openGraph: {

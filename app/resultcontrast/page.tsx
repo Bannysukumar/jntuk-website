@@ -43,7 +43,7 @@ const ResultContrast = () => {
         heading="Compare Two Students’ JNTUK Results (Result Contrast)"
         paragraphs={[
           "Result Contrast lets you compare academic performance between two valid JNTUK hall ticket numbers side by side. It is often used by classmates to compare CGPA trends, subject-wise performance, or backlogs in a single view—without sharing passwords or unofficial screenshots.",
-          "Enter two 10-character hall tickets. Contrast starts only after both students return 200. If either is 202, we keep polling and show a fetching state. Different regulations or missing semesters can limit what appears.",
+          "Enter both 10-digit hall ticket numbers and submit. The comparison is based on data returned from official result systems at the time of your request. Different regulations or missing semester data may affect what can be shown; if one student’s result is still being prepared, try again after the official release.",
           "Use this feature responsibly and respect privacy: only compare hall tickets when both students agree. JNTUK RESULTS does not store your marks on our servers permanently; we display what the upstream APIs return for your session.",
         ]}
         note="This tool is for informational purposes only. Official standings and eligibility are determined by JNTUK and your institution."

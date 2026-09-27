@@ -87,14 +87,7 @@ const GraceMarksEligibilityResult = () => {
         )}
         
         {/* Render Eligibility Information */}
-        {eligibilityData._errorStatus || (eligibilityData.message && eligibilityData.eligibility === undefined && !eligibilityData.details) ? (
-          <div className="my-6 max-w-xl mx-auto text-center text-sm md:text-base text-gray-800 dark:text-gray-200">
-            {eligibilityData.message ||
-              (eligibilityData._errorStatus === 404
-                ? "This hall ticket has no stored 4-2 result, so grace marks cannot be checked yet."
-                : "Grace marks are not applicable for this record, or the checker is not configured.")}
-          </div>
-        ) : eligibilityData.eligibility !== undefined ? (
+        {eligibilityData.eligibility !== undefined ? (
           <div className="my-4">
             <table className="dark:border-white my-2 w-full">
               <tbody>
