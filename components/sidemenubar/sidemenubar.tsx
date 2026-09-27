@@ -6,6 +6,7 @@ import { navitems } from "@/constants/navitems";
 import { socialMediaItems } from "@/constants/socialmediaitems";
 import { ModeToggleMobile } from "../ui/toggle";
 import { useState, useEffect } from "react";
+import SiteHost from "../footer/site-host";
 
 // Collect all nav hrefs for prefetch (flat list of unique routes)
 const NAV_HREFS = Array.from(
@@ -163,7 +164,7 @@ const SideMenubar = () => {
             ))}
           </div> */}
           <div className="flex justify-center m-2 text-xs text-muted-foreground">
-            © 2026 jntuk-website.vercel.app
+            © 2026 <SiteHost />
           </div>
         </div>
       </footer>

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Title from "@/components/homepage/title";
 import { homeLinks } from "@/constants/homeLinks";
 import { SITELINK_URLS } from "@/lib/seo";
+import SiteHost from "@/components/footer/site-host";
 import { SEO_LANDING_PAGE_LIST } from "@/constants/seoLandingPages";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
@@ -391,7 +392,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center space-y-2">
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              &copy; 2026 jntuk-website.vercel.app - JNTUK RESULTS Portal
+              &copy; 2026 <SiteHost /> - JNTUK RESULTS Portal
             </p>
             <div>
               <Link

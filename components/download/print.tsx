@@ -31,7 +31,7 @@ const Print = ({ componentRef }: { componentRef: any }) => {
       await shareContent({
         title: `JNTUK Result - ${htno || 'Hall Ticket'}`,
         text: textContent.substring(0, 500) + (textContent.length > 500 ? '...' : ''),
-        url: `https://jntuk-website.vercel.app/academicresult/result?htno=${htno}`,
+        url: `${typeof window !== "undefined" ? window.location.origin : ""}/academicresult/result?htno=${htno}`,
         dialogTitle: 'Share Result',
       });
     }

@@ -1,3 +1,5 @@
+import { unpublishedMark } from "@/lib/result-display";
+
 const AcademicResult = ({ result, academic = false }: AcademicResultProps) => {
   return (
     <div className="flex flex-col gap-2">
@@ -35,17 +37,13 @@ const AcademicResult = ({ result, academic = false }: AcademicResultProps) => {
                           {subject.subjectName}
                         </th>
                         <th className="dark:border-white px-1">
-                          {subject.internalMarks == 0
-                            ? ""
-                            : subject.internalMarks}
+                          {unpublishedMark(subject.internalMarks)}
                         </th>
                         <th className="dark:border-white px-1">
-                          {subject.externalMarks == 0
-                            ? ""
-                            : subject.externalMarks}
+                          {unpublishedMark(subject.externalMarks)}
                         </th>
                         <th className="dark:border-white px-1">
-                          {subject.totalMarks == 0 ? "" : subject.totalMarks}
+                          {unpublishedMark(subject.totalMarks)}
                         </th>
                         <th className="dark:border-white px-1">
                           {subject.grades}

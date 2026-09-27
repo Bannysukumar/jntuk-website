@@ -3,6 +3,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import SiteHost from "./site-host";
 // import AdComponent from "../ads/adcomponent";
 const Footer = () => {
   const path = usePathname();
@@ -154,7 +155,7 @@ const Footer = () => {
             remain the authority for marks and eligibility.
           </p>
           <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-500">
-            &copy; 2026 jntuk-website.vercel.app - Your Premier JNTUK Results Portal
+            &copy; 2026 <SiteHost /> - Your Premier JNTUK Results Portal
           </p>
         </div>
       </div>

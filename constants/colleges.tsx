@@ -334,7 +334,7 @@ export const collegedata: CollegeData = {
   R7: "S.S Instt. of Technology",
   "60": "S.S.J ENGINEERING COLLEGE",
   W4: "S.V. College of Engineering and Technology",
-  "6Q": "S.V. Institute of Engineering and Technology",
+  "6Q": "Kakinada Institute of Engineering and Technology - II, Korangi",
   "2A": "S.V.College of Computer Sciences",
   TM: "SAHAJA INSTITUTE OF TECHNOLOGY & SCIENCES For WOMEN",
   "6R": "SAHASRA COLLEGE OF ENGINEERING FOR WOMEN",

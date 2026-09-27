@@ -1,4 +1,5 @@
 import React from "react";
+import { unpublishedMark } from "@/lib/result-display";
 
 const Subjects = ({
   semester,
@@ -30,13 +31,13 @@ const Subjects = ({
                   {subject.subjectName}
                 </th>
                 <th className="dark:border-white px-1">
-                  {subject.internalMarks == 0 ? "" : subject.internalMarks}
+                  {unpublishedMark(subject.internalMarks)}
                 </th>
                 <th className="dark:border-white px-1">
-                  {subject.externalMarks == 0 ? "" : subject.externalMarks}
+                  {unpublishedMark(subject.externalMarks)}
                 </th>
                 <th className="dark:border-white px-1">
-                  {subject.totalMarks == 0 ? "" : subject.totalMarks}
+                  {unpublishedMark(subject.totalMarks)}
                 </th>
                 <th className="dark:border-white px-1">{subject.grades}</th>
                 <th className="dark:border-white px-1">{subject.credits}</th>

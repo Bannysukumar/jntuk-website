@@ -1,8 +1,9 @@
 import React from "react";
 import Subjects from "./subjectRenderer";
+import { examAttemptLabel, officialResultUrl } from "@/lib/result-display";
+
 const AcademicAllResult = ({
   results,
-  htno,
 }: {
   results: StudentResults;
   htno: string;
@@ -21,14 +22,14 @@ const AcademicAllResult = ({
                 </tr>
               </tbody>
             </table>
-            {semester.exams.map((exam: Exam, index: number) => {
+            {semester.exams.map((exam: Exam, examIndex: number) => {
               return (
-                <div key={index}>
+                <div key={examIndex}>
                   <table className="dark:border-white dark:bg-gray-900">
                     <tbody>
                       <tr>
                         <th className="bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954] dark:border-white">
-                          Exam Code: {exam.examCode}
+                          {examAttemptLabel(exam, semester.exams)}
                         </th>
                         {(exam.rcrv || exam.graceMarks) && (
                           <th className="bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954] dark:border-white">
@@ -37,7 +38,7 @@ const AcademicAllResult = ({
                         )}
                         <th className="bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954] dark:border-white">
                           <a
-                            href="https://jntukresults.edu.in"
+                            href={officialResultUrl(exam.examCode)}
                             target="_blank"
                             className="underline"
                           >
@@ -49,7 +50,7 @@ const AcademicAllResult = ({
                   </table>
                   <Subjects
                     semester={exam}
-                    lastIndex={semester.exams.length == index + 1}
+                    lastIndex={semester.exams.length == examIndex + 1}
                   />
                 </div>
               );
@@ -57,6 +58,12 @@ const AcademicAllResult = ({
           </div>
         );
       })}
+      <p className="text-center text-[10px] md:text-xs text-gray-500 dark:text-gray-400 mt-1">
+        JNTUK publishes grade and credits only. Internal, External, and Total
+        show — when the official result has no marks. Only exams JNTUK has
+        published (and that were scraped) appear. Missing 1-2 / 2-2 / 4-x is
+        normal, not a bug.
+      </p>
     </div>
   );
 };

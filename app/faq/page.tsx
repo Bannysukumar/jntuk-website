@@ -4,6 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { AiOutlineDownCircle, AiOutlineUpCircle } from "react-icons/ai";
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import SiteHost from "@/components/footer/site-host";
 
 const Faq = () => {
   const faqs = [
@@ -182,7 +183,7 @@ const Faq = () => {
             </a>
           </div> */}
           <div className="flex justify-center m-2 text-xs	 text-gray-600">
-            <p>&copy; 2026 jntuk-website.vercel.app</p>
+            <p>&copy; 2026 <SiteHost /></p>
           </div>
         </center>
       </div>

@@ -1,5 +1,10 @@
-import { branchDetails } from "@/constants/branchdetails";
 import { collegedata } from "@/constants/colleges";
+import { branchDetails } from "@/constants/branchdetails";
+import {
+  branchLabel,
+  collegeLabel,
+  unpublishedPersonField,
+} from "@/lib/result-display";
 import React from "react";
 
 interface ResultDetailsProps {
@@ -7,6 +12,13 @@ interface ResultDetailsProps {
 }
 
 const ResultDetails = ({ details }: ResultDetailsProps) => {
+  const rollNumber = details.rollNumber || "";
+  const collegeCode = String(details.collegeCode || "").trim();
+  const branchCode =
+    rollNumber.length >= 8 ? rollNumber.substring(6, 8) : "";
+  const collegeName = collegeLabel(details);
+  const branchName = branchLabel(details);
+
   return (
     <>
       <table className="w-[100%] mt-2  border-black dark:border-white  rounded-t ">
@@ -18,10 +30,14 @@ const ResultDetails = ({ details }: ResultDetailsProps) => {
             <th className=" dark:border-white">Father Name</th>
           </tr>
           <tr>
-            <th className=" dark:border-white">{details.name}</th>
-            <th className=" dark:border-white">{details.rollNumber}</th>
-            <th className=" dark:border-white">{details.collegeCode}</th>
-            <th className=" dark:border-white">{details.fatherName}</th>
+            <th className=" dark:border-white">
+              {unpublishedPersonField(details.name, rollNumber)}
+            </th>
+            <th className=" dark:border-white">{rollNumber}</th>
+            <th className=" dark:border-white">{collegeCode}</th>
+            <th className=" dark:border-white">
+              {unpublishedPersonField(details.fatherName)}
+            </th>
           </tr>
         </tbody>
       </table>
@@ -44,10 +60,14 @@ const ResultDetails = ({ details }: ResultDetailsProps) => {
           </tr>
           <tr className="">
             <th key="college_name" className=" dark:border-white">
-              {collegedata[details["collegeCode"]]}
+              {collegeName !== "—"
+                ? collegeName
+                : collegedata[collegeCode] || "—"}
             </th>
             <th key="branch_detail" className=" dark:border-white">
-              {branchDetails[details["rollNumber"].substring(6, 8)]}
+              {branchName !== "—"
+                ? branchName
+                : branchDetails[branchCode] || "—"}
             </th>
           </tr>
         </tbody>

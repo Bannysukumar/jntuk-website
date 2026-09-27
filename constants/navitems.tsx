@@ -310,7 +310,7 @@ export const navitems = [
         </svg>
       </>
     ),
-    title: "Jobs & carrers",
+    title: "Jobs & careers",
   },
   {
     href: "/notifications",

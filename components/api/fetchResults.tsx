@@ -112,7 +112,8 @@ async function requestWithPoll(
     toast.dismiss();
     toast(
       response.data?.message ||
-        "Result is queued. Checking again in about 40 seconds..."
+        "Result is queued. Checking again in about 40 seconds...",
+      { id: "jntuk-result-poll" }
     );
     await sleep(POLL_DELAY_MS, signal);
     return requestWithPoll(endpoint, params, signal, polls + 1);
@@ -190,7 +191,7 @@ export const fetchAcademicResult = async (
   const signal = options?.signal;
   promise = (async (): Promise<null | AcademicResulProps> => {
     try {
-      toast.loading("Fetching result...");
+      const loadingToast = toast.loading("Fetching result...");
 
       const response = await requestWithPoll(
         "getAcademicResult",
@@ -199,13 +200,13 @@ export const fetchAcademicResult = async (
       );
 
       if (response.status === 200 && response.data && "details" in response.data) {
-        toast.dismiss();
+        toast.dismiss(loadingToast);
         toast.success("Result fetched successfully");
         setCachedResult(key, response.data as AcademicResulProps);
         return response.data as AcademicResulProps;
       }
 
-      toast.dismiss();
+      toast.dismiss(loadingToast);
       if (response.status === 202) {
         toast(
           response.data?.message ||
@@ -288,8 +289,8 @@ export const fetchAllResult = async (
   const key = normalizeRollNumber(htno);
   if (!isValidRollNumber(key)) return false;
 
+  const loadingToast = toast.loading("Fetching result...");
   try {
-    toast.loading("Fetching result...");
     const response = await requestWithPoll(
       "getAllResult",
       { rollNumber: key },
@@ -303,7 +304,7 @@ export const fetchAllResult = async (
       return true;
     }
 
-    toast.dismiss();
+    toast.dismiss(loadingToast);
     if (response.status === 202) {
       toast(
         response.data?.message ||
@@ -314,7 +315,7 @@ export const fetchAllResult = async (
     toastForStatus(response.status, response.data);
     return false;
   } catch (e: any) {
-    toast.dismiss();
+    toast.dismiss(loadingToast);
     if (e?.name === "AbortError" || e?.code === "ERR_CANCELED") throw e;
     const isAxiosError = axios.isAxiosError ? axios.isAxiosError(e) : false;
     const isTimeoutError =

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { grades, credits } from "@/constants/resultconstants";
+import { unpublishedMark } from "@/lib/result-display";
 
 interface ResultResultsProps {
   Results: Record<string, any>;
@@ -46,13 +47,13 @@ const ResultResults = ({ Results }: ResultResultsProps) => {
                                 {subjectvalue["subject_name"]}
                               </th>
                               <th className="dark:border-white">
-                                {subjectvalue["subject_internal"]}
+                                {unpublishedMark(subjectvalue["subject_internal"])}
                               </th>
                               <th className="dark:border-white">
-                                {subjectvalue["subject_external"]}
+                                {unpublishedMark(subjectvalue["subject_external"])}
                               </th>
                               <th className="dark:border-white">
-                                {subjectvalue["subject_total"]}
+                                {unpublishedMark(subjectvalue["subject_total"])}
                               </th>
 
                               <th className="dark:border-white">

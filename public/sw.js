@@ -7,7 +7,7 @@ self.addEventListener("push", function (event) {
       icon: "/android-chrome-512x512.png",
       badge: "/android-chrome-192x192.png",
       data: {
-        url: data.url || "https://jntuk-website.vercel.app/academicresult",
+        url: data.url || `${self.location.origin}/academicresult`,
       },
     }),
   );
@@ -17,7 +17,7 @@ self.addEventListener("push", function (event) {
 self.addEventListener("notificationclick", function (event) {
   event.notification.close();
   
-  const urlToOpen = event.notification.data?.url || "https://jntuk-website.vercel.app/academicresult";
+  const urlToOpen = event.notification.data?.url || `${self.location.origin}/academicresult`;
   
   event.waitUntil(
     clients.matchAll({ type: "window", includeUncontrolled: true }).then(function (clientList) {

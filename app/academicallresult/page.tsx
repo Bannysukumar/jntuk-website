@@ -43,7 +43,7 @@ const AcademicAllResult = () => {
               The Academic All Results tool shows every exam result you have taken at JNTUK in one consolidated view. Instead of checking each semester separately, you enter your hall ticket number once and see published JNTUK attempts—regular, supply, and RCRV—in a single page. This makes it easier to track your overall CGPA, identify backlogs, and plan for future exams.
             </p>
             <p className="leading-relaxed">
-              Data is fetched from JNTUK published exams. We do not store your results on our servers. For official certification, always refer to mark sheets from Jawaharlal Nehru Technological University, Kakinada and https://jntukresults.edu.in.
+              Data is fetched from JNTUK published exams. JNTUK publishes grade and credits only; internal, external, and total marks are shown as — when the official JSON does not include them. We do not store your results on our servers. For official certification, always refer to mark sheets from Jawaharlal Nehru Technological University, Kakinada and https://jntukresults.edu.in.
             </p>
           </div>
         </div>

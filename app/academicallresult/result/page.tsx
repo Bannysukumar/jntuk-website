@@ -7,6 +7,7 @@ import AcademicAllResult from "@/components/result/academicallresult";
 import Print from "@/components/download/print";
 import { getFromLocalStorage } from "@/components/customfunctions/localStorage";
 import { fetchAllResult } from "@/components/api/fetchResults";
+import toast from "react-hot-toast";
 
 const AcademicAllResultResult = () => {
   const router = useRouter();
@@ -23,6 +24,7 @@ const AcademicAllResultResult = () => {
     }
     const cached = getFromLocalStorage(htno + "-AllResult");
     if (cached) {
+      toast.dismiss();
       setAllResult(cached);
       setLoading(false);
       return;
@@ -39,7 +41,10 @@ const AcademicAllResultResult = () => {
         if (cancelled || abortController.signal.aborted) return;
         if (ok) {
           const data = getFromLocalStorage(htno + "-AllResult");
-          if (data) setAllResult(data);
+          if (data) {
+            toast.dismiss();
+            setAllResult(data);
+          }
         } else {
           router.push("/academicallresult");
         }
@@ -82,7 +87,7 @@ const AcademicAllResultResult = () => {
       >
         <div className="text-center grid grid-cols-3 font-bold my-5 text-xs lg:text-2xl">
           <div></div>
-          <div className="justify-center">ACADEMIC All RESULTS</div>
+          <div className="justify-center">Academic All Results</div>
           <div className="justify-end flex "></div>
         </div>
 

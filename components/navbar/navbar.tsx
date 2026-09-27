@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
-import { AiOutlineGithub } from "react-icons/ai";
 import {
   MdNotificationsActive,
   MdOutlineNotificationsActive,
@@ -38,47 +36,29 @@ const Navbar = () => {
         href="/"
       >
         <div className="md:hidden h-full flex items-center">
-          <span className="dark:hidden h-full flex items-center">
-            <Image
-              src="/jntuhresults_md.png"
-              alt="JNTUK RESULTS Logo"
-              width={65}
-              height={40}
-              priority={false}
-              className="h-auto w-auto max-h-12 object-contain"
-            />
-          </span>
-          <span className="hidden dark:block h-full flex items-center">
-            <Image
-              src="/jntuhresults_black.png"
-              alt="JNTUK RESULTS Logo"
-              width={65}
-              height={40}
-              priority={false}
-              className="h-auto w-auto max-h-12 object-contain"
-            />
+          <span
+            className="flex flex-col justify-center leading-none text-center select-none max-h-12"
+            aria-label="JNTUK RESULTS"
+          >
+            <span className="font-extrabold tracking-wide text-[#2563eb] dark:text-[#60a5fa] text-[11px]">
+              JNTUK
+            </span>
+            <span className="font-extrabold tracking-wide text-[#2563eb] dark:text-[#60a5fa] text-[11px]">
+              RESULTS
+            </span>
           </span>
         </div>
-        <div className="hidden md:block h-full flex items-center">
-          <span className="dark:hidden h-full flex items-center">
-            <Image
-              src="/jntuhresults_md.png"
-              alt="JNTUK RESULTS Logo"
-              width={130}
-              height={60}
-              priority={false}
-              className="h-auto w-auto max-h-14 object-contain"
-            />
-          </span>
-          <span className="hidden dark:block h-full flex items-center">
-            <Image
-              src="/jntuhresults_md_black.png"
-              alt="JNTUK RESULTS Logo"
-              width={130}
-              height={60}
-              priority={false}
-              className="h-auto w-auto max-h-14 object-contain"
-            />
+        <div className="hidden md:flex h-full items-center">
+          <span
+            className="flex flex-col justify-center leading-none text-left select-none max-h-14"
+            aria-label="JNTUK RESULTS"
+          >
+            <span className="font-extrabold tracking-wide text-[#2563eb] dark:text-[#60a5fa] text-lg">
+              JNTUK
+            </span>
+            <span className="font-extrabold tracking-wide text-[#2563eb] dark:text-[#60a5fa] text-lg">
+              RESULTS
+            </span>
           </span>
         </div>
       </Link>

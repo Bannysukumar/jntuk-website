@@ -58,7 +58,7 @@ export default function SavedResults() {
     await shareContent({
       title: `JNTUK Result - ${rollNumber}`,
       text: `Check out ${name}'s JNTUK result (Hall Ticket: ${rollNumber})`,
-      url: `https://jntuk-website.vercel.app/academicresult/result?htno=${rollNumber}`,
+      url: `${typeof window !== "undefined" ? window.location.origin : ""}/academicresult/result?htno=${rollNumber}`,
       dialogTitle: 'Share Result',
     });
   };

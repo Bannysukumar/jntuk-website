@@ -1,5 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
+import { SITE_URL } from "@/lib/seo";
 
 import React from "react";
 
@@ -7,7 +8,7 @@ const MetaData = () => {
   const pathname = usePathname();
   return (
     <>
-      <meta property="og:url" content="https://jntuk-website.vercel.app/" />
+      <meta property="og:url" content={`${SITE_URL}/`} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="JNTUK RESULTS" />
       <meta
@@ -16,7 +17,7 @@ const MetaData = () => {
       />
       <meta
         property="og:image"
-        content="https://jntuk-website.vercel.app/jntuhresults_md.png"
+        content={`${SITE_URL}/jntuhresults_md.png`}
       />
       <meta property="og:image:width" content="512" />
       <meta property="og:image:height" content="512" />
@@ -82,7 +83,7 @@ const MetaData = () => {
       <link rel="manifest" href="/manifest.json" />
       <link
         rel="canonical"
-        href={`https://jntuk-website.vercel.app${pathname}`}
+        href={`${SITE_URL}${pathname}`}
       />
 
       <link rel="manifest" href="/site.webmanifest" />

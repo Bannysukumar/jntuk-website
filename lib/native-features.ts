@@ -182,7 +182,7 @@ export const shareResult = async (hallTicket: string, resultData: any) => {
     `CGPA: ${resultData.cgpa || 'N/A'}\n` +
     `Total Credits: ${resultData.totalCredits || 'N/A'}\n` +
     `Backlogs: ${resultData.backlogs || 0}\n\n` +
-    `View full result at: https://jntuk-website.vercel.app`;
+    `View full result at: ${typeof window !== "undefined" ? window.location.origin : "https://jntuk-results.vercel.app"}`;
 
   await shareContent({
     title: 'JNTUK Result',

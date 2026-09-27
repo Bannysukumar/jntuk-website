@@ -24,6 +24,7 @@ export const branchDetails: Record<string, string> = {
   "34": "IT and Engineering",
   "35": "Artificial Intelligence",
   "36": "CS and Technology",
+  "43": "Artificial Intelligence and Machine Learning",
   "56": "Computer Engineering ( SE ) Technology",
   "62": "CSE ( Cyber Security ) Technology",
   "66": "CSE ( AI and ML )",

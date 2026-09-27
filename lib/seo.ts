@@ -4,7 +4,15 @@
  */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://jntuk-website.vercel.app";
+  "https://jntuk-results.vercel.app";
+
+export function getSiteHost(): string {
+  try {
+    return new URL(SITE_URL).host;
+  } catch {
+    return "jntuk-results.vercel.app";
+  }
+}
 
 /** Sitelink candidate URLs for sitemap and Quick Links (homepage). */
 export const SITELINK_URLS = [
