@@ -1,6 +1,8 @@
 "use client";
 import { getFromLocalStorage } from "@/components/customfunctions/localStorage";
 import { fetchCreditContrastReport } from "@/components/api/fetchResults";
+import QueuedState from "@/components/result/QueuedState";
+import { displayStudentName, displayValue } from "@/lib/jntuk-api";
 import { useSearchParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -31,6 +33,7 @@ function ResultContrastPage() {
   const htno2 = (searchParams.get("htno2") || "").trim().toUpperCase();
   const [results, setResults] = useState<CreditContrastReport | null>(null);
   const [loading, setLoading] = useState(true);
+  const [queued, setQueued] = useState(false);
 
   useEffect(() => {
     toast.dismiss();
@@ -54,6 +57,7 @@ function ResultContrastPage() {
       try {
         const ok = await fetchCreditContrastReport(htno, htno2, {
           signal: abortController.signal,
+          onQueued: () => setQueued(true),
         });
         if (cancelled || abortController.signal.aborted) return;
         if (ok) {
@@ -79,11 +83,12 @@ function ResultContrastPage() {
     };
   }, [htno, htno2, router]);
 
-  if (loading) {
+  if (loading || queued && !results) {
     return (
-      <div className="m-1 text-[30%] sm:text-[45%] md:text-[60%] lg:text-[100%]">
-        <div className="text-center font-bold my-4">Loading...</div>
-      </div>
+      <QueuedState
+        title="Fetching from JNTUK…"
+        message="Waiting until both hall tickets have results (200). A 202 means one or both are still being fetched from JNTUK."
+      />
     );
   }
   if (results == null) {
@@ -114,8 +119,8 @@ function ResultContrastPage() {
           </tr>
           <AttributeRow
             label="Name"
-            value1={results.studentProfiles[0]["name"]}
-            value2={results.studentProfiles[1]["name"]}
+            value1={displayStudentName(results.studentProfiles[0]["name"], results.studentProfiles[0]["rollNumber"])}
+            value2={displayStudentName(results.studentProfiles[1]["name"], results.studentProfiles[1]["rollNumber"])}
           />
           <AttributeRow
             label="Roll No"
@@ -128,9 +133,9 @@ function ResultContrastPage() {
             value2={results.studentProfiles[1]["collegeCode"]}
           />
           <AttributeRow
-            label="Father's Name"
-            value1={results.studentProfiles[0]["fatherName"]}
-            value2={results.studentProfiles[1]["fatherName"]}
+            label="Father name"
+            value1={displayValue(results.studentProfiles[0]["fatherName"])}
+            value2={displayValue(results.studentProfiles[1]["fatherName"])}
           />
         </tbody>
       </table>
@@ -184,16 +189,8 @@ function ResultContrastPage() {
           </tr>
           <AttributeRow
             label="Total CGPA"
-            value1={
-              results.studentProfiles[0]["backlogs"] == "0"
-                ? results.studentProfiles[0]["CGPA"]
-                : "-"
-            }
-            value2={
-              results.studentProfiles[1]["backlogs"] == "0"
-                ? results.studentProfiles[1]["CGPA"]
-                : "-"
-            }
+            value1={displayValue(results.studentProfiles[0]["CGPA"])}
+            value2={displayValue(results.studentProfiles[1]["CGPA"])}
           />
           {/* <AttributeRow */}
           {/*   label="Percentage" */}

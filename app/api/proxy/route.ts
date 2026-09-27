@@ -88,10 +88,24 @@ export async function GET(request: NextRequest) {
       next: { revalidate: 0 },
     });
 
-    const contentType = response.headers.get("content-type");
+    const contentType = response.headers.get("content-type") || "";
+    if (endpoint === "getCMM") {
+      const buffer = await response.arrayBuffer();
+      return new NextResponse(buffer, {
+        status: response.status,
+        headers: {
+          "Content-Type": contentType || "application/pdf",
+          "Content-Disposition":
+            response.headers.get("content-disposition") ||
+            `attachment; filename="cmm-${searchParams.get("rollNumber") || "result"}.pdf"`,
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
+    }
+
     let data: any;
     try {
-      if (contentType && contentType.includes("application/json")) {
+      if (contentType.includes("application/json")) {
         data = await response.json();
       } else {
         const text = await response.text();

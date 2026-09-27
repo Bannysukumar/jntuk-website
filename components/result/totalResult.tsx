@@ -1,23 +1,45 @@
-import React from "react";
+import { displayValue } from "@/lib/jntuk-api";
 
-const TotalResult = ({ CGPA, backlogs }: { CGPA: any; backlogs: any }) => {
+const TotalResult = ({
+  CGPA,
+  backlogs,
+  credits,
+  serverStatus,
+}: {
+  CGPA?: unknown;
+  backlogs?: unknown;
+  credits?: unknown;
+  serverStatus?: unknown;
+}) => {
   return (
-    <table className="dark:border-white rounded mt-2">
-      <tbody>
-        <tr>
-          <th className="dark:border-white  dark:bg-[#0b3954] w-[25%] bg-gray-200">
-            Backlogs
-          </th>
-          <th className="dark:border-white w-[25%]">{backlogs}</th>
-          <th className="dark:border-white  dark:bg-[#0b3954] w-[25%]  bg-gray-200">
-            CGPA
-          </th>
-          <th className="dark:border-white w-[25%]">
-            {backlogs > 0 ? "" : CGPA}
-          </th>
-        </tr>
-      </tbody>
-    </table>
+    <div className="result-table-wrap mt-2">
+      <table className="rounded">
+        <tbody>
+          <tr>
+            <th className="dark:bg-[#0b3954] w-[25%] bg-gray-200 px-2 py-2">
+              Backlogs
+            </th>
+            <td className="w-[25%] px-2 py-2">{displayValue(backlogs, "0")}</td>
+            <th className="dark:bg-[#0b3954] w-[25%] bg-gray-200 px-2 py-2">
+              CGPA
+            </th>
+            <td className="w-[25%] px-2 py-2">{displayValue(CGPA)}</td>
+          </tr>
+          {(credits !== undefined || serverStatus !== undefined) && (
+            <tr>
+              <th className="dark:bg-[#0b3954] w-[25%] bg-gray-200 px-2 py-2">
+                Credits
+              </th>
+              <td className="w-[25%] px-2 py-2">{displayValue(credits)}</td>
+              <th className="dark:bg-[#0b3954] w-[25%] bg-gray-200 px-2 py-2">
+                Server status
+              </th>
+              <td className="w-[25%] px-2 py-2">{displayValue(serverStatus)}</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

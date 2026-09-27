@@ -76,10 +76,10 @@ export default function StudentResourcesPage() {
 
           <section aria-labelledby="sec-regulations">
             <h2 id="sec-regulations" className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Regulations (R18, R22, and others)—why they matter
+              Regulations (R16, R19, R20, R23)—why they matter
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              JNTUK offers several curriculum regulations over time (for example R18 and R22). Your
+              JNTUK offers several curriculum regulations over time (for example R16, R19, R20 and R23). Your
               regulation defines <strong>credit structure</strong>, <strong>evaluation scheme</strong>,
               and sometimes <strong>grace-mark rules</strong>. Two students in different regulations
               may have different subject codes, credit totals, or promotion criteria even if their

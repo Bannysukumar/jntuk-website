@@ -19,7 +19,7 @@ const CONTENT_RICH_ROUTES = [
   "/resultcontrast",
   "/backlogreport",
   "/syllabus",
-  "/carrers",
+  "/careers",
   "/faq",
   "/helpcenter",
   "/notifications",
@@ -41,9 +41,9 @@ function isContentRichRoute(pathname: string | null): boolean {
     }
   }
 
-  // Result pages (e.g. /academicallresult/result, /classresult/result) - have result content
+  // Do not load ads on marks tables
   if (pathname.includes("/result")) {
-    return true;
+    return false;
   }
 
   return false;

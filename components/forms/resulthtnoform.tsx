@@ -96,7 +96,7 @@ const Form = ({
 
             <NativeButton
               type="submit"
-              className="w-full h-12 text-lg font-semibold"
+              className="w-full h-12 text-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white disabled:bg-slate-300 dark:disabled:bg-slate-700 disabled:text-slate-700 dark:disabled:text-slate-200 disabled:opacity-100"
               disabled={isDisabled || hallticketno.length < ROLL_NUMBER_LENGTH || (hallticketno2 !== undefined && (hallticketno2?.length || 0) < ROLL_NUMBER_LENGTH)}
               onClick={onSubmit}
               hapticStyle={ImpactStyle.Medium}
@@ -104,7 +104,7 @@ const Form = ({
               {isDisabled ? (
                 <>
                   <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Processing...
+                  Processing…
                 </>
               ) : (
                 "Get Results"

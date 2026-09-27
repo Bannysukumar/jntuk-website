@@ -1,58 +1,58 @@
-import { branchDetails } from "@/constants/branchdetails";
-import { collegedata } from "@/constants/colleges";
-import React from "react";
+import { displayStudentName, displayValue } from "@/lib/jntuk-api";
 
 interface ResultDetailsProps {
   details: Record<string, any>;
 }
 
 const ResultDetails = ({ details }: ResultDetailsProps) => {
+  const name = displayStudentName(details?.name, details?.rollNumber);
+  const fatherName = displayValue(details?.fatherName);
+  const showFather = fatherName !== "—";
+
   return (
-    <>
-      <table className="w-[100%] mt-2  border-black dark:border-white  rounded-t ">
-        <tbody>
-          <tr className="w-max bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954]">
-            <th className=" dark:border-white">Name</th>
-            <th className=" dark:border-white">Roll Number</th>
-            <th className=" dark:border-white">College Code</th>
-            <th className=" dark:border-white">Father Name</th>
+    <div className="result-table-wrap">
+      <table className="w-full mt-2 rounded-t">
+        <thead>
+          <tr className="bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954]">
+            <th className="px-2 py-2 text-left">Hall ticket</th>
+            <th className="px-2 py-2 text-left">College code</th>
+            {showFather && <th className="px-2 py-2 text-left">Father name</th>}
+            <th className="px-2 py-2 text-left">Name</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
-            <th className=" dark:border-white">{details.name}</th>
-            <th className=" dark:border-white">{details.rollNumber}</th>
-            <th className=" dark:border-white">{details.collegeCode}</th>
-            <th className=" dark:border-white">{details.fatherName}</th>
+            <td className="px-2 py-2">{displayValue(details?.rollNumber)}</td>
+            <td className="px-2 py-2">{displayValue(details?.collegeCode)}</td>
+            {showFather && <td className="px-2 py-2">{fatherName}</td>}
+            <td className="px-2 py-2">{name}</td>
           </tr>
         </tbody>
       </table>
 
-      <table className="w-[100%] mb-2   border-black dark:border-white  rounded-b ">
-        <tbody>
-          <tr className="">
-            <th
-              key="college_name_key"
-              className=" dark:border-white max bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954]"
-            >
-              COLLEGE NAME
+      <table className="w-full mb-2 rounded-b">
+        <thead>
+          <tr>
+            <th className="px-2 py-2 text-left bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954]">
+              College name
             </th>
-            <th
-              key="branch"
-              className=" dark:border-white max bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954]"
-            >
-              BRANCH
+            <th className="px-2 py-2 text-left bg-gray-200 md:bg-gray-300 dark:bg-[#0b3954]">
+              Branch
             </th>
           </tr>
-          <tr className="">
-            <th key="college_name" className=" dark:border-white">
-              {collegedata[details["collegeCode"]]}
-            </th>
-            <th key="branch_detail" className=" dark:border-white">
-              {branchDetails[details["rollNumber"].substring(6, 8)]}
-            </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-2 py-2 whitespace-normal break-words">
+              {displayValue(details?.collegeName)}
+            </td>
+            <td className="px-2 py-2 whitespace-normal break-words">
+              {displayValue(details?.branch)}
+            </td>
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

@@ -7,16 +7,16 @@ const MetaData = () => {
   const pathname = usePathname();
   return (
     <>
-      <meta property="og:url" content="https://manajntuhresults.vercel.app/" />
+      <meta property="og:url" content="https://jntuk-website.vercel.app/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="JNTUK RESULTS" />
       <meta
         property="og:description"
-        content="Check your JNTUK exam results online instantly! Access Academic Results, All Results, Backlog Report, Class Results, Credit Checker, Grace Marks Eligibility, Syllabus, Jobs & Careers, and Notifications. Official JNTUK Results portal for Jawaharlal Nehru Technological University Kakinada."
+        content="Independent student tool for JNTUK (Kakinada) exam results, backlogs, credits, and notifications."
       />
       <meta
         property="og:image"
-        content="https://manajntuhresults.vercel.app/jntuhresults_md.png"
+        content="https://jntuk-website.vercel.app/jntuhresults_md.png"
       />
       <meta property="og:image:width" content="512" />
       <meta property="og:image:height" content="512" />
@@ -82,7 +82,7 @@ const MetaData = () => {
       <link rel="manifest" href="/manifest.json" />
       <link
         rel="canonical"
-        href={`https://manajntuhresults.vercel.app${pathname}`}
+        href={`https://jntuk-website.vercel.app${pathname}`}
       />
 
       <link rel="manifest" href="/site.webmanifest" />
@@ -93,10 +93,6 @@ const MetaData = () => {
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5512897194230969"
         crossOrigin="anonymous"
       ></script> */}
-      <link
-        href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter:wght@300&family=Roboto+Slab&display=swap"
-        rel="stylesheet"
-      />
     </>
   );
 };

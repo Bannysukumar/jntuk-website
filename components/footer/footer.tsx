@@ -1,20 +1,17 @@
 "use client";
 import React from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-// import AdComponent from "../ads/adcomponent";
-const Footer = () => {
-  const path = usePathname();
 
+const Footer = () => {
   return (
     <>
       <div className="mt-2">
-        <div className="font-serif mt-1 block text-left text-[#808080] ml-[17%] text-[55%] md:text-[80%]">
-          It does consider the RCRV Results
+        <div className="mt-1 block text-left text-gray-500 dark:text-gray-400 ml-[17%] text-[55%] md:text-[80%]">
+          Includes RCRV results when JNTUK has published them
         </div>
-        <div className="font-serif mt-1 block text-left text-[#808080] ml-[17%] mb-4 text-[55%] md:text-[80%]">
-          It only works above R18 Regulation
+        <div className="mt-1 block text-left text-gray-500 dark:text-gray-400 ml-[17%] mb-4 text-[55%] md:text-[80%]">
+          Common JNTUK regulations: R16, R19, R20, R23
         </div>
         <center>
           <hr className="w-[64%] mt-4 mb-1 " />
@@ -23,42 +20,6 @@ const Footer = () => {
           <hr className="w-[64%]  text-[#808080]" />
         </center>
 
-        <span className="mt-4  text-center mx-[18%] mb-4 text-[75%] sm:text-[100%] hidden">
-          Made with ❤ by &nbsp;
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/Bannysukumar"
-            className=" underline	underline-offset-1"
-          >
-            Adepu Sukumar
-          </a>
-          <br />
-          <p
-          // className={` ${path == "/academicresult" ? "block" : "hidden"}`}
-          >
-            In collaboration with{" "}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/hemanth-kotagiri/"
-              className=" underline	underline-offset-1"
-            >
-              Hemanth kotagiri
-            </a>{" "}
-            and{" "}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/Syed-Ansar/"
-              className=" underline	underline-offset-1"
-            >
-              Syed Ansar
-            </a>
-          </p>
-        </span>
-
-        {/* Social Media Links */}
         <div className="flex justify-center mt-4 mb-4 gap-4">
           <a
             href="https://github.com/Bannysukumar"
@@ -89,76 +50,40 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* <span className="mt-4 block text-center mx-[18%] mb-4 text-[75%] sm:text-[100%]">
-          Join us on{" "}
-          <Link
-            href="https://t.me/s/jntuhvercel"
-            className="underline underline-offset-1"
-          >
-            Telegram
-          </Link>
-          , thanks!
-        </span> */}
-
-        {/* Sitelinks Group */}
         <div className="flex flex-wrap justify-center mt-6 mb-4 gap-x-6 gap-y-2">
-          <Link
-            href="/about"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             About Us
           </Link>
-          <Link
-            href="/contact"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             Contact
           </Link>
-          <Link
-            href="/disclaimer"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/disclaimer" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             Disclaimer
           </Link>
-          <Link
-            href="/privacy"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/privacy" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             Privacy Policy
           </Link>
-          <Link
-            href="/guide"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/guide" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             Guide
           </Link>
-          <Link
-            href="/student-resources"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/student-resources" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             Student Resources
           </Link>
-          <Link
-            href="/faq"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm transition-colors"
-          >
+          <Link href="/faq" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-xs md:text-sm">
             FAQ
           </Link>
         </div>
 
-        {/* Attribution */}
         <div className="text-center mb-4 space-y-2">
-          <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-500 max-w-xl mx-auto px-2">
-            JNTUK RESULTS is an independent student portal with guides and tools for checking JNTUK exam results,
-            credits, backlogs, and notifications. We are not affiliated with JNTUK; official documents from the university
-            remain the authority for marks and eligibility.
+          <p className="text-[10px] md:text-xs text-gray-600 dark:text-gray-300 max-w-xl mx-auto px-2">
+            JNTUK Results is an independent student portal for Jawaharlal Nehru Technological University, Kakinada.
+            We are not affiliated with JNTUK; official documents from the university remain the authority for marks and eligibility.
           </p>
-          <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-500">
-            &copy; 2026 manajntuhresults.vercel.app - Your Premier JNTUK Results Portal
+          <p className="text-[10px] md:text-xs text-gray-600 dark:text-gray-300">
+            © 2026 jntuk-website.vercel.app
           </p>
         </div>
       </div>
-      {/* <AdComponent /> */}
     </>
   );
 };

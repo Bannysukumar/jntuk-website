@@ -98,15 +98,11 @@ const NotificationPopUp = () => {
                               </th>
                               <th className="dark:border-white">
                                 <Link
-                                  href={`http://202.63.105.184/results/jsp/SearchResult.jsp${
-                                    result?.link?.includes("?")
-                                      ? "?" + result.link.split("?")[1]
-                                      : ""
-                                  }`}
+                                  href={result.link || "/notifications/"}
                                   target="_blank"
                                   className="text-blue-500 hover:underline cursor-pointer"
                                 >
-                                  link
+                                  Open
                                 </Link>
                               </th>
                             </tr>
@@ -116,15 +112,10 @@ const NotificationPopUp = () => {
                               </th>
                               <th className="dark:border-white">
                                 <Link
-                                  href={`http://results.jntuh.ac.in/results/jsp/SearchResult.jsp${
-                                    result?.link?.includes("?")
-                                      ? "?" + result.link.split("?")[1]
-                                      : ""
-                                  }`}
-                                  target="_blank"
+                                  href="/notifications/"
                                   className="text-blue-500 hover:underline cursor-pointer"
                                 >
-                                  link
+                                  Notifications
                                 </Link>
                               </th>
                             </tr>

@@ -20,8 +20,13 @@ const nextConfig = {
     output: 'export',
   }),
   
-  // Disable features that require server-side rendering
   trailingSlash: true,
+  async redirects() {
+    return [
+      { source: "/carrers", destination: "/careers", permanent: true },
+      { source: "/carrers/:path*", destination: "/careers/:path*", permanent: true },
+    ];
+  },
 };
 
 module.exports = nextConfig;

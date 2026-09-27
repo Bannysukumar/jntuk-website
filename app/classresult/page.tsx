@@ -65,7 +65,7 @@ const AcademicResult = () => {
       <div className="max-w-2xl mx-auto px-4 mb-4">
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 text-center">
           <p className="text-sm text-yellow-800 dark:text-yellow-200">
-            <strong>Disclaimer:</strong> This feature is not yet fully updated. Please use with caution.
+            This can take a long time and may be refused when the scrape queue is busy (423).
           </p>
         </div>
       </div>

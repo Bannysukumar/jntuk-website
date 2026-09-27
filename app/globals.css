@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font display optimization */
-@font-face {
-  font-family: 'Inter';
-  font-display: swap;
+html,
+body,
+button,
+input,
+select,
+textarea,
+th,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @layer base {
@@ -79,8 +90,26 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    color: hsl(var(--foreground));
   }
+}
+
+.result-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.result-table-wrap table {
+  min-width: 36rem;
+}
+
+.result-table-wrap th,
+.result-table-wrap td {
+  font-weight: 500;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

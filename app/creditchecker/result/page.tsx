@@ -7,12 +7,14 @@ import QuickNavigation from "@/components/navbar/quicknavigation";
 import { getFromLocalStorage } from "@/components/customfunctions/localStorage";
 import CreditsCheckerResult from "@/components/result/creditscheckerresult";
 import { fetchCreditsCheckerReport } from "@/components/api/fetchResults";
+import QueuedState from "@/components/result/QueuedState";
 
 const CreditCheckerResult = () => {
   const router = useRouter();
   const htno = (useSearchParams().get("htno") || "").trim().toUpperCase();
   const [creditsCheckerReport, setCreditsCheckerReport] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [queued, setQueued] = useState(false);
 
   useEffect(() => {
     if (!htno || htno.length < 10) {
@@ -32,7 +34,10 @@ const CreditCheckerResult = () => {
     const doFetch = async () => {
       setLoading(true);
       try {
-        const ok = await fetchCreditsCheckerReport(htno, { signal: abortController.signal });
+        const ok = await fetchCreditsCheckerReport(htno, {
+          signal: abortController.signal,
+          onQueued: () => setQueued(true),
+        });
         if (cancelled || abortController.signal.aborted) return;
         if (ok) {
           const data = getFromLocalStorage(htno + "-CreditsCheckerreport");
@@ -57,12 +62,8 @@ const CreditCheckerResult = () => {
     };
   }, [htno, router]);
 
-  if (loading) {
-    return (
-      <div className="m-2 text-[30%] sm:text-[45%] md:text-[60%] lg:text-[100%]">
-        <div className="text-center font-bold my-5">Loading...</div>
-      </div>
-    );
+  if (loading || (queued && !creditsCheckerReport)) {
+    return <QueuedState />;
   }
   if (creditsCheckerReport === null) {
     return (

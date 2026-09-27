@@ -18,21 +18,7 @@ const NotificationForm = ({
 }: {
   handleChangeParams: (param: string, event: any) => void;
 }) => {
-  const regulations = [
-    "R25",
-    "R24",
-    "R23",
-    "R22",
-    "R19",
-    "R18",
-    "R17",
-    "R16",
-    "R15",
-    "R13",
-    "R09",
-    "R07",
-    "R05",
-  ];
+  const regulations = ["R16", "R19", "R20", "R23"];
 
   return (
     <Card className="p-6 mb-6 bg-white dark:bg-gray-800 shadow-sm">
@@ -87,11 +73,13 @@ const NotificationForm = ({
                 <SelectValue placeholder="Select Degree" />
               </SelectTrigger>
               <SelectContent>
-                {Object.keys(degrees).map((degree) => (
-                  <SelectItem value={degrees[degree]} key={degree}>
-                    {degree}
-                  </SelectItem>
-                ))}
+                {Object.keys(degrees)
+                  .filter((degree) => ["B.Tech", "B.Pharmacy", "M.Tech", "M.B.A", "M.C.A"].includes(degree))
+                  .map((degree) => (
+                    <SelectItem value={degrees[degree]} key={degree}>
+                      {degree}
+                    </SelectItem>
+                  ))}
               </SelectContent>
             </Select>
           </div>
