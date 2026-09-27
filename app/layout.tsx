@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeprovider/theme-provider";
 import { Toaster } from "react-hot-toast";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import SpeedInsightsWrapper from "@/components/analytics/SpeedInsightsWrapper";
 import StructuredData from "@/components/metadata/structured-data";
 import CanonicalUrl from "@/components/metadata/canonical-url";
@@ -129,6 +128,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google tag (gtag.js) — must be first in <head> so Tag Assistant can detect it */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K71X77D87X"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-K71X77D87X');
+            `,
+          }}
+        />
         {/* Resource Hints - DNS Prefetch and Preconnect */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
@@ -164,7 +175,6 @@ export default function RootLayout({
         <BreadcrumbSchema />
       </head>
       <body className={inter.className}>
-        <GoogleAnalytics />
         <SpeedInsightsWrapper />
         <AdSenseLoader />
         <ThemeProvider
