@@ -1,7 +1,7 @@
 "use client";
 import Script from "next/script";
 
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || "G-KHQHHFYXCL";
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || "G-K71X77D87X";
 
 export default function GoogleAnalytics() {
   if (!GA_TRACKING_ID) {
