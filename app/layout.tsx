@@ -160,6 +160,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Meta Tags */}
+        <meta name="google-site-verification" content="19aqihOrD-qf3lECIogsri3a8H8WCd2piEQ7xdq2Akg" />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="google-adsense-account" content="ca-pub-1589551808134823" />
