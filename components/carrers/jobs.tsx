@@ -11,7 +11,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { JobDetail } from "@/app/carrers/page";
+import { JobDetail } from "@/components/carrers/types";
 
 interface JobsProps {
   jobDetails: JobDetail[];
