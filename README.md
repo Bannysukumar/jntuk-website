@@ -4,7 +4,7 @@
 
 **JNTUK Website** is an open-source website project. The code is written mainly in TypeScript and maintained by [Banny Sukumar](https://github.com/Bannysukumar), a blockchain and full-stack developer.
 
-This repository is public so developers can read the source, reuse it under the MIT License, and send improvements.
+This repository is public so developers can read the source, reuse it under the GPL-3.0 License, and send improvements.
 
 ## About this project
 
@@ -13,7 +13,7 @@ JNTUK Website lives at [`github.com/Bannysukumar/jntuk-website`](https://github.
 ## Tech stack
 
 - Primary language: **TypeScript**
-- License: **MIT**
+- License: **GPL-3.0**
 - Maintainer: [Banny Sukumar](https://github.com/Bannysukumar)
 
 ## Getting started
@@ -31,7 +31,7 @@ Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before you op
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Banny Sukumar.
+This project is licensed under the [GPL-3.0 License](LICENSE). Copyright (c) 2026 Banny Sukumar.
 
 ## Author
 
