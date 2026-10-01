@@ -1,41 +1,106 @@
-<!-- readme-seo: bannysukumar -->
+# Jntuk Website
 
-# JNTUK Website
+Jntuk Website is a Next.js site. Visible sections include (Root) page, Seo Slug page, About page, Academicallresult page, Academicallresult/Result page, Academicresult page, Academicresult/Result page, Backlogreport page.
 
-**JNTUK Website** is an open-source website project. The code is written mainly in TypeScript and maintained by [Banny Sukumar](https://github.com/Bannysukumar), a blockchain and full-stack developer.
+[![License](https://img.shields.io/github/license/Bannysukumar/jntuk-website)](https://github.com/Bannysukumar/jntuk-website/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/jntuk-website)](https://github.com/Bannysukumar/jntuk-website/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/jntuk-website)](https://github.com/Bannysukumar/jntuk-website/commits/main)
 
-This repository is public so developers can read the source, reuse it under the GPL-3.0 License, and send improvements.
+## Overview
 
-## About this project
+Jntuk Website is a Next.js site. Visible sections include (Root) page, Seo Slug page, About page, Academicallresult page, Academicallresult/Result page, Academicresult page, Academicresult/Result page, Backlogreport page.
 
-JNTUK Website lives at [`github.com/Bannysukumar/jntuk-website`](https://github.com/Bannysukumar/jntuk-website). Use it as a starting point for a website project, or study how the TypeScript parts fit together.
 
-## Tech stack
+What is actually in the repository: `app/`, `components/`, `constants/`, `customhooks/`, `docs/`, `lib/`. GitHub reports the primary language as TypeScript.
 
-- Primary language: **TypeScript**
-- License: **GPL-3.0**
-- Maintainer: [Banny Sukumar](https://github.com/Bannysukumar)
+Published site recorded on the repository: https://jntuk-website.vercel.app
 
-## Getting started
+## Features
+
+
+- (Root) page
+- Seo Slug page
+- About page
+- Academicallresult page
+- Academicallresult/Result page
+- Academicresult page
+- Academicresult/Result page
+- Backlogreport page
+- Backlogreport/Result page
+- Calendars page
+- Carrers page
+- Classresult page
+
+## Tech Stack
+
+| Technology | Where it shows up |
+|---|---|
+| Next.js | React framework |
+| React | User interface |
+| Tailwind CSS | Styling |
+
+## Project Architecture
+
+Next.js App Router project. Pages live under app/.
+
+## Project Structure
+
+```text
+jntuk-website/
+├── app/
+├── components/
+├── constants/
+├── customhooks/
+├── docs/
+├── lib/
+├── public/
+├── scripts/
+├── types/
+├── .env.example
+├── .eslintrc.json
+├── .vercelignore
+├── capacitor.config.ts
+├── components.json
+├── global.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tailwind.config.ts
+```
+
+## Getting Started
 
 ```bash
 git clone https://github.com/Bannysukumar/jntuk-website.git
 cd jntuk-website
+npm install
+npm run dev
+# Copy .env.example to .env and fill in the values that file lists.
 ```
 
-Open the project in your editor. Install dependencies only if this repo already includes a manifest such as `package.json`, `requirements.txt`, or a `.csproj` file.
+Scripts defined in package.json:
+
+- `npm run dev` — `next dev`
+- `npm run build` — `next build`
+- `npm run start` — `next start`
+- `npm run lint` — `next lint`
+
+## Deployment
+
+- The repository homepage is https://jntuk-website.vercel.app.
 
 ## Contributing
 
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before you open a pull request.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-This project is licensed under the [GPL-3.0 License](LICENSE). Copyright (c) 2026 Banny Sukumar.
+Licensed under GPL-3.0. See [LICENSE](LICENSE).
 
 ## Author
+
+[Banny Sukumar](https://github.com/Bannysukumar)
 
 - GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
 - Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
 - LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
-- ORCID: [0009-0007-9766-6579](https://orcid.org/0009-0007-9766-6579)
